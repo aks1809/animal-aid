@@ -9,13 +9,14 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import CallIcon from "@material-ui/icons/Call";
 import HomeIcon from "@material-ui/icons/Home";
 import { Avatar } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
       <div className="jumbotron p-5 mb-0 rounded-0 bg-dark">
         <div className="row">
-          <div className="col-lg-5 px-4 mb-5">
+          <div className="col-lg-5 px-4 mb-4">
             <div className="heading text-white h3 font-weight-bold">
               About Us
             </div>
@@ -29,90 +30,125 @@ const Footer = () => {
             <br />
             <div className="author text-muted text-right">-Arpit Kher</div>
           </div>
-          <div className="col-lg-3 px-4 mb-5">
+          <div className="col-lg-3 px-4 mb-4">
             <div className="heading text-white h3 font-weight-bold">
               Keep Connected
             </div>
             <hr className="bg-white" />
             <div className="description-1 mx-auto">
               <div className="row">
-                <div className="row d-flex align-items-center px-3 py-1">
-                  <div className="col ml-3">
-                    <Avatar>
-                      <FacebookIcon />
-                    </Avatar>
-                  </div>
-                  <div className="text-muted">Like us on Facebook</div>
+                <div className="row px-3 py-1">
+                  <Link
+                    to="www.google.com"
+                    className="d-flex align-items-center link"
+                  >
+                    <div className="col ml-3 facebook">
+                      <Avatar>
+                        <FacebookIcon />
+                      </Avatar>
+                    </div>
+                    <div className="text-muted">Like us on Facebook</div>
+                  </Link>
                 </div>
               </div>
               <div className="row">
-                <div className="row d-flex align-items-center px-3 py-1">
-                  <div className="col ml-3">
-                    <Avatar className="twitter">
-                      <TwitterIcon />
-                    </Avatar>
-                  </div>
-                  <div className="text-muted">Follow us on Twitter</div>
+                <div className="row px-3 py-1">
+                  <Link
+                    to="www.google.com"
+                    className="d-flex align-items-center link"
+                  >
+                    <div className="col ml-3 twitter">
+                      <Avatar>
+                        <TwitterIcon />
+                      </Avatar>
+                    </div>
+                    <div className="text-muted">Follow us on Twitter</div>
+                  </Link>
                 </div>
               </div>
               <div className="row">
-                <div className="row d-flex align-items-center px-3 py-1">
-                  <div className="col ml-3">
-                    <Avatar>
-                      <InstagramIcon />
-                    </Avatar>
-                  </div>
-                  <div className="text-muted">Follow us on Instagram</div>
+                <div className="row px-3 py-1">
+                  <Link
+                    to="www.google.com"
+                    className="d-flex align-items-center link"
+                  >
+                    <div className="col ml-3 instagram">
+                      <Avatar>
+                        <InstagramIcon />
+                      </Avatar>
+                    </div>
+                    <div className="text-muted">Follow us on Instagram</div>
+                  </Link>
                 </div>
               </div>
               <div className="row">
-                <div className="row d-flex align-items-center px-3 py-1">
-                  <div className="col ml-3">
-                    <Avatar>
-                      <YouTubeIcon />
-                    </Avatar>
-                  </div>
-                  <div className="text-muted">Suscribe on YouTube</div>
+                <div className="row px-3 py-1">
+                  <Link
+                    to="www.google.com"
+                    className="d-flex align-items-center link"
+                  >
+                    <div className="col ml-3 youtube">
+                      <Avatar>
+                        <YouTubeIcon />
+                      </Avatar>
+                    </div>
+                    <div className="text-muted">Suscribe on YouTube</div>
+                  </Link>
                 </div>
               </div>
               <div className="row">
-                <div className="row d-flex align-items-center px-3 py-1">
-                  <div className="col ml-3">
-                    <Avatar>
-                      <PinterestIcon />
-                    </Avatar>
-                  </div>
-                  <div className="text-muted">Follow us on Pinterest</div>
+                <div className="row px-3 py-1">
+                  <Link
+                    to="www.google.com"
+                    className="d-flex align-items-center link"
+                  >
+                    <div className="col ml-3 pinterest">
+                      <Avatar>
+                        <PinterestIcon />
+                      </Avatar>
+                    </div>
+                    <div className="text-muted">Follow us on Pinterest</div>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-4 px-4 mb-5">
+          <div className="col-lg-4 px-4 mb-4">
             <div className="heading text-white h3 font-weight-bold">
               Contact Information
             </div>
             <hr className="bg-white" />
             <div className="description-1 mx-auto">
               <div className="row">
-                <div className="row d-flex align-items-center px-3 py-1">
-                  <div className="col ml-3">
-                    <Avatar className="twitter">
-                      <CallIcon />
-                    </Avatar>
-                  </div>
-                  <div className="text-muted">+91-9988776655</div>
+                <div className="row px-3 py-1">
+                  <Link
+                    to="www.google.com"
+                    className="d-flex align-items-center link"
+                  >
+                    <div className="col ml-3 call">
+                      <Avatar>
+                        <CallIcon />
+                      </Avatar>
+                    </div>
+                    <div className="text-muted">+91-9988776655</div>
+                  </Link>
                 </div>
-                <div className="row d-flex align-items-center px-3 py-1">
-                  <div className="col ml-3">
-                    <Avatar className="twitter">
-                      <HomeIcon />
-                    </Avatar>
-                  </div>
-                  <div className="text-muted">Subhash Nagar, Bareilly</div>
+                <div className="row px-3 py-1">
+                  <Link
+                    to="www.google.com"
+                    className="d-flex align-items-center link"
+                  >
+                    <div className="col ml-3 home">
+                      <Avatar>
+                        <HomeIcon />
+                      </Avatar>
+                    </div>
+                    <div className="text-muted">Subhash Nagar, Bareilly</div>
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="heading text-white h3 font-weight-bold mt-3">
+            <div className="heading text-white h3 font-weight-bold mt-4">
               Suscribe to newsletter
             </div>
             <hr className="bg-white" />
@@ -136,7 +172,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="jumbotron jumbotron-flex rounded-0 bg-info m-0 p-2 text-white px-5">
+      <div className="jumbotron jumbotron-flex rounded-0 bg-primary m-0 p-2 text-white text-center ">
         &#169; Designed by Chutiye | All Rights Reserved
       </div>
     </footer>

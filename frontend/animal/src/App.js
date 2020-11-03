@@ -7,11 +7,14 @@ import WhatWeDo from "./Components/WhatWeDo";
 import HomePage from "./Components/HomePage";
 import Donate from "./Components/Donate";
 import NotFound from "./Components/NotFound";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutUs} />
@@ -20,6 +23,7 @@ function App() {
           <Route exact path="/donate" component={Donate} />
           <Route path="*" component={NotFound} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

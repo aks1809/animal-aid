@@ -1,3 +1,37 @@
 .description-1 {
   max-width: 300px;
 }
+.link {
+  text-decoration: none !important;
+}
+.link:hover > .text-muted {
+  color: white !important;
+}
+.link:hover > .facebook > .MuiAvatar-colorDefault {
+  color: #29487d;
+  background-color: #9cb2ce;
+}
+.link:hover > .twitter > .MuiAvatar-colorDefault {
+  color: #08a0e9;
+  background-color: #e8f5fd;
+}
+.link:hover > .instagram > .MuiAvatar-colorDefault {
+  color: #dd2a7b;
+  background-color: pink;
+}
+.link:hover > .youtube > .MuiAvatar-colorDefault {
+  color: #e62117;
+  background-color: black;
+}
+.link:hover > .pinterest > .MuiAvatar-colorDefault {
+  color: #efefef;
+  background-color: #bd081c;
+}
+.link:hover > .call > .MuiAvatar-colorDefault {
+  color: white;
+  background-color: #7289da;
+}
+.link:hover > .home > .MuiAvatar-colorDefault {
+  color: #ff6600;
+  background-color: #ffaf7a;
+}
