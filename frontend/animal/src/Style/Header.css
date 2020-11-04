@@ -1,49 +1,29 @@
 .full{
-  display: flex;
-  padding-bottom: 1%;
+  background-color:#FFDFDD;
 }
 
-.header{
-  display: flex;
-  flex:1;
-}
-
-.homeIcon{
-  transform: scale(3.0);
-  margin-right: 1vw;
-
-}
 .title{
-  font-size: 65px;
+  font-size: 60px;
+  font-style: normal;
   font-family: sans-serif;
-  font-size-adjust: auto;
   font-weight: bolder;
-  color: #4863A0;
-}
-.Links{
-  display: flex;
-  margin-right: 1vw;
-}
-.Link{
-  margin-right: 40px;
-  margin-top: 40px;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 18px;
+  color: #E2A76F;
 }
 
-.Link:hover{
-  color:black;
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 19px;
-  margin-right: 34.5px;
+.icon{
+  transform: scale(2) rotate(25deg);
+  border: none;
+  outline-width: 0px;
 }
+
 .google__login{
-  margin-top: 20px;
+  margin-left: 20px;
   margin-right: 10px;
 }
 
+.nav-link{
+  font-size: 18px;
+}
 .LinkButton {
   background-color: #4CAF50; /* Green */
   border-radius: 5%;

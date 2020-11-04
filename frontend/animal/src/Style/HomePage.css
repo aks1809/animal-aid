@@ -1,0 +1,48 @@
+.full__carousel{
+  margin: 2% 0;
+    box-shadow: -1px 4px 20px -6px rgba(0,0,0,1);
+}
+
+.home__page__carousel__img{
+  height: 90vh;
+  width: 100%;
+}
+
+.home__page__carousel1{
+  display: flex;
+  background-color: lightgreen;
+  place-items:center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.home__page__carousel2{
+  display: flex;
+  background-color: pink;
+  place-items:center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.home__page__carousel3{
+  display: flex;
+  background-color: yellow;
+  place-items:center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.home__page__text{
+  display: flex;
+  flex-direction: column;
+  flex:0.25;
+  text-align: center;
+  padding: 1%;
+  color: #504A4B;
+}
+
+.home__page__img{
+  display: flex;
+  flex-direction: column;
+  flex: 0.75;
+}
