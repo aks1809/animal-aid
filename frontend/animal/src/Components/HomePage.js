@@ -3,6 +3,7 @@ import "../Style/HomePage.css";
 
 function HomePage(){
 
+function HomePage() {
   return (
     <div>
     <div class="full__carousel">
@@ -61,6 +62,7 @@ function HomePage(){
    </div>
  </div>
  </div>
+      <h1>Home Page</h1>
     </div>
   );
 }
