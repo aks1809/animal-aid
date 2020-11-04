@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "./Header";
 import "../Style/HomePage.css";
 
 function HomePage(){
 
   return (
     <div>
-    <Header/>
     <div class="full__carousel">
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="4000" >
    <div class="carousel-inner">

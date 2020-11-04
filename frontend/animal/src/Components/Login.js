@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from 'react-google-login';
 import {Link} from 'react-router-dom';
-import "./Header";
 
 //ClientId:193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com
 //193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com
