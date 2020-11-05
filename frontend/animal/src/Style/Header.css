@@ -1,7 +1,6 @@
-.full{
-  background-color:#BDEDFF;
+.full {
+  background-color: #bdedff;
 }
-
 
 .header {
   display: flex;
@@ -14,12 +13,12 @@
 }
 .title {
   font-size: 85px;
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: "Balsamiq Sans", cursive;
   font-weight: bolder;
-  color: #736AFF;
+  color: #736aff;
 }
 
-.icon{
+.icon {
   transform: scale(2) rotate(25deg);
   border: none;
   outline-width: 0px;
@@ -27,10 +26,10 @@
 
 .google__login {
   margin-right: 10px;
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
-.nav-link{
+.nav-link {
   font-size: 20px;
   color: blue;
 }
