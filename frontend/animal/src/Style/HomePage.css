@@ -1,0 +1,141 @@
+.full__carousel{
+  margin: 2% 0.5%;
+    box-shadow: -1px 4px 20px -6px rgba(0,0,0,1);
+}
+
+.home__page__carousel__img{
+  height: 90vh;
+  width: 100%;
+}
+
+.home__page__carousel1{
+  display: flex;
+  background-color: lightgreen;
+  place-items:center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.home__page__carousel2{
+  display: flex;
+  background-color: pink;
+  place-items:center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.home__page__carousel3{
+  display: flex;
+  background-color: yellow;
+  place-items:center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.home__page__text{
+  display: flex;
+  flex-direction: column;
+  flex:0.25;
+  text-align: center;
+  padding: 1%;
+  color: #504A4B;
+}
+
+.home__page__img{
+  display: flex;
+  flex-direction: column;
+  flex: 0.75;
+}
+
+.what__we__do{
+  display: flex;
+  padding: 0% 1%;
+  place-items:center;
+}
+
+.what__we__do__img{
+  width: 104%;
+  height: 90vh;
+}
+
+
+
+.what__we__do__text__right{
+
+  text-align: center;
+  padding: 2%;
+  font-size: 20px;
+}
+
+.what__we__do__text__left>h1{
+  font-family: 'Balsamiq Sans', cursive;
+  color:#736AFF;
+}
+
+.what__we__do__text__right>h1{
+  font-family: 'Balsamiq Sans', cursive;
+  color:#736AFF;
+}
+
+.what__we__do__text__left{
+
+  text-align: center;
+  padding: 2%;
+  font-size: 20px;
+}
+.linkButton {
+  background-color: #4caf50; /* Green */
+  border-radius: 2%;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.linkButton {
+  background-color: #736AFF;
+  color: white;
+  border: 2px solid #736AFF;
+}
+
+.linkButton:hover {
+  background-color: white;
+  color: Black;
+  text-decoration: none;
+}
+
+.success__stories{
+  display:grid;
+  padding: 5% 3%;
+  place-items:center;
+  background-color: #BDEDFF;
+  margin: 1% 0%;
+}
+.heading{
+  display: flex;
+  margin-bottom: 5%;
+}
+.heading>p{
+  font-size: 18px;
+}
+
+.card__detail{
+  display: flex;
+}
+.card{
+  width:20rem;
+  height: 30rem;
+  margin: 10% 4%;
+}
+.card-img-top{
+  height: 30vh;
+}
+
+.card__margin{
+  margin:  5%;
+}

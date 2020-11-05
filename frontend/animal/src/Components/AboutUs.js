@@ -1,3 +1,4 @@
+import React from 'react';
 import React from "react";
 import { Link } from "react-router-dom";
 import image1 from "../images/aboutus1.jpg";
@@ -7,6 +8,8 @@ import "../Style/AboutUs.css";
 function AboutUs() {
   return (
     <div>
+    <h1>About Us</h1>
+      <h1>About Us</h1>
       <div
         className="jumbotron rounded-0 bg-dark banner m-0 p-0"
         style={{ backgroundImage: `url(${image1})` }}
