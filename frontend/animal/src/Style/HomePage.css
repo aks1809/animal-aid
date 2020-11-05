@@ -1,84 +1,80 @@
-.full__carousel{
+.full__carousel {
   margin: 2% 0.5%;
-    box-shadow: -1px 4px 20px -6px rgba(0,0,0,1);
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 1);
 }
 
-.home__page__carousel__img{
+.home__page__carousel__img {
   height: 90vh;
   width: 100%;
 }
 
-.home__page__carousel1{
+.home__page__carousel1 {
   display: flex;
   background-color: lightgreen;
-  place-items:center;
+  place-items: center;
   justify-content: center;
   font-size: 45px;
 }
 
-.home__page__carousel2{
+.home__page__carousel2 {
   display: flex;
   background-color: pink;
-  place-items:center;
+  place-items: center;
   justify-content: center;
   font-size: 45px;
 }
 
-.home__page__carousel3{
+.home__page__carousel3 {
   display: flex;
   background-color: yellow;
-  place-items:center;
+  place-items: center;
   justify-content: center;
   font-size: 45px;
 }
 
-.home__page__text{
+.home__page__text {
   display: flex;
   flex-direction: column;
-  flex:0.25;
+  flex: 0.25;
   text-align: center;
   padding: 1%;
-  color: #504A4B;
+  color: #504a4b;
 }
 
-.home__page__img{
+.home__page__img {
   display: flex;
   flex-direction: column;
   flex: 0.75;
 }
 
-.what__we__do{
+.what__we__do {
   display: flex;
   padding: 0% 1%;
-  place-items:center;
+  place-items: center;
 }
 
-.what__we__do__img{
+.what__we__do__img {
   width: 104%;
   height: 90vh;
 }
 
-
-
-.what__we__do__text__right{
-
+.what__we__do__text__right {
   text-align: center;
   padding: 2%;
   font-size: 20px;
 }
 
-.what__we__do__text__left>h1{
-  font-family: 'Balsamiq Sans', cursive;
-  color:#736AFF;
+.what__we__do__text__left > h1 {
+  font-family: "Balsamiq Sans", cursive;
+  color: #736aff;
 }
 
-.what__we__do__text__right>h1{
-  font-family: 'Balsamiq Sans', cursive;
-  color:#736AFF;
+.what__we__do__text__right > h1 {
+  font-family: "Balsamiq Sans", cursive;
+  color: #736aff;
 }
 
-.what__we__do__text__left{
-
+.what__we__do__text__left {
   text-align: center;
   padding: 2%;
   font-size: 20px;
@@ -98,9 +94,9 @@
 }
 
 .linkButton {
-  background-color: #736AFF;
+  background-color: #736aff;
   color: white;
-  border: 2px solid #736AFF;
+  border: 2px solid #736aff;
 }
 
 .linkButton:hover {
@@ -109,33 +105,33 @@
   text-decoration: none;
 }
 
-.success__stories{
-  display:grid;
+.success__stories {
+  display: grid;
   padding: 5% 3%;
-  place-items:center;
-  background-color: #BDEDFF;
+  place-items: center;
+  background-color: #bdedff;
   margin: 1% 0%;
 }
-.heading{
+.heading {
   display: flex;
   margin-bottom: 5%;
 }
-.heading>p{
+.heading > p {
   font-size: 18px;
 }
 
-.card__detail{
+.card__detail {
   display: flex;
 }
-.card{
-  width:20rem;
+.card {
+  width: 20rem;
   height: 30rem;
   margin: 10% 4%;
 }
-.card-img-top{
+.card-img-top {
   height: 30vh;
 }
 
-.card__margin{
-  margin:  5%;
+.card__margin {
+  margin: 5%;
 }
