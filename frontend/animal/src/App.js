@@ -13,17 +13,6 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
-    <Router>
-    <Header/>
-     <Switch>
-      <Route exact path="/" component={HomePage}/>
-      <Route exact path="/about" component={AboutUs}/>
-      <Route exact path="/whatWeDo" component={WhatWeDo}/>
-      <Route exact path="/contact" component={Contact}/>
-      <Route exact path="/donate" component={Donate}/>
-     </Switch>
-    </Router>
-
       <Router>
         <Header />
         <Switch>

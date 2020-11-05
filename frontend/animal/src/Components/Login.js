@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from 'react-google-login';
-import {Link} from 'react-router-dom';
-import { GoogleLogout } from "react-google-login";
 import { Link } from "react-router-dom";
 import "./Header";
 
@@ -27,6 +25,8 @@ function Login() {
           className="google__login"
           clientId="193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com"
           buttonText="Login With Google"
+          theme="dark"
+          icon={true}
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
           cookiePolicy={"single_host_origin"}
@@ -37,6 +37,8 @@ function Login() {
             className="google__login"
             clientId="193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com"
             buttonText="Log Out"
+            theme="dark"
+            icon={true}
             onLogoutSuccess={logout}
           ></GoogleLogout>
           <Link className="LinkButton" to="/donate">
