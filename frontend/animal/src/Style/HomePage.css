@@ -48,9 +48,9 @@
 }
 
 .what__we__do {
-  display: flex;
   padding: 0% 1%;
   place-items: center;
+  margin-right: 0px;
 }
 
 .what__we__do__img {
@@ -116,8 +116,12 @@
   display: flex;
   margin-bottom: 5%;
 }
+.heading > h1 {
+  color: #736aff;
+}
 .heading > p {
   font-size: 18px;
+  margin-left: 5%;
 }
 
 .card__detail {
