@@ -9,6 +9,10 @@ import Donate from "./Components/Donate";
 import NotFound from "./Components/NotFound";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import RescuePage from "./Components/Rescue";
+import MedicalPage from "./Components/Medical";
+import CrueltyPage from "./Components/Cruelty";
+import EducationPage from "./Components/Education";
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
           <Route exact path="/whatWeDo" component={WhatWeDo} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/donate" component={Donate} />
+          <Route exact path="/whatWeDo/rescue" component={RescuePage} />
+          <Route exact path="/whatWeDo/medical" component={MedicalPage} />
+          <Route exact path="/whatWeDo/cruelty" component={CrueltyPage} />
+          <Route exact path="/whatWeDo/education" component={EducationPage} />
           <Route path="*" component={NotFound} />
         </Switch>
         <Footer />

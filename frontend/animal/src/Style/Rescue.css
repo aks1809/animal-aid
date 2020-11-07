@@ -1,0 +1,97 @@
+.rescue__top {
+  margin: 1%;
+  height: 110vh;
+}
+
+.rescue__top__text {
+  background-color: white;
+  width: 500px;
+  padding: 5%;
+  position: relative;
+  top: 15%;
+  left: 8%;
+  font-size: 18px;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 1);
+}
+.rescue__top__text > h1 {
+  color: #736aff;
+}
+
+@media screen and (max-width: 768px) {
+  .rescue__top__text {
+    background-color: white;
+    width: 200px;
+    padding: 5%;
+    position: relative;
+    top: 10%;
+    left: 4%;
+    font-size: 14px;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 1);
+  }
+  .rescue__top__text > h1 {
+    font-size: 26px;
+  }
+}
+
+.rescue__flip__flap {
+  place-items: center;
+  margin-right: 0%;
+}
+
+.rescue__img__right {
+  width: 100%;
+  height: 75vh;
+}
+.rescue__img__left {
+  width: 102%;
+  height: 70vh;
+  margin-left: 2%;
+}
+.rescue__text__left {
+  padding: 2%;
+  text-align: center;
+  justify-content: space-between;
+}
+.rescue__text__right {
+  padding: 3%;
+  text-align: center;
+  justify-content: space-between;
+}
+.rescue__text__right > h1 {
+  font-family: "Balsamiq Sans", cursive;
+  color: #736aff;
+}
+.rescue__text__left > h1 {
+  font-family: "Balsamiq Sans", cursive;
+  color: #736aff;
+}
+.rescue__text__right > p {
+  font-size: 20px;
+}
+.rescue__text__left > p {
+  font-size: 20px;
+}
+.Iframe {
+  width: 65vw;
+  height: 75vh;
+  margin: 3%;
+}
+
+.rescue__vedio {
+  background-color: lightblue;
+  margin: 2% 1%;
+  text-align: center;
+  justify-content: space-between;
+}
+.rescue__vedio__detail {
+  padding: 2%;
+}
+.rescue__vedio__detail > h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Balsamiq Sans", cursive;
+  color: #736aff;
+}
+.rescue__vedio__detail > p {
+  font-size: 1.5rem;
+}
