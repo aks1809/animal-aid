@@ -13,6 +13,9 @@ import RescuePage from "./Components/Rescue";
 import MedicalPage from "./Components/Medical";
 import CrueltyPage from "./Components/Cruelty";
 import EducationPage from "./Components/Education";
+import ValuePage from "./Components/Values";
+import HistoryPage from "./Components/History";
+import TeamPage from "./Components/Team";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           <Route exact path="/whatWeDo/medical" component={MedicalPage} />
           <Route exact path="/whatWeDo/cruelty" component={CrueltyPage} />
           <Route exact path="/whatWeDo/education" component={EducationPage} />
+          <Route exact path="/about/values" component={ValuePage} />
+          <Route exact path="/about/history" component={HistoryPage} />
+          <Route exact path="/about/team" component={TeamPage} />
           <Route path="*" component={NotFound} />
         </Switch>
         <Footer />

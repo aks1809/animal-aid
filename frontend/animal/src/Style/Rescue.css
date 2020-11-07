@@ -1,6 +1,9 @@
 .rescue__top {
   margin: 1%;
   height: 110vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .rescue__top__text {
@@ -94,4 +97,20 @@
 }
 .rescue__vedio__detail > p {
   font-size: 1.5rem;
+}
+.Values {
+  background-color: black;
+  color: brown;
+  padding: 2%;
+  width: 40%;
+  opacity: 0.6;
+  margin: auto;
+  position: relative;
+  top: 65%;
+}
+.Image {
+  height: 110vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
