@@ -19,52 +19,52 @@ function HomePage() {
   const [height, width] = useWindowSize();
   return (
     <div>
-      <div class="full__carousel">
+      <div className="full__carousel">
         <div
           id="carouselExampleSlidesOnly"
-          class="carousel slide"
+          className="carousel slide"
           data-ride="carousel"
           data-interval="4000"
         >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="home__page__carousel1">
-                <div class="home__page__text">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div className="home__page__carousel1">
+                <div className="home__page__text">
                   <p>Street animals need our protection. Help them.</p>
                 </div>
-                <div class="home__page__img">
+                <div className="home__page__img">
                   <img
-                    class="home__page__carousel__img"
+                    className="home__page__carousel__img"
                     src="carousel1.jpg"
                     alt="dog-profile"
                   />
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="home__page__carousel2">
-                <div class="home__page__text">
+            <div className="carousel-item">
+              <div className="home__page__carousel2">
+                <div className="home__page__text">
                   <p>They just need a gentle touch not ignorance.</p>
                 </div>
-                <div class="home__page__img">
+                <div className="home__page__img">
                   <img
-                    class="home__page__carousel__img"
+                    className="home__page__carousel__img"
                     src="carousel2.jpg"
                     alt="dog-profile"
                   />
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="home__page__carousel3">
-                <div class="home__page__text">
+            <div className="carousel-item">
+              <div className="home__page__carousel3">
+                <div className="home__page__text">
                   <p>
                     Animals are such agreeable friends—they ask no questions.
                   </p>
                 </div>
-                <div class="home__page__img">
+                <div className="home__page__img">
                   <img
-                    class="home__page__carousel__img"
+                    className="home__page__carousel__img"
                     src="carousel3.jpg"
                     alt="dog-profile"
                   />
@@ -72,17 +72,17 @@ function HomePage() {
               </div>
             </div>
 
-            <div class="carousel-item">
-              <div class="home__page__carousel2">
-                <div class="home__page__text">
+            <div className="carousel-item">
+              <div className="home__page__carousel2">
+                <div className="home__page__text">
                   <p>
                     Until one has loved an animal, a part of one's soul remains
                     unawakened.
                   </p>
                 </div>
-                <div class="home__page__img">
+                <div className="home__page__img">
                   <img
-                    class="home__page__carousel__img"
+                    className="home__page__carousel__img"
                     src="animallove.webp"
                     alt="dog-profile"
                   />
@@ -234,7 +234,7 @@ function HomePage() {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <Link to="/" class="btn btn-primary">
+                  <Link to="/" className="btn btn-primary">
                     Go somewhere
                   </Link>
                 </div>
@@ -250,7 +250,7 @@ function HomePage() {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="/" class="btn btn-primary">
+                  <a href="/" className="btn btn-primary">
                     Go somewhere
                   </a>
                 </div>
@@ -266,7 +266,7 @@ function HomePage() {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="/" class="btn btn-primary">
+                  <a href="/" className="btn btn-primary">
                     Go somewhere
                   </a>
                 </div>
@@ -282,7 +282,7 @@ function HomePage() {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="/" class="btn btn-primary">
+                  <a href="/" className="btn btn-primary">
                     Go somewhere
                   </a>
                 </div>

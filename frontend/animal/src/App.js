@@ -9,6 +9,7 @@ import Donate from "./Components/Donate";
 import NotFound from "./Components/NotFound";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import TalkToUs from "./Components/TalkToUs";
 import RescuePage from "./Components/Rescue";
 import MedicalPage from "./Components/Medical";
 import CrueltyPage from "./Components/Cruelty";
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/about/team" component={TeamPage} />
           <Route path="*" component={NotFound} />
         </Switch>
+        <TalkToUs />
         <Footer />
       </Router>
     </div>
