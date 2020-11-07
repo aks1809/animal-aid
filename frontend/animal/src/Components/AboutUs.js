@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image1 from "../images/aboutus1.jpg";
-import image2 from "../images/aboutus2.jpg";
+import image2 from "../images/Mission1.jpg";
+import image3 from "../images/History1.webp";
 import "../Style/AboutUs.css";
 import Counter from "./Counter";
 
@@ -46,13 +47,37 @@ function AboutUs() {
       <div className="jumbotron bg-white mb-0">
         <div className="row d-flex justify-content-between">
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="#" className="category-link">
+            <Link to="/about/values" className="category-link">
               <div
                 className="category-item"
                 style={{ backgroundImage: `url(${image2})` }}
               >
                 <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
                   Our values and mission
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
+            <Link to="/about/history" className="category-link">
+              <div
+                className="category-item"
+                style={{ backgroundImage: `url(${image3})` }}
+              >
+                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                  History Of AA.
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
+            <Link to="/about/team" className="category-link">
+              <div
+                className="category-item"
+                style={{ backgroundImage: `url(${image2})` }}
+              >
+                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                  Meet the team.
                 </div>
               </div>
             </Link>
