@@ -8,15 +8,15 @@ import Login from "./Login";
 function Header() {
   return (
     <div className="full">
-      <nav class="navbar navbar-expand-lg navbar-light ">
+      <nav className="navbar navbar-expand-lg navbar-light ">
         <IconButton>
           <PetsIcon className="icon" />
         </IconButton>
-        <a class="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           <h1 className="title">Animal Aid</h1>
-        </a>
+        </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -24,31 +24,31 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/">
-                Home Page <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">
+                Home Page <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/about">
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
                 About Us
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/whatWeDo">
+            <li className="nav-item">
+              <Link className="nav-link" to="/whatWeDo">
                 What We Do
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link " to="/contact">
-                Conact Us
+            <li className="nav-item">
+              <Link className="nav-link " to="/contact">
+                Conact
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Login />
             </li>
           </ul>

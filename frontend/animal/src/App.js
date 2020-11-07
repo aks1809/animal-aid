@@ -9,6 +9,7 @@ import Donate from "./Components/Donate";
 import NotFound from "./Components/NotFound";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import TalkToUs from "./Components/TalkToUs";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/donate" component={Donate} />
           <Route path="*" component={NotFound} />
         </Switch>
+        <TalkToUs />
         <Footer />
       </Router>
     </div>

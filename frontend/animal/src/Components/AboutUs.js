@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import image1 from "../images/aboutus1.jpg";
 import image2 from "../images/aboutus2.jpg";
 import "../Style/AboutUs.css";
+import Counter from "./Counter";
 
 function AboutUs() {
   return (
@@ -58,6 +59,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <Counter />
     </div>
   );
 }
