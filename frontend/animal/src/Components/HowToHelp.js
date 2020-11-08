@@ -1,45 +1,50 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image3 from "../images/whatWeDo4.jpg";
-import image4 from "../images/whatWeDo8.jpg";
-import image5 from "../images/whatWeDo9.jpg";
-import image6 from "../images/whatWeDo7.jpg";
-import image7 from "../images/whatWeDo11.jpg";
-
+import image1 from "../images/howToHelp1.jpg";
+import image2 from "../images/howToHelp2.jpg";
+import image3 from "../images/howToHelp3.jpeg";
+import image4 from "../images/howToHelp4.jpg";
+import image5 from "../images/donate2.jpeg";
+import image6 from "../images/donate3.jpg";
+import image7 from "../images/donate4.jpeg";
 import "../Style/AboutUs.css";
 
-function WhatWeDo() {
+function HowToHelp() {
   return (
     <div>
       <div
         className="jumbotron rounded-0 bg-dark banner m-0 p-0"
-        style={{ backgroundImage: `url(${image7})` }}
+        style={{ backgroundImage: `url(${image1})` }}
       >
         <div className="title-bar bg-primary h1 text-white p-3 text-center rounded">
-          What We DO
+          How To Help
         </div>
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; What We do
+          <Link to="/">Home</Link> &gt; How To Help
         </div>
         <div className="row p-4">
           <div className="col-md-6">
             <div className="small-title text-uppercase font-weight-bold text-danger mb-2">
-              What We Do
+              How To Help
             </div>
             <div className="large-title mb-4 text-left">
-              Helping street animals when they need us most.
+              Your help will save lives today and far into the future.
             </div>
           </div>
           <div className="col-md-6 text-justify section-description">
             <p>
-              We rescue street animals, provide medical care and sanctuary, and
-              help turn community compassion into action.
+              Compassionate action can take many forms. Become a monthly donor
+              for support that helps us plan for the future. Volunteer with us
+              to directly help take care of the 700 animals at our shelter, or
+              adopt one of our rescues. Sponsor an animal in our sanctuary,
+              memorialize your beloved pet or leave a legacy for Animal Aid in
+              your will.
             </p>
             <p>
-              We combine on-the-ground, immediate relief to suffering animals
-              with prevention to ensure long-term protection for animals.
+              The animals need you, and we want to make it easy for you to turn
+              your desire to help into powerful action that saves lives.
             </p>
           </div>
         </div>
@@ -47,49 +52,74 @@ function WhatWeDo() {
       <div className="jumbotron bg-white mb-0">
         <div className="row d-flex justify-content-between">
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="/whatWeDo/rescue" className="category-link">
+            <Link to="#" className="category-link">
               <div
                 className="category-item"
                 style={{ backgroundImage: `url(${image4})` }}
               >
                 <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
-                  Rescue
+                  Adopt
                 </div>
               </div>
             </Link>
           </div>
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="/whatWeDo/medical" className="category-link">
+            <Link to="/donate" className="category-link">
+              <div
+                className="category-item"
+                style={{ backgroundImage: `url(${image2})` }}
+              >
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
+                  Donate
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
+            <Link to="#" className="category-link">
               <div
                 className="category-item"
                 style={{ backgroundImage: `url(${image3})` }}
               >
                 <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
-                  Hospital And Medical Care
+                  Volunteer
                 </div>
               </div>
             </Link>
           </div>
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="/whatWeDo/cruelty" className="category-link">
+            <Link to="#" className="category-link">
+              <div
+                className="category-item"
+                style={{ backgroundImage: `url(${image7})` }}
+              >
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
+                  Sponsor an animal
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
+            <Link to="#" className="category-link">
               <div
                 className="category-item"
                 style={{ backgroundImage: `url(${image5})` }}
               >
                 <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
-                  Cruelty Response
+                  Memorialize a pet
                 </div>
               </div>
             </Link>
           </div>
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="/whatWeDo/education" className="category-link">
+            <Link to="#" className="category-link">
               <div
                 className="category-item"
                 style={{ backgroundImage: `url(${image6})` }}
               >
                 <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
-                  Outreach And Education
+                  Shop
                 </div>
               </div>
             </Link>
@@ -100,4 +130,4 @@ function WhatWeDo() {
   );
 }
 
-export default WhatWeDo;
+export default HowToHelp;

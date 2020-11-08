@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image1 from "../images/donate1.jpeg";
-import image2 from "../images/aboutus2.jpg";
-import "../Style/AboutUs.css";
+import image2 from "../images/donate2.jpeg";
+import image3 from "../images/donate3.jpg";
+import image4 from "../images/donate4.jpeg";
+import "../Style/Donate.css";
 
 function Donate() {
   return (
@@ -42,7 +44,16 @@ function Donate() {
           </div>
         </div>
       </div>
-      <div className="jumbotron bg-dark rounded-0 text-white mb-0">FORM</div>
+      <div className="jumbotron rounded-0 mb-0 form-wrapper">
+        <div
+          className="container p-0"
+          style={{ height: "100vh", width: "50vw" }}
+        >
+          <form action="" method="post">
+            <input type="text" />
+          </form>
+        </div>
+      </div>
       <div className="jumbotron py-2 mb-0">
         <div className="row p-4">
           <div className="col-md-6">
@@ -67,8 +78,32 @@ function Donate() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image2})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
-                  Our values and mission
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
+                  Memorialize a pet
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
+            <Link to="#" className="category-link">
+              <div
+                className="category-item"
+                style={{ backgroundImage: `url(${image3})` }}
+              >
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
+                  Shop
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
+            <Link to="#" className="category-link">
+              <div
+                className="category-item"
+                style={{ backgroundImage: `url(${image4})` }}
+              >
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
+                  Sponsor an animal
                 </div>
               </div>
             </Link>

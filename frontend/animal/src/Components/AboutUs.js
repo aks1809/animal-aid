@@ -51,7 +51,7 @@ function AboutUs() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image2})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Our values and mission
                 </div>
               </div>

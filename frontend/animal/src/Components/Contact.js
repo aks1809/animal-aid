@@ -6,8 +6,20 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import "../Style/Contact.css";
 
 function Contact() {
-  const [dropdown, setDropdown] = useState(Array(1).fill(0));
+  const [dropdown, setDropdown] = useState(Array(7).fill(0));
   const [description] = useState([
+    {
+      title: "Report an ill or injured animal",
+      body: (
+        <span className="text-justify">
+          <p>
+            Click <Link to="#">here</Link> to report an ill or injured animal or
+            cruelty to an animal in Udaipur. This helpline is for un-owned
+            street animals in Udaipur, Rajasthan, only.
+          </p>
+        </span>
+      ),
+    },
     {
       title: "Visit and volunteer",
       body: (
@@ -24,6 +36,79 @@ function Contact() {
             If you’re planning on volunteering for several weeks or more, or
             want to visit in a large group, give us a heads-up by filling out
             our <Link to="#">Volunteer contact form</Link>.
+          </p>
+        </span>
+      ),
+    },
+    {
+      title: "Adoption",
+      body: (
+        <span className="text-justify">
+          <p>
+            For questions about our adoption procedures, send us an email at{" "}
+            <Link to="#">adoptions@animalaidunlimited.org</Link>.
+          </p>
+          <p>
+            If you’re looking for more information on one of the dogs we have
+            for <Link to="#">adoption</Link>, fill our{" "}
+            <Link to="#">Adoption contact form</Link>.
+          </p>
+          <p>We currently only adopt dogs within India.</p>
+        </span>
+      ),
+    },
+    {
+      title: "Job opportunities",
+      body: (
+        <span className="text-justify">
+          <p>
+            To apply for a current open position or a general application,
+            please visit our <Link to="#">Career page</Link> and fill out the
+            related form.
+          </p>
+          <p>
+            For general inquiries on job opportunities, send us an email at{" "}
+            <Link to="#">hr@animalaidunlimited.org</Link>.
+          </p>
+          <p>Please note that we do not accept applications via email.</p>
+        </span>
+      ),
+    },
+    {
+      title: "Training",
+      body: (
+        <span className="text-justify">
+          <p>
+            To apply for our First Aid Training course, visit our{" "}
+            <Link to="#">Training Program</Link> page and fill out the form
+            online.
+          </p>
+          <p>
+            For general inquiries about the training, send us an email at{" "}
+            <Link to="#">training@animalaidunlimited.org</Link>.
+          </p>
+          <p>Please know that we do not accept applications via email.</p>
+        </span>
+      ),
+    },
+    {
+      title: "Donations",
+      body: (
+        <span className="text-justify">
+          <p>
+            For questions about your donations or different donation methods,
+            write to us at <Link to="#">donations@animalaidunlimited.org</Link>.
+          </p>
+        </span>
+      ),
+    },
+    {
+      title: "General enquiries",
+      body: (
+        <span className="text-justify">
+          <p>
+            For all other inquiries, including media, contact us at{" "}
+            <Link to="#">info@animalaidunlimited.org</Link>.
           </p>
         </span>
       ),
@@ -54,7 +139,7 @@ function Contact() {
             >
               {description[index].title}
             </h3>
-            <div className="p-1 bg-primary rounded d-flex align-items-center">
+            <div className="p-1 bg-primary rounded d-flex align-items-center text-white">
               {item === 0 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
             </div>
           </div>
@@ -80,7 +165,7 @@ function Contact() {
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; About us
+          <Link to="/">Home</Link> &gt; Contact
         </div>
         <div className="row p-4">
           <div className="col-md-6">

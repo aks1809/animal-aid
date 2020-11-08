@@ -24,3 +24,10 @@
 .section-description {
   font-size: 18px;
 }
+.form-wrapper {
+  background-image: url("../images/donate5.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
