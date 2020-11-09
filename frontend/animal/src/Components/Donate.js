@@ -4,6 +4,7 @@ import image1 from "../images/donate1.jpeg";
 import image2 from "../images/donate2.jpeg";
 import image3 from "../images/donate3.jpg";
 import image4 from "../images/donate4.jpeg";
+import DonationForm from "./DonationForm";
 import "../Style/Donate.css";
 
 function Donate() {
@@ -45,14 +46,7 @@ function Donate() {
         </div>
       </div>
       <div className="jumbotron rounded-0 mb-0 form-wrapper">
-        <div
-          className="container p-0"
-          style={{ height: "100vh", width: "50vw" }}
-        >
-          <form action="" method="post">
-            <input type="text" />
-          </form>
-        </div>
+        <DonationForm />
       </div>
       <div className="jumbotron py-2 mb-0">
         <div className="row p-4">
@@ -65,7 +59,7 @@ function Donate() {
             <p>
               Become a monthly donor to support our work into the future, save
               an animal’s life in honor of a beloved pet, or buy a gift of
-              beautiful jewelry in support of our work.
+              beautiful jewellry in support of our work.
             </p>
           </div>
         </div>

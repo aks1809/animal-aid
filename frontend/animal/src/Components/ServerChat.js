@@ -1,6 +1,6 @@
 import React from "react";
 
-const ServerChat = () => {
+const ServerChat = ({ message }) => {
   return (
     <div className="message message-left">
       <div className="avatar-wrapper avatar-small">
@@ -9,9 +9,7 @@ const ServerChat = () => {
           alt="avatar"
         />
       </div>
-      <div className="bubble bubble-light bg-info text-white">
-        Welcome! How can we help you?
-      </div>
+      <div className="bubble bubble-light bg-info text-white">{message}</div>
     </div>
   );
 };

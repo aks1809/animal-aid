@@ -4,7 +4,6 @@ import image1 from "../images/aboutus1.jpg";
 import image2 from "../images/Mission1.jpg";
 import image3 from "../images/History1.webp";
 import "../Style/AboutUs.css";
-import Counter from "./Counter";
 
 function AboutUs() {
   return (
@@ -84,7 +83,6 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <Counter />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutUs from "./Components/AboutUs";
@@ -18,8 +18,33 @@ import HowToHelp from "./Components/HowToHelp";
 import ValuePage from "./Components/Values";
 import HistoryPage from "./Components/History";
 import TeamPage from "./Components/Team";
+import axios from "./apis/axios";
+import Pusher from "pusher-js";
 
 function App() {
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    axios.get("/talkToUs/sync").then((response) => {
+      setMessages(response.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    const pusher = new Pusher("fb46276ac52a5ca3188c", {
+      cluster: "ap2",
+    });
+
+    const channel = pusher.subscribe("message");
+    channel.bind("inserted", function (data) {
+      setMessages([...messages, data]);
+    });
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe();
+    };
+  }, [messages]);
+
   return (
     <div className="App">
       <Router>
@@ -40,7 +65,7 @@ function App() {
           <Route exact path="/about/team" component={TeamPage} />
           <Route path="*" component={NotFound} />
         </Switch>
-        <TalkToUs />
+        <TalkToUs messageList={messages} />
         <Footer />
       </Router>
     </div>
