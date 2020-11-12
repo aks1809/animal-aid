@@ -139,3 +139,7 @@
 .card__margin {
   margin: 5%;
 }
+.card_button {
+  position: sticky;
+  top: 65%;
+}

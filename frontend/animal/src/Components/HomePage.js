@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Style/HomePage.css";
 import { Link } from "react-router-dom";
+import axios from "./axios";
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
@@ -17,6 +18,16 @@ function useWindowSize() {
 }
 function HomePage() {
   const [height, width] = useWindowSize();
+  const [stories, setStories] = useState([]);
+  useEffect(() => {
+    axios
+      .get("/success-stories/sync")
+      .then((response) => {
+        console.log(response);
+        setStories(response.data);
+      })
+      .catch(() => console.log("Promise rejected"));
+  }, []);
   return (
     <div>
       <div className="full__carousel">
@@ -25,6 +36,7 @@ function HomePage() {
           className="carousel slide"
           data-ride="carousel"
           data-interval="4000"
+          data-pause="false"
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -225,69 +237,31 @@ function HomePage() {
 
         <div className="card__detail">
           <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="card">
-                <img class="card-img-top" src="whatWeDo1.jpg" alt="Card" />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <Link to="/" className="btn btn-primary">
-                    Go somewhere
-                  </Link>
+            {stories.slice(0, 4).map((story) => (
+              <div className="card__detail">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="card">
+                    <img
+                      class="card-img-top"
+                      src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
+                      alt="Card"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">{story.title}</h5>
+                      <p class="card-text">
+                        {story.description.substr(0, 100)}
+                      </p>
+                      <Link
+                        to={`/success-stories/${story._id}`}
+                        className="btn btn-primary card_button"
+                      >
+                        Read more..
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="card">
-                <img class="card-img-top" src="whatWeDo3.jpg" alt="card" />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="/" className="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="card">
-                <img class="card-img-top" src="whatWeDo2.jpg" alt="Card" />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="/" className="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12 ">
-              <div class="card">
-                <img class="card-img-top" src="whatWeDo1.jpg" alt="Card" />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="/" className="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
