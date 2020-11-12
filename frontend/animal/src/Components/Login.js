@@ -9,6 +9,7 @@ import "./Header";
 function Login() {
   const [input, setInput] = useState("");
   const responseGoogle = (response) => {
+    console.log(response);
     setInput(response.profileObj.name);
     alert("You are successfully logged in");
   };
