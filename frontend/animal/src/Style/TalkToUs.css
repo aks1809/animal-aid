@@ -8,7 +8,7 @@
   box-shadow: 4px 4px 10px 2px #000000;
 }
 .talkToUs > .MuiAvatar-colorDefault {
-  background-color: #0275d8;
+  background-color: #007bff;
 }
 .talkToUs .plus-sign {
   color: white;
@@ -52,14 +52,18 @@ img {
   margin-left: auto;
 }
 .chat-box .header .options .close-window-wrapper:hover {
-  background-color: #0275d8;
+  background-color: #007bff;
 }
 .chat-box .header .options .close-window {
   color: white;
 }
 .chat-box .chat-room {
-  min-height: 300px;
+  height: 50vh;
+  overflow: scroll;
   padding: 15px;
+}
+.chat-box .chat-room::-webkit-scrollbar {
+  display: none;
 }
 .chat-box .chat-room .avatar-small {
   width: 25px;
@@ -88,7 +92,7 @@ img {
   margin-top: 5px;
   display: inline-block;
 }
-.chat-box .type-area {
+.chat-box .type-area form {
   display: flex;
   height: 65px;
   border-radius: 0 0 20px 20px;
@@ -109,10 +113,10 @@ img {
   margin-left: auto;
   width: 65px;
   font-weight: bold;
-  border-left: 2px solid #0275d8;
+  border-left: 2px solid #007bff;
   border-radius: 0 0 20px 0;
 }
 .chat-box .type-area .button-send:hover {
-  background-color: #0275d8 !important;
+  background-color: #007bff !important;
   color: #fff !important;
 }

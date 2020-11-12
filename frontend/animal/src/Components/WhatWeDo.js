@@ -52,7 +52,7 @@ function WhatWeDo() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image4})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Rescue
                 </div>
               </div>
@@ -64,7 +64,7 @@ function WhatWeDo() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image3})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Hospital And Medical Care
                 </div>
               </div>
@@ -76,7 +76,7 @@ function WhatWeDo() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image5})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Cruelty Response
                 </div>
               </div>
@@ -88,7 +88,7 @@ function WhatWeDo() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image6})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Outreach And Education
                 </div>
               </div>
