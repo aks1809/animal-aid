@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutUs from "./Components/AboutUs";
@@ -14,6 +14,7 @@ import RescuePage from "./Components/Rescue";
 import MedicalPage from "./Components/Medical";
 import CrueltyPage from "./Components/Cruelty";
 import EducationPage from "./Components/Education";
+import HowToHelp from "./Components/HowToHelp";
 import ValuePage from "./Components/Values";
 import HistoryPage from "./Components/History";
 import TeamPage from "./Components/Team";
@@ -25,9 +26,37 @@ import HelpPage from "./Components/HowToHelp";
 import AdoptPage from "./Components/Adopt";
 import AdoptCarouselForm from "./Components/AdoptCarousel";
 import AdoptParticularPage from "./Components/AdoptParticular";
+<<<<<<< HEAD
 import AdoptionFormPage from "./Components/AdoptionForm";
+=======
+import axios from "./apis/axios";
+import Pusher from "pusher-js";
+>>>>>>> bc746e865e5e7330c86e83f51ddf912deacbaf9c
 
 function App() {
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    axios.get("/talkToUs/sync").then((response) => {
+      setMessages(response.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    const pusher = new Pusher("fb46276ac52a5ca3188c", {
+      cluster: "ap2",
+    });
+
+    const channel = pusher.subscribe("message");
+    channel.bind("inserted", function (data) {
+      setMessages([...messages, data]);
+    });
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe();
+    };
+  }, [messages]);
+
   return (
     <div className="App">
       <Router>
@@ -36,6 +65,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutUs} />
           <Route exact path="/whatWeDo" component={WhatWeDo} />
+          <Route exact path="/howToHelp" component={HowToHelp} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/whatWeDo/rescue" component={RescuePage} />
@@ -72,7 +102,7 @@ function App() {
           />
           <Route path="*" component={NotFound} />
         </Switch>
-        <TalkToUs />
+        <TalkToUs messageList={messages} />
         <Footer />
       </Router>
     </div>

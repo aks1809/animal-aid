@@ -4,7 +4,6 @@ import image1 from "../images/aboutus1.jpg";
 import image2 from "../images/Mission1.jpg";
 import image3 from "../images/History1.webp";
 import "../Style/AboutUs.css";
-import Counter from "./Counter";
 
 function AboutUs() {
   return (
@@ -52,7 +51,7 @@ function AboutUs() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image2})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Our values and mission
                 </div>
               </div>
@@ -84,7 +83,6 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <Counter />
     </div>
   );
 }
