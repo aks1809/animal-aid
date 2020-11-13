@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import Stories from "./success.js";
 import Adopts from "./adopt.js";
+import AdoptContactForms from "./adoptForm.js";
 import fileUpload from "express-fileupload";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -85,6 +86,19 @@ app.post("/adoptForm/new", (req, res) => {
   console.log(req.body);
   console.log("successfully added");
   Adopts.create(dbAdopt, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(data);
+      console.log("successfully added");
+    }
+  });
+});
+
+app.post("/adoptContactForm/new", (req, res) => {
+  const dbAdoptContact = req.body;
+  console.log(req.body);
+  AdoptContactForms.create(dbAdoptContact, (err, data) => {
     if (err) {
       res.status(500).send(err);
     } else {

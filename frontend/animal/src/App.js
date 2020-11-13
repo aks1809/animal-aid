@@ -25,6 +25,7 @@ import HelpPage from "./Components/HowToHelp";
 import AdoptPage from "./Components/Adopt";
 import AdoptCarouselForm from "./Components/AdoptCarousel";
 import AdoptParticularPage from "./Components/AdoptParticular";
+import AdoptionFormPage from "./Components/AdoptionForm";
 
 function App() {
   return (
@@ -63,6 +64,11 @@ function App() {
             exact
             path="/howToHelp/adopt/:adoptId"
             component={AdoptParticularPage}
+          />
+          <Route
+            exact
+            path="/howToHelp/adopt/:adoptId/adoptionForm"
+            component={AdoptionFormPage}
           />
           <Route path="*" component={NotFound} />
         </Switch>
