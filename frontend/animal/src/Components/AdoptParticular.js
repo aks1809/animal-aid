@@ -68,6 +68,12 @@ function AdoptParticular() {
       <Link className="linkButton linkButtonDetails" to="/howToHelp/adopt">
         Back to adopt page
       </Link>
+      <Link
+        className="linkButtonDetails2 linkButtonDetails"
+        to="/howToHelp/adopt/adoptId/adoptionForm"
+      >
+        Pls Adopt {adoptName}
+      </Link>
     </div>
   );
 }

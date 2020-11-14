@@ -13,11 +13,10 @@
 }
 .title {
   font-size: 6vw;
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
   color: #736aff;
 }
-
 .icon {
   transform: scale(2) rotate(25deg);
   border: none;
