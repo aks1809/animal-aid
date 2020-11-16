@@ -139,3 +139,42 @@
 .card__margin {
   margin: 5%;
 }
+
+.small-png > .MuiAvatar-root {
+  height: 120px;
+  width: 120px;
+}
+
+.large-numbers {
+  font-size: 3.5rem;
+}
+
+.counter-divs {
+  height: 400px;
+}
+
+.counter-divs > p {
+  font-size: 1.6rem;
+}
+
+.contact {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact {
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 100% !important;
+  }
+}

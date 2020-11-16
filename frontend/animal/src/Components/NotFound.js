@@ -4,7 +4,7 @@ import "../Style/NotFound.css";
 const NotFound = () => {
   return (
     <div>
-      <div className="main">
+      <div className="main mt-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"

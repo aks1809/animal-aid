@@ -5,9 +5,27 @@ import Pusher from "pusher";
 import Stories from "./success.js";
 import Messages from "./talkToUs.js";
 import Donations from "./donation.js";
+import Contacts from "./contact.js";
+import axios from "axios";
+import Razorpay from "razorpay";
+import { v4 as uuidv4 } from "uuid";
+import nodemailer from "nodemailer";
 
 const app = express();
 const port = process.env.PORT || 9000;
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "mymail@gmail.com",
+    pass: "mypassword",
+  },
+});
+
+const instance = new Razorpay({
+  key_id: "rzp_test_kGHEKiVYhobBNU",
+  key_secret: "w88Z5gwKZNwSYXsGrgSHL2BD",
+});
 
 app.use(express.json());
 app.use(cors());
@@ -101,13 +119,102 @@ app.get("/talkToUs/sync", (req, res) => {
   });
 });
 
-app.post("/donate/new", (req, res) => {
-  const donationDetails = req.body;
-  Donations.create(donationDetails, (err, data) => {
+app.post("/razorpay", (req, res) => {
+  try {
+    const payment_capture = 1;
+    const amount = req.body.amount;
+    const currency = "INR";
+    const id = uuidv4();
+
+    const options = {
+      amount: amount,
+      currency,
+      receipt: id,
+      payment_capture,
+    };
+    instance.orders.create(options, (err, data) => {
+      if (err) {
+        return res.status(500).json({
+          message: "Something went wrong",
+        });
+      }
+      return res.status(200).json({
+        id: data.id,
+        amount: data.amount,
+      });
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.post("/contactForm", async (req, res) => {
+  const contactDetails = req.body;
+  if (!contactDetails.token) {
+    res.status(400).send("reCaptcha token is missing");
+  }
+  try {
+    const googleVerify = `https://www.google.com/recaptcha/api/siteverify?secret=6LdfAuIZAAAAANnE17sAt33NvLA3f2NEljENmutG&response=${contactDetails.token}`;
+    const response = await axios.post(googleVerify);
+    const { success } = response.data;
+    if (success) {
+      Contacts.create(contactDetails, (err, data) => {
+        if (err) {
+          res.status(500).send(err);
+        } else {
+          const mailOptions = {
+            from: "mymail@gmail.com",
+            to: details.emailAddress,
+            subject: "Contact details",
+            html: `<h1>Someone send a query</h1><p>${
+              contactDetails.firstName + " " + contactDetails.lastName
+            }</p><p>${contactDetails.emailAddress}</p><p>${
+              contactDetails.query
+            }</p>`,
+          };
+
+          transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log("Email sent: " + info.response);
+            }
+          });
+          res.status(201).send(data);
+        }
+      });
+    } else {
+      res.status(400).send("reCaptcha error");
+    }
+  } catch (e) {
+    res.status(400).send("reCaptcha error");
+  }
+});
+
+app.post("/donation/new", (req, res) => {
+  const details = req.body;
+  console.log(details);
+
+  const mailOptions = {
+    from: "mumail@gmail.com",
+    to: details.emailAddress,
+    subject: "Donation details",
+    html: `<h1>Thank you for donating!</h1><p>${details.amount}</p><p>${details.payment_id}</p><p>${details.order_id}</p>`,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+
+  Donations.create(details, (err, data) => {
     if (err) {
       res.status(500).send(err);
     } else {
-      res.status(201).send(data);
+      res.status(200).send(data);
     }
   });
 });

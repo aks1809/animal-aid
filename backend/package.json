@@ -11,11 +11,15 @@
   "author": "arpit-akshay",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.11",
+    "nodemailer": "^6.4.16",
     "nodemon": "^2.0.6",
-    "pusher": "^4.0.0"
+    "pusher": "^4.0.0",
+    "razorpay": "^2.0.6",
+    "uuid": "^8.3.1"
   }
 }

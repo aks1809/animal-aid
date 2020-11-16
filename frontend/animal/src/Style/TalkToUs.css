@@ -120,3 +120,28 @@ img {
   background-color: #007bff !important;
   color: #fff !important;
 }
+@media only screen and (max-width: 400px) {
+  .chat-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  .chat-box .header,
+  .chat-box .type-area .button-send,
+  .chat-box .type-area .input-wrapper {
+    border-radius: 0;
+  }
+  .chat-box {
+    width: -webkit-fill-available;
+  }
+  .input-wrapper {
+    width: -webkit-fill-available;
+  }
+  .type-in {
+    width: 100% !important;
+  }
+  .chat-room {
+    height: calc(100vh - 143px) !important;
+  }
+}

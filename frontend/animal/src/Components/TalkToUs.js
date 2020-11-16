@@ -77,7 +77,7 @@ const TalkToUs = ({ messageList }) => {
               <input
                 type="text"
                 id="inputText"
-                className="text-white bg-dark"
+                className="text-white bg-dark type-in"
                 placeholder="Type messages here..."
                 value={query}
                 autoComplete="off"
