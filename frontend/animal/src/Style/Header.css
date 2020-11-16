@@ -12,12 +12,11 @@
   margin-right: 1vw;
 }
 .title {
-  font-size: 8vw;
-  font-family: "Balsamiq Sans", cursive;
+  font-size: 6vw;
+  font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
   color: #736aff;
 }
-
 .icon {
   transform: scale(2) rotate(25deg);
   border: none;
@@ -30,7 +29,7 @@
 }
 
 .nav-link {
-  font-size: 20px;
+  font-size: 18px;
   color: blue;
 }
 .LinkButton {

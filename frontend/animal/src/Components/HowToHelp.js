@@ -22,7 +22,7 @@ function HowToHelp() {
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; How To Help
+          <Link to="/">Home</Link> &gt; How to help
         </div>
         <div className="row p-4">
           <div className="col-md-6">
@@ -76,7 +76,7 @@ function HowToHelp() {
             </Link>
           </div>
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="#" className="category-link">
+            <Link to="/howToHelp/adopt" className="category-link">
               <div
                 className="category-item"
                 style={{ backgroundImage: `url(${image3})` }}
@@ -99,7 +99,6 @@ function HowToHelp() {
               </div>
             </Link>
           </div>
-
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
             <Link to="#" className="category-link">
               <div
