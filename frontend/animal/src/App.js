@@ -26,12 +26,9 @@ import HelpPage from "./Components/HowToHelp";
 import AdoptPage from "./Components/Adopt";
 import AdoptCarouselForm from "./Components/AdoptCarousel";
 import AdoptParticularPage from "./Components/AdoptParticular";
-<<<<<<< HEAD
 import AdoptionFormPage from "./Components/AdoptionForm";
-=======
 import axios from "./apis/axios";
 import Pusher from "pusher-js";
->>>>>>> bc746e865e5e7330c86e83f51ddf912deacbaf9c
 
 function App() {
   const [messages, setMessages] = useState([]);

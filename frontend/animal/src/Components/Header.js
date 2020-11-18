@@ -1,6 +1,5 @@
 import React from "react";
-import PetsIcon from "@material-ui/icons/Pets";
-import { IconButton } from "@material-ui/core";
+import image3 from "../images/logoHeader.png";
 import "../Style/Header.css";
 import { Link } from "react-router-dom";
 import Login from "./Login";
@@ -9,14 +8,14 @@ function Header() {
   return (
     <div className="full">
       <nav className="navbar navbar-expand-lg navbar-light ">
-        <IconButton>
-          <PetsIcon className="icon" />
-        </IconButton>
+        <Link to="/">
+          <img src={image3} className="logoHeader" />
+        </Link>
         <Link className="navbar-brand" to="/">
           <h1 className="title">Animal Aid</h1>
         </Link>
         <button
-          className="navbar-toggler"
+          class="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"

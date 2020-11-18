@@ -6,21 +6,17 @@
   display: flex;
   flex: 1;
 }
-
-.homeIcon {
-  transform: scale(2.5) rotate(-25deg);
-  margin-right: 1vw;
+.logoHeader {
+  height: 11.5vh;
+  width: 7vw;
+  cursor: pointer;
 }
+
 .title {
   font-size: 6vw;
   font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
   color: #736aff;
-}
-.icon {
-  transform: scale(2) rotate(25deg);
-  border: none;
-  outline-width: 0px;
 }
 
 .google__login {

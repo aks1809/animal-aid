@@ -7,9 +7,7 @@ import AdoptContactForms from "./adoptForm.js";
 import fileUpload from "express-fileupload";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import cors from "cors";
 import Pusher from "pusher";
-import Stories from "./success.js";
 import Messages from "./talkToUs.js";
 import Donations from "./donation.js";
 
@@ -24,7 +22,6 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "*");
   next();
 });
-app.use(cors());
 
 const connection_url =
   "mongodb+srv://Arpit-Akshay:Arpit22@@@animal-aid.sj5o2.mongodb.net/animal-aid?retryWrites=true&w=majority";
@@ -122,6 +119,15 @@ app.post("/adoptForm/new", (req, res) => {
   console.log(req.body);
   console.log("successfully added");
   Adopts.create(dbAdopt, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(data);
+      console.log("successfully added");
+    }
+  });
+});
+
 app.post("/talkToUs/new", (req, res) => {
   const message = req.body;
   Messages.create(message, (err, data) => {
@@ -165,6 +171,8 @@ app.post("/upload", (req, res) => {
       res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
     }
   );
+});
+
 app.get("/talkToUs/sync", (req, res) => {
   Messages.find((err, data) => {
     if (err) {
