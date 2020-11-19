@@ -32,7 +32,7 @@ function Header() {
                 Home Page <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item nav">
               <Link className="nav-link" to="/about">
                 About Us
               </Link>
@@ -54,7 +54,7 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link className="nav-link " to="/contact">
-                Conact
+                Contact
               </Link>
             </li>
             <li className="nav-item">
