@@ -55,7 +55,7 @@ function Adopt() {
           </div>
           <div className="card__detail adopt">
             <div className="row">
-              {adopts.slice(0, 4).map((adopt) => (
+              {adopts.map((adopt) => (
                 <div className="col-lg-4 col-md-6 col-sm-12" key={adopt._id}>
                   <div className="card card__width">
                     <img

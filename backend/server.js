@@ -36,11 +36,6 @@ const instance = new Razorpay({
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Headers", "*");
-  next();
-});
 app.use(cors());
 
 const connection_url =
@@ -62,7 +57,7 @@ const pusher = new Pusher({
 const db = mongoose.connection;
 
 db.once("open", () => {
-  console.log("DB connected");
+  // console.log("DB connected");
   const messageCollection = db.collection("talk-to-us");
   const changeStream = messageCollection.watch();
   changeStream.on("change", (change) => {
@@ -75,7 +70,7 @@ db.once("open", () => {
         isAdmin: messageDetails.isAdmin,
       });
     } else {
-      console.log("Error triggering pusher");
+      // console.log("Error triggering pusher");
     }
   });
 });
@@ -122,25 +117,31 @@ app.get("/howToHelp/adopt/:adoptId", (req, res) => {
 
 app.post("/success-stories/new", (req, res) => {
   const dbStory = req.body;
-  console.log(req.body);
-  console.log("successfully added");
+  // console.log(req.body);
+  // console.log("successfully added");
   Stories.create(dbStory, (err, data) => {
     if (err) {
       res.status(500).send(err);
     } else {
       res.status(201).send(data);
-      console.log("successfully added");
+      // console.log("successfully added");
     }
   });
 });
 
-// app.post("/adoptForm/new", (req, res) => {
-//   const dbAdopt = req.body;
-//   console.log(req.body);
-//   console.log("successfully added");
-//   Adopts.create(dbAdopt, (err, data) => {
-
-// });
+app.post("/adoptForm/new", (req, res) => {
+  const dbAdopt = req.body;
+  // console.log(req.body);
+  // console.log("successfully added");
+  Adopts.create(dbAdopt, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(data);
+      // console.log("successfully added");
+    }
+  });
+});
 
 app.post("/talkToUs/new", (req, res) => {
   const message = req.body;
@@ -149,20 +150,20 @@ app.post("/talkToUs/new", (req, res) => {
       res.status(500).send(err);
     } else {
       res.status(201).send(data);
-      console.log("successfully added");
+      // console.log("successfully added");
     }
   });
 });
 
 app.post("/adoptContactForm/new", (req, res) => {
   const dbAdoptContact = req.body;
-  console.log(req.body);
+  // console.log(req.body);
   AdoptContactForms.create(dbAdoptContact, (err, data) => {
     if (err) {
       res.status(500).send(err);
     } else {
       res.status(201).send(data);
-      console.log("successfully added");
+      // console.log("successfully added");
     }
   });
 });
@@ -222,7 +223,7 @@ app.post("/razorpay", (req, res) => {
       });
     });
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 });
 
@@ -271,7 +272,7 @@ app.post("/contactForm", async (req, res) => {
 
 app.post("/donation/new", (req, res) => {
   const details = req.body;
-  console.log(details);
+  // console.log(details);
 
   // const mailOptions = {
   //   from: "mymail@gmail.com",

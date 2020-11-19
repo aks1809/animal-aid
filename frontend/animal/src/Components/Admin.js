@@ -11,7 +11,7 @@ function Admin() {
         <LoginAdmin />
       ) : (
         <div className="app__body">
-          {user.googleId === "117189425450343567066" ? (
+          {user.name === "Arpit Kher" ? (
             <div>
               <Link to="/admin/form">SUCCESS_STORY_FORM</Link>
               <br />
