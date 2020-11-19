@@ -74,11 +74,11 @@ function Rescue() {
       </div>
       {width > 1000 || height > 800 ? (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Help is on the way.</h1>
               <p>
                 Whether a dog has been hit by a car, or a calf has fallen in a
@@ -116,11 +116,11 @@ function Rescue() {
               <img src={image6} className="rescue__img__right" alt="" />
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>20 new admissions each day</h1>
               <p>
                 Our rescue teams respond to approximately 70 calls each day, out
@@ -142,11 +142,11 @@ function Rescue() {
         </div>
       ) : (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Help is on the way.</h1>
               <p>
                 Whether a dog has been hit by a car, or a calf has fallen in a
@@ -184,11 +184,11 @@ function Rescue() {
               </Link>
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>20 new admissions each day</h1>
               <p>
                 Our rescue teams respond to approximately 70 calls each day, out

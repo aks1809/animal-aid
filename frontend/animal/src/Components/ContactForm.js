@@ -51,8 +51,8 @@ const ContactForm = () => {
         setSend(true);
         setTimeout(() => setSend(false), 5000);
       })
-      .catch(({ resp }) => {
-        setError(resp.data.error);
+      .catch((err) => {
+        setError(err);
       })
       .finally(() => {
         reCaptcha.current.reset();

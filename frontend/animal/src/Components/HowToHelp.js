@@ -52,10 +52,10 @@ function HowToHelp() {
       <div className="jumbotron bg-white mb-0">
         <div className="row d-flex justify-content-between">
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="#" className="category-link">
+            <Link to="/howToHelp/adopt" className="category-link">
               <div
                 className="category-item"
-                style={{ backgroundImage: `url(${image4})` }}
+                style={{ backgroundImage: `url(${image3})` }}
               >
                 <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Adopt
@@ -76,10 +76,10 @@ function HowToHelp() {
             </Link>
           </div>
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="/howToHelp/adopt" className="category-link">
+            <Link to="#" className="category-link">
               <div
                 className="category-item"
-                style={{ backgroundImage: `url(${image3})` }}
+                style={{ backgroundImage: `url(${image4})` }}
               >
                 <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Volunteer
@@ -88,7 +88,7 @@ function HowToHelp() {
             </Link>
           </div>
           <div className="col-xl-4 col-md-6 col-12 d-flex justify-content-center mb-5">
-            <Link to="#" className="category-link">
+            <Link to="/howToHelp/adopt" className="category-link">
               <div
                 className="category-item"
                 style={{ backgroundImage: `url(${image7})` }}

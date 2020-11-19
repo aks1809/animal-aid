@@ -107,6 +107,7 @@ const DonationForm = () => {
   const diffFocusLost = () => {
     if (/^\d+$/.test(diffAmount) === false) {
       setDiffAmount(800);
+      setAmountIndex(1);
     }
     if (diffAmount !== "") {
       amount.forEach((item, index) => {

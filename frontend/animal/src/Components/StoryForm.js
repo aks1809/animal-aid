@@ -46,10 +46,10 @@ function StoryForm() {
   return (
     <div className="form-padding">
       <form onSubmit={onSubmit}>
-        <div class="form-group">
+        <div className="form-group">
           <h3>Title</h3>
           <input
-            class="form-control"
+            className="form-control"
             value={input1}
             onChange={(e) => setInput1(e.target.value)}
             type="text"
@@ -57,7 +57,7 @@ function StoryForm() {
           ></input>
           <h3>Post</h3>
           <input
-            class="form-control"
+            className="form-control"
             value={input2}
             onChange={(e) => setInput2(e.target.value)}
             type="text"
@@ -66,7 +66,7 @@ function StoryForm() {
           <br />
           <br />
           <input type="file" onChange={onChange} />
-          <button class="btn btn-primary" type="submit">
+          <button className="btn btn-primary" type="submit">
             Publish
           </button>
         </div>

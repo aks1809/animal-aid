@@ -47,10 +47,10 @@ function AdoptCarousel() {
   return (
     <div className="form-padding">
       <form onSubmit={onSubmit}>
-        <div class="form-group">
+        <div className="form-group">
           <h3>Name</h3>
           <input
-            class="form-control"
+            className="form-control"
             value={input3}
             onChange={(e) => setInput3(e.target.value)}
             type="text"
@@ -59,7 +59,7 @@ function AdoptCarousel() {
           ></input>
           <h3>Details</h3>
           <input
-            class="form-control"
+            className="form-control"
             value={input4}
             onChange={(e) => setInput4(e.target.value)}
             name="detail"
@@ -69,7 +69,7 @@ function AdoptCarousel() {
           <br />
           <br />
           <input type="file" onChange={onChange} />
-          <button class="btn btn-primary" type="submit">
+          <button className="btn btn-primary" type="submit">
             Submit
           </button>
         </div>

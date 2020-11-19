@@ -20,13 +20,13 @@ import nodemailer from "nodemailer";
 const app = express();
 const port = process.env.PORT || 9000;
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "mymail@gmail.com",
-    pass: "mypassword",
-  },
-});
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: "mymail@gmail.com",
+//     pass: "mypassword",
+//   },
+// });
 
 const instance = new Razorpay({
   key_id: "rzp_test_kGHEKiVYhobBNU",
@@ -240,25 +240,25 @@ app.post("/contactForm", async (req, res) => {
         if (err) {
           res.status(500).send(err);
         } else {
-          const mailOptions = {
-            from: "mymail@gmail.com",
-            to: details.emailAddress,
-            subject: "Contact details",
-            html: `<h1>Someone send a query</h1><p>${
-              contactDetails.firstName + " " + contactDetails.lastName
-            }</p><p>${contactDetails.emailAddress}</p><p>${
-              contactDetails.query
-            }</p>`,
-          };
-
-          transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-              console.log(error);
-            } else {
-              console.log("Email sent: " + info.response);
-            }
-          });
           res.status(201).send(data);
+          // const mailOptions = {
+          //   from: "mymail@gmail.com",
+          //   to: details.emailAddress,
+          //   subject: "Contact details",
+          //   html: `<h1>Someone send a query</h1><p>${
+          //     contactDetails.firstName + " " + contactDetails.lastName
+          //   }</p><p>${contactDetails.emailAddress}</p><p>${
+          //     contactDetails.query
+          //   }</p>`,
+          // };
+
+          // transporter.sendMail(mailOptions, function (error, info) {
+          //   if (error) {
+          //     console.log(error);
+          //   } else {
+          //     console.log("Email sent: " + info.response);
+          //   }
+          // });
         }
       });
     } else {
@@ -273,20 +273,20 @@ app.post("/donation/new", (req, res) => {
   const details = req.body;
   console.log(details);
 
-  const mailOptions = {
-    from: "mumail@gmail.com",
-    to: details.emailAddress,
-    subject: "Donation details",
-    html: `<h1>Thank you for donating!</h1><p>${details.amount}</p><p>${details.payment_id}</p><p>${details.order_id}</p>`,
-  };
+  // const mailOptions = {
+  //   from: "mymail@gmail.com",
+  //   to: details.emailAddress,
+  //   subject: "Donation details",
+  //   html: `<h1>Thank you for donating!</h1><p>${details.amount}</p><p>${details.payment_id}</p><p>${details.order_id}</p>`,
+  // };
 
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent: " + info.response);
-    }
-  });
+  // transporter.sendMail(mailOptions, function (error, info) {
+  //   if (error) {
+  //     console.log(error);
+  //   } else {
+  //     console.log("Email sent: " + info.response);
+  //   }
+  // });
 
   Donations.create(details, (err, data) => {
     if (err) {
