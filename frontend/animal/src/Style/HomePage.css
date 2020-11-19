@@ -1,6 +1,6 @@
 .full__carousel {
-  margin: 2% 0.5%;
-  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 1);
+  margin-bottom: 1%;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 2);
 }
 
 .home__page__carousel__img {
@@ -18,7 +18,7 @@
 
 .home__page__carousel2 {
   display: flex;
-  background-color: pink;
+  background-color: #f8bbd0;
   place-items: center;
   justify-content: center;
   font-size: 45px;
@@ -31,11 +31,25 @@
   justify-content: center;
   font-size: 45px;
 }
+@media screen and (max-width: 850px) {
+  .home__page__carousel1 {
+    font-size: 35px;
+    padding: 1%;
+  }
+  .home__page__carousel2 {
+    font-size: 35px;
+    padding: 1%;
+  }
+  .home__page__carousel3 {
+    font-size: 35px;
+    padding: 1%;
+  }
+}
 
 .home__page__text {
   display: flex;
   flex-direction: column;
-  flex: 0.25;
+  flex: 0.2;
   text-align: center;
   padding: 1%;
   color: #504a4b;
@@ -44,11 +58,11 @@
 .home__page__img {
   display: flex;
   flex-direction: column;
-  flex: 0.75;
+  flex: 0.8;
 }
 
 .what__we__do {
-  padding: 0% 1%;
+  padding: 0% 0.5%;
   place-items: center;
   margin-right: 0px;
 }
@@ -107,11 +121,11 @@
 
 .success__stories {
   display: grid;
-  padding: 5% 3%;
-  place-items: center;
+  padding: 5% 5%;
   background-color: #bdedff;
   margin: 1% 0%;
 }
+
 .heading {
   display: flex;
   margin-bottom: 5%;
@@ -126,18 +140,30 @@
 
 .card__detail {
   display: flex;
+  place-items: center;
 }
 .card {
   width: 20rem;
   height: 30rem;
-  margin: 10% 4%;
+  margin: 10% 0%;
 }
+@media screen and (max-width: 750px) {
+  .card {
+    margin: 10% 15%;
+  }
+}
+
 .card-img-top {
   height: 30vh;
 }
 
 .card__margin {
   margin: 5%;
+}
+
+.card_button {
+  position: sticky;
+  top: 100%;
 }
 
 .small-png > .MuiAvatar-root {

@@ -1,16 +1,16 @@
-/* .form-group {
+.form-group1 {
   margin: 1%;
 }
-.form-group > h3 {
+.form-group1 > h3 {
   font-weight: normal;
   color: #3341ff;
   font-size: 3vh;
   margin-top: 1.5%;
 }
-.form-control {
+.form-control1 {
   width: 70vw;
 }
 .additional {
   width: 70vw;
   height: 40vh;
-} */
+}

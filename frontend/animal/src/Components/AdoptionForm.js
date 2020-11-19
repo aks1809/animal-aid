@@ -73,10 +73,10 @@ function AdoptionForm() {
       </div>
       <div className="form-padding">
         <form onSubmit={onSubmit}>
-          <div className="form-group">
+          <div class="form-group form-group1">
             <h3>First Name</h3>
             <input
-              className="form-control"
+              class="form-control form-control1"
               value={input1}
               onChange={(e) => setInput1(e.target.value)}
               type="text"
@@ -84,7 +84,7 @@ function AdoptionForm() {
             ></input>
             <h3>Last Name</h3>
             <input
-              className="form-control"
+              class="form-control form-control1"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}
               type="text"
@@ -92,7 +92,7 @@ function AdoptionForm() {
             ></input>
             <h3>Phone Number</h3>
             <input
-              className="form-control"
+              class="form-control form-control1"
               value={input3}
               onChange={(e) => setInput3(e.target.value)}
               type="text"
@@ -100,7 +100,7 @@ function AdoptionForm() {
             ></input>
             <h3>Email Address</h3>
             <input
-              className="form-control"
+              class="form-control form-control1"
               value={input4}
               onChange={(e) => setInput4(e.target.value)}
               type="email"
@@ -108,7 +108,7 @@ function AdoptionForm() {
             ></input>
             <h3>Confirm Email Adress</h3>
             <input
-              className="form-control"
+              class="form-control form-control1"
               value={input5}
               onChange={(e) => setInput5(e.target.value)}
               type="email"
@@ -116,7 +116,7 @@ function AdoptionForm() {
             ></input>
             <h3>Who would you like to adopt?</h3>
             <input
-              className="form-control"
+              class="form-control form-control1"
               value={input6}
               onChange={(e) => setInput6(e.target.value)}
               type="text"

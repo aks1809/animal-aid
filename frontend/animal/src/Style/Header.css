@@ -1,26 +1,29 @@
 .full {
-  background-color: #bdedff;
+  background-color: #fdeef4;
 }
 
 .header {
   display: flex;
   flex: 1;
 }
-
-.homeIcon {
-  transform: scale(2.5) rotate(-25deg);
-  margin-right: 1vw;
+.logoHeader {
+  height: 11.5vh;
+  width: 7vw;
+  cursor: pointer;
 }
+
 .title {
   font-size: 6vw;
   font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
-  color: #736aff;
+  color: #007bff;
+  text-shadow: 2px 2px #e45e9d;
+  text-rendering: optimizeLegibility;
 }
-.icon {
-  transform: scale(2) rotate(25deg);
-  border: none;
-  outline-width: 0px;
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 60px;
+  }
 }
 
 .google__login {
@@ -29,9 +32,10 @@
 }
 
 .nav-link {
-  font-size: 18px;
-  color: blue;
+  font-size: 16.5px;
+  color: black;
 }
+
 .LinkButton {
   background-color: #4caf50; /* Green */
   border-radius: 5%;
