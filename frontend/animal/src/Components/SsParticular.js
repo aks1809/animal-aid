@@ -5,7 +5,7 @@ import axios from "./axios";
 import image1 from "../images/story3.jpg";
 import "../Style/Story.css";
 
-function SsParticular({ image }) {
+function SsParticular() {
   const [storyName, setStoryName] = useState("");
   const [storyDescription, setStoryDescription] = useState("");
   const [stories, setStories] = useState([]);
@@ -42,8 +42,9 @@ function SsParticular({ image }) {
         </div>
       </div>
       <div className="jumbotron pt-3 mb-0 detail2">
-        <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; success-stories
+        <div className="link mb-5 text-black text-left">
+          <Link to="/">Home</Link> &gt;{" "}
+          <Link to="/success-stories">Success stories</Link> &gt; {storyName}
         </div>
         SUCCESS STORIES
       </div>

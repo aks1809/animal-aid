@@ -63,7 +63,7 @@ function AboutUs() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image3})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   History Of AA.
                 </div>
               </div>
@@ -75,7 +75,7 @@ function AboutUs() {
                 className="category-item"
                 style={{ backgroundImage: `url(${image2})` }}
               >
-                <div className="d-inline-flex border border-dark p-2 h5 text-white bg-dark label">
+                <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Meet the team.
                 </div>
               </div>

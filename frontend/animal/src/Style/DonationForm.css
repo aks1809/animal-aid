@@ -1,0 +1,21 @@
+.form-check-label {
+  cursor: pointer !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-inner {
+    width: 100% !important;
+    margin: 0;
+    padding: 10% !important;
+    padding-top: 30px !important;
+  }
+  .form-check-label {
+    font-size: small;
+  }
+  .frequency-text {
+    font-size: small;
+  }
+  .amount-input {
+    width: 85% !important;
+  }
+}

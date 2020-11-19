@@ -40,6 +40,9 @@
   font-size: 4vw;
   color: #736aff;
 }
+.text-black {
+  color: black;
+}
 .detail {
   place-items: center;
   padding: 5%;

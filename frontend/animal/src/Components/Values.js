@@ -59,11 +59,11 @@ function Values() {
 
       {width > 1000 || height > 800 ? (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Compassion For All</h1>
               <p>
                 We believe all animals deserve our compassion and protection. We
@@ -100,11 +100,11 @@ function Values() {
         </div>
       ) : (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Compassion For All</h1>
               <p>
                 We believe all animals deserve our compassion and protection. We

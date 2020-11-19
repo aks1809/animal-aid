@@ -15,7 +15,6 @@ function AdoptParticular() {
       axios
         .get(`/howToHelp/adopt/${adoptId}`)
         .then((response) => {
-          console.log(response);
           setAdoptName(response.data.name);
           setAdoptDescription(response.data.details);
         })
@@ -27,7 +26,6 @@ function AdoptParticular() {
     axios
       .get("/adoptForm/sync")
       .then((response) => {
-        console.log(response);
         setAdopts(response.data);
       })
       .catch(() => console.log("Promise rejected"));
@@ -44,19 +42,21 @@ function AdoptParticular() {
         </div>
       </div>
       <div className="jumbotron pt-3 mb-0 detail2">
-        <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; success-stories
+        <div className="link mb-5 text-left text-black">
+          <Link to="/">Home</Link> &gt; <Link to="/howToHelp">How To Help</Link>{" "}
+          &gt; <Link to="/adopt">Adopt</Link> &gt; {adoptName}
         </div>
         Adopt {adoptName}
       </div>
       <div className="detail">
         <h1>{adoptName}</h1>
         {adopts.map((adopt) => (
-          <div>
+          <div key={adopt._id}>
             {adopt._id === adoptId ? (
               <img
                 className="center__image"
                 src={process.env.PUBLIC_URL + `/uploads/${adopt.imgName}`}
+                alt=""
               />
             ) : (
               <div></div>

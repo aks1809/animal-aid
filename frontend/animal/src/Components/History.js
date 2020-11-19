@@ -61,11 +61,11 @@ function History() {
 
       {width > 1000 || height > 800 ? (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>From Seattle to Bareillly.</h1>
               <p>
                 In 1994 Animal Aid’s founders Erika, Jim and daughter Claire
@@ -99,11 +99,11 @@ function History() {
               <img src={image6} className="rescue__img__right" alt="" />
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Word Spread Throughout Bareilly.</h1>
               <p>
                 Within a few months, our 40 kennels and two small paddocks
@@ -120,11 +120,11 @@ function History() {
         </div>
       ) : (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>From Seattle to Bareillly.</h1>
               <p>
                 In 1994 Animal Aid’s founders Erika, Jim and daughter Claire
@@ -158,11 +158,11 @@ function History() {
               <br />
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Word Spread Throughout Bareilly.</h1>
               <p>
                 Within a few months, our 40 kennels and two small paddocks

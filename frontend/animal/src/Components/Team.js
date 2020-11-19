@@ -62,11 +62,11 @@ function Team() {
 
       {width > 1000 || height > 800 ? (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Our Caregivers.</h1>
               <p>
                 Caregivers feed, shampoo, clean areas, and wrap their arms
@@ -96,11 +96,11 @@ function Team() {
               <img src={image6} className="rescue__img__right" alt="" />
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Our Medical Team.</h1>
               <p>
                 Under the supervision of our medical director and supervisor,
@@ -116,11 +116,11 @@ function Team() {
         </div>
       ) : (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Our Caregivers.</h1>
               <p>
                 Caregivers feed, shampoo, clean areas, and wrap their arms
@@ -150,11 +150,11 @@ function Team() {
               <br />
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Our Medical Team.</h1>
               <p>
                 Under the supervision of our medical director and supervisor,

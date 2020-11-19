@@ -36,7 +36,8 @@ function Cruelty() {
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; What We Do>Cruelty Response
+          <Link to="/">Home</Link> &gt; <Link to="/whatWeDo">What We Do</Link>{" "}
+          &gt; Cruelty Response
         </div>
         <div className="row p-4">
           <div className="col-md-6">
@@ -76,11 +77,11 @@ function Cruelty() {
       </div>
       {width > 1000 || height > 800 ? (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Creating Awarenwss</h1>
               <p>
                 Our goal in cruelty response is not only to stop the abusers,
@@ -119,11 +120,11 @@ function Cruelty() {
               <img src={image6} className="rescue__img__right" alt="" />
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>When street dogs are in eminent danger.</h1>
               <p>
                 If a street dog bites someone, the generally peaceful
@@ -146,11 +147,11 @@ function Cruelty() {
         </div>
       ) : (
         <div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image5} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>Creating Awarenwss</h1>
               <p>
                 Our goal in cruelty response is not only to stop the abusers,
@@ -189,11 +190,11 @@ function Cruelty() {
               </Link>
             </div>
           </div>
-          <div class="row rescue__flip__flap">
-            <div class="col-lg-6 col-sm-12 ">
+          <div className="row rescue__flip__flap">
+            <div className="col-lg-6 col-sm-12 ">
               <img src={image7} className="rescue__img__left" alt="" />
             </div>
-            <div class="col-lg-6 col-sm-12 rescue__text__right">
+            <div className="col-lg-6 col-sm-12 rescue__text__right">
               <h1>When street dogs are in eminent danger.</h1>
               <p>
                 If a street dog bites someone, the generally peaceful

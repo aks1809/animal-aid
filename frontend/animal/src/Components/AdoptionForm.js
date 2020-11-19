@@ -124,7 +124,7 @@ function AdoptionForm() {
             ></input>
             <h3>Why would yo like to adopt an animal from animal aid?</h3>
             <textarea
-              class="form-control additional"
+              className="form-control additional"
               value={input7}
               onChange={(e) => setInput7(e.target.value)}
               type="text"
@@ -132,7 +132,7 @@ function AdoptionForm() {
             />
             <br />
             <br />
-            <button class="btn btn-primary" type="submit">
+            <button className="btn btn-primary" type="submit">
               Submit
             </button>
           </div>

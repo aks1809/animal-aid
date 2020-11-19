@@ -173,7 +173,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="jumbotron jumbotron-flex rounded-0 bg-primary m-0 p-2 text-white text-center ">
-        &#169; Designed by Chutiye | All Rights Reserved
+        &#169; Designed by Akshay-Arpit | All Rights Reserved
       </div>
     </footer>
   );

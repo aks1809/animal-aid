@@ -14,7 +14,6 @@ import RescuePage from "./Components/Rescue";
 import MedicalPage from "./Components/Medical";
 import CrueltyPage from "./Components/Cruelty";
 import EducationPage from "./Components/Education";
-import HowToHelp from "./Components/HowToHelp";
 import ValuePage from "./Components/Values";
 import HistoryPage from "./Components/History";
 import TeamPage from "./Components/Team";
@@ -62,7 +61,6 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutUs} />
           <Route exact path="/whatWeDo" component={WhatWeDo} />
-          <Route exact path="/howToHelp" component={HowToHelp} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/whatWeDo/rescue" component={RescuePage} />

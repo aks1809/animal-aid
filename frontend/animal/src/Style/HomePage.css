@@ -80,12 +80,12 @@
 
 .what__we__do__text__left > h1 {
   font-family: "Balsamiq Sans", cursive;
-  color: #736aff;
+  color: #007bff;
 }
 
 .what__we__do__text__right > h1 {
   font-family: "Balsamiq Sans", cursive;
-  color: #736aff;
+  color: #007bff;
 }
 
 .what__we__do__text__left {
@@ -94,7 +94,7 @@
   font-size: 20px;
 }
 .linkButton {
-  background-color: #4caf50; /* Green */
+  background-color: #007bff !important;
   border-radius: 2%;
   color: white;
   padding: 10px 25px;
@@ -108,13 +108,13 @@
 }
 
 .linkButton {
-  background-color: #736aff;
+  background-color: #007bff;
   color: white;
-  border: 2px solid #736aff;
+  border: 2px solid #007bff !important;
 }
 
 .linkButton:hover {
-  background-color: white;
+  background-color: white !important;
   color: Black;
   text-decoration: none;
 }
@@ -131,7 +131,7 @@
   margin-bottom: 5%;
 }
 .heading > h1 {
-  color: #736aff;
+  color: #007bff;
 }
 .heading > p {
   font-size: 18px;
@@ -160,7 +160,51 @@
 .card__margin {
   margin: 5%;
 }
+
 .card_button {
   position: sticky;
   top: 100%;
+}
+
+.small-png > .MuiAvatar-root {
+  height: 120px;
+  width: 120px;
+}
+
+.large-numbers {
+  font-size: 3.5rem;
+}
+
+.counter-divs {
+  height: 400px;
+}
+
+.counter-divs > p {
+  font-size: 1.6rem;
+}
+
+.contact {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact {
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 100% !important;
+  }
+  .card_button {
+    position: sticky;
+    top: 65%;
+  }
 }

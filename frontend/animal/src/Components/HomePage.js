@@ -1,7 +1,74 @@
 import React, { useState, useEffect } from "react";
 import "../Style/HomePage.css";
 import { Link } from "react-router-dom";
+import image1 from "../images/homePage1.png";
+import image2 from "../images/homePage2.png";
+import image3 from "../images/homePage3.png";
+import image4 from "../images/contactForm.jpg";
+import Avatar from "@material-ui/core/Avatar";
+import TrackVisibility from "react-on-screen";
+import ContactForm from "./ContactForm";
 import axios from "./axios";
+
+const ComponentToTrack1 = ({ isVisible, limit }) => {
+  if (isVisible) {
+    var i = 0;
+    const id = document.getElementById("counter1");
+    const counter = setInterval(() => {
+      i += 5;
+      id.innerHTML = i;
+      if (i >= limit) {
+        id.innerHTML = limit;
+        clearInterval(counter);
+      }
+    }, 1);
+  }
+  return (
+    <p className="text-white text-center large-numbers mb-0" id="counter1">
+      0
+    </p>
+  );
+};
+
+const ComponentToTrack2 = ({ isVisible, limit }) => {
+  if (isVisible) {
+    var i = 0;
+    const id = document.getElementById("counter2");
+    const counter = setInterval(() => {
+      i += 1;
+      id.innerHTML = i;
+      if (i >= limit) {
+        id.innerHTML = limit;
+        clearInterval(counter);
+      }
+    }, 1);
+  }
+  return (
+    <p className="text-white text-center large-numbers mb-0" id="counter2">
+      0
+    </p>
+  );
+};
+
+const ComponentToTrack3 = ({ isVisible, limit }) => {
+  if (isVisible) {
+    var i = 0;
+    const id = document.getElementById("counter3");
+    const counter = setInterval(() => {
+      i += 1;
+      id.innerHTML = i;
+      if (i >= limit) {
+        id.innerHTML = limit;
+        clearInterval(counter);
+      }
+    }, 1);
+  }
+  return (
+    <p className="text-white text-center large-numbers mb-0" id="counter3">
+      0
+    </p>
+  );
+};
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
@@ -23,11 +90,11 @@ function HomePage() {
     axios
       .get("/success-stories/sync")
       .then((response) => {
-        console.log(response);
         setStories(response.data);
       })
       .catch(() => console.log("Promise rejected"));
   }, []);
+
   return (
     <div>
       <div className="full__carousel">
@@ -107,11 +174,11 @@ function HomePage() {
 
       {width > 1000 || height > 800 ? (
         <div>
-          <div class="row what__we__do">
-            <div class="col-lg-6 col-sm-12 what__we__do__img__left">
+          <div className="row what__we__do">
+            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
               <img src="whatWeDo2.jpg" alt="" className="what__we__do__img" />
             </div>
-            <div class="col-lg-6 col-sm-12 what__we__do__text__right">
+            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
               <h1>How we save street animals' lives</h1>
               <p>
                 Every day we save animals with fractures, wounds, mange, viral
@@ -144,11 +211,11 @@ function HomePage() {
             </div>
           </div>
 
-          <div class="row what__we__do">
-            <div class="col-lg-6 col-sm-12 what__we__do__img__left">
+          <div className="row what__we__do">
+            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
               <img src="whatWeDo3.jpg" alt="" className="what__we__do__img" />
             </div>
-            <div class="col-lg-6 col-sm-12 what__we__do__text__right">
+            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
               <h1>Visit or volunteer in our team shelter.</h1>
               <p>
                 Volunteers are a life-sustaining force that enables us to give
@@ -166,11 +233,11 @@ function HomePage() {
       ) : (
         <div>
           {" "}
-          <div class="row what__we__do">
-            <div class="col-lg-6 col-sm-12 what__we__do__img__left">
+          <div className="row what__we__do">
+            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
               <img src="whatWeDo2.jpg" alt="" className="what__we__do__img" />
             </div>
-            <div class="col-lg-6 col-sm-12 what__we__do__text__right">
+            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
               <h1>How we save street animals' lives</h1>
               <p>
                 Every day we save animals with fractures, wounds, mange, viral
@@ -201,11 +268,11 @@ function HomePage() {
               </Link>
             </div>
           </div>
-          <div class="row what__we__do">
-            <div class="col-lg-6 col-sm-12 what__we__do__img__left">
+          <div className="row what__we__do">
+            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
               <img src="whatWeDo3.jpg" alt="" className="what__we__do__img" />
             </div>
-            <div class="col-lg-6 col-sm-12 what__we__do__text__right">
+            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
               <h1>Visit or volunteer in our team shelter.</h1>
               <p>
                 Volunteers are a life-sustaining force that enables us to give
@@ -257,6 +324,56 @@ function HomePage() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="jumbotron bg-white rounded-0 pt-4 mb-0">
+        <h2 className="text-center mb-5 mt-4">Our numbers so far</h2>
+        <div className="row">
+          <div className="col-md-4 col-12 mb-4">
+            <div className="container bg-primary p-5 small-png counter-divs">
+              <Avatar className="mx-auto bg-dark mb-4">
+                <img src={image1} alt="" />
+              </Avatar>
+              <TrackVisibility once partialVisibility>
+                <ComponentToTrack1 limit={3213} />
+              </TrackVisibility>
+              <p className="text-center text-white h2">{"animals rescued"}</p>
+            </div>
+          </div>
+          <div className="col-md-4 col-12 mb-4">
+            <div className="container bg-primary px-2 py-5 small-png counter-divs">
+              <Avatar className="mx-auto bg-dark mb-4">
+                <img src={image2} alt="" />
+              </Avatar>
+              <TrackVisibility once partialVisibility>
+                <ComponentToTrack2 limit={498} />
+              </TrackVisibility>
+              <p className="text-center text-white h2">
+                {"average daily number of animals at AAU"}
+              </p>
+            </div>
+          </div>
+          <div className="col-md-4 col-12 mb-4">
+            <div className="container bg-primary px-2 py-5 small-png counter-divs">
+              <Avatar className="mx-auto bg-dark mb-4">
+                <img src={image3} alt="" />
+              </Avatar>
+              <TrackVisibility once partialVisibility>
+                <ComponentToTrack3 limit={655} />
+              </TrackVisibility>
+              <p className="text-center text-white h2">
+                {"visitors and volunteers"}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="jumbotron rounded-0 bg-dark contact mb-0"
+        style={{ backgroundImage: `url(${image4})` }}
+      >
+        <div className="contact-form">
+          <ContactForm />
         </div>
       </div>
     </div>

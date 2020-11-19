@@ -28,7 +28,8 @@ function Adopt() {
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; How to help>Adopt
+          <Link to="/">Home</Link> &gt; <Link to="/howToHelp">How to help</Link>{" "}
+          &gt; Adopt
         </div>
         <div className="row p-4">
           <div className="col-md-6">
@@ -53,18 +54,18 @@ function Adopt() {
             </p>
           </div>
           <div className="card__detail adopt">
-            <div class="row">
-              {adopts.slice(0, 4).map((adopt) => (
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                  <div class="card card__width">
+            <div className="row">
+              {adopts.map((adopt) => (
+                <div className="col-lg-4 col-md-6 col-sm-12" key={adopt._id}>
+                  <div className="card card__width">
                     <img
-                      class="card-img-top adopt-image"
+                      className="card-img-top adopt-image"
                       src={process.env.PUBLIC_URL + `/uploads/${adopt.imgName}`}
                       alt="Card"
                     />
-                    <div class="card-body">
-                      <h5 class="card-title">{adopt.name}</h5>
-                      <p class="card-text">{adopt.details.substr(0, 30)}</p>
+                    <div className="card-body">
+                      <h5 className="card-title">{adopt.name}</h5>
+                      <p className="card-text">{adopt.details.substr(0, 30)}</p>
                       <Link
                         to={`/howToHelp/adopt/${adopt._id}`}
                         className="btn btn-primary card_button"
