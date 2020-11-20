@@ -149,7 +149,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="heading text-white h3 font-weight-bold mt-4">
-              Suscribe to newsletter
+              Suscribe to Newsletter
             </div>
             <hr className="bg-white" />
             <div className="container d-flex justify-content-center">

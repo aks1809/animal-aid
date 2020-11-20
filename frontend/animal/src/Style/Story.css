@@ -38,7 +38,7 @@
 .detail2 {
   text-align: center;
   font-size: 4vw;
-  color: #736aff;
+  color: #007bff;
 }
 .text-black {
   color: black;
@@ -53,7 +53,7 @@
   font-size: 6vw;
   font-family: "Balsamiq Sans", cursive;
   font-weight: bolder;
-  color: #736aff;
+  color: #007bff;
   margin-bottom: 2%;
 }
 .detail > p {
@@ -75,9 +75,9 @@
 }
 
 .linkButton {
-  background-color: #736aff;
+  background-color: #007bff;
   color: white;
-  border: 2px solid #736aff;
+  border: 2px solid #007bff;
 }
 .linkButtonDetails2 {
   background-color: black; /* Green */

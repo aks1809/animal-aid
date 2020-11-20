@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import image1 from "../images/aboutus1.jpg";
 import image2 from "../images/Mission1.jpg";
-import image3 from "../images/History1.webp";
+import image3 from "../images/History1.jpg";
+import image4 from "../images/Team1.jpg";
 import "../Style/AboutUs.css";
 
 function AboutUs() {
@@ -73,7 +74,7 @@ function AboutUs() {
             <Link to="/about/team" className="category-link">
               <div
                 className="category-item"
-                style={{ backgroundImage: `url(${image2})` }}
+                style={{ backgroundImage: `url(${image4})` }}
               >
                 <div className="d-inline-flex border border-primary p-2 h5 text-white bg-primary label">
                   Meet the team.

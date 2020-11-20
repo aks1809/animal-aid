@@ -21,7 +21,7 @@
 }
 .link:hover > .youtube > .MuiAvatar-colorDefault {
   color: #e62117;
-  background-color: black;
+  background-color: white;
 }
 .link:hover > .pinterest > .MuiAvatar-colorDefault {
   color: #efefef;
@@ -33,5 +33,5 @@
 }
 .link:hover > .home > .MuiAvatar-colorDefault {
   color: #ff6600;
-  background-color: #ffaf7a;
+  background-color: white;
 }

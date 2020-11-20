@@ -16,64 +16,27 @@
   font-size: 18px;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 1);
 }
+
 .rescue__top__text > h1 {
-  color: #736aff;
+  color: #007bff;
 }
 
-@media screen and (max-width: 768px) {
-  .rescue__top__text {
-    background-color: white;
-    width: 200px;
-    padding: 5%;
-    position: relative;
-    top: 10%;
-    left: 4%;
-    font-size: 14px;
-    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 1);
-  }
-  .rescue__top__text > h1 {
-    font-size: 26px;
-  }
+.banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.rescue__flip__flap {
-  place-items: center;
-  margin-right: 0%;
+.hover-buttons {
+  font-size: 1.3rem;
 }
 
-.rescue__img__right {
-  width: 100%;
-  height: 75vh;
+.hover-buttons:hover {
+  background: white;
+  border-color: #007bff;
+  color: rgb(54, 53, 53);
 }
-.rescue__img__left {
-  width: 102%;
-  height: 70vh;
-  margin-left: 2%;
-}
-.rescue__text__left {
-  padding: 2%;
-  text-align: center;
-  justify-content: space-between;
-}
-.rescue__text__right {
-  padding: 3%;
-  text-align: center;
-  justify-content: space-between;
-}
-.rescue__text__right > h1 {
-  font-family: "Balsamiq Sans", cursive;
-  color: #736aff;
-}
-.rescue__text__left > h1 {
-  font-family: "Balsamiq Sans", cursive;
-  color: #736aff;
-}
-.rescue__text__right > p {
-  font-size: 20px;
-}
-.rescue__text__left > p {
-  font-size: 20px;
-}
+
 .Iframe {
   width: 65vw;
   height: 75vh;
@@ -88,22 +51,20 @@
 }
 .rescue__vedio__detail {
   padding: 2%;
+  padding-top: 35px;
 }
 .rescue__vedio__detail > h1 {
-  font-size: 4rem;
+  font-size: 6vw;
   font-weight: bold;
   font-family: "Balsamiq Sans", cursive;
-  color: #736aff;
+  color: #007bff;
 }
 .rescue__vedio__detail > p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .Values {
-  background-color: black;
-  color: brown;
   padding: 2%;
   width: 40%;
-  opacity: 0.6;
   margin: auto;
   position: relative;
   top: 65%;
@@ -116,4 +77,27 @@
 }
 .form-padding {
   padding: 2%;
+}
+
+@media screen and (max-width: 768px) {
+  .rescue__top__text {
+    background-color: white;
+    width: 200px;
+    padding: 5%;
+    position: relative;
+    top: 10%;
+    left: 4%;
+    font-size: 14px;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 1);
+  }
+
+  .Iframe {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .banner {
+    height: 40vh !important;
+  }
 }

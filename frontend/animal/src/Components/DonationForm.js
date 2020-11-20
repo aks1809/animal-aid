@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "../apis/axios";
 import ErrorIcon from "@material-ui/icons/Error";
-import "../Style/DonationForm.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../Style/DonationForm.css";
 
 const DonationForm = () => {
   const [form, setForm] = useState({
@@ -59,8 +59,7 @@ const DonationForm = () => {
       currency: "INR",
       name: "Animal Aid",
       description: "Thank you for your donation",
-      image:
-        "https://www.designyourway.net/blog/wp-content/uploads/2018/04/gray_wolf_games_-_logo.jpg",
+      image: "https://i.ibb.co/gtcx3zp/logo-Header.png",
       order_id: data.id,
       handler: function (response) {
         axios.post("/donation/new", {

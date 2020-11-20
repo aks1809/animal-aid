@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import axios from "./axios";
 import image1 from "../images/story3.jpg";
+import axios from "../apis/axios";
 import "../Style/Story.css";
 
 function SsParticular() {
@@ -13,7 +13,7 @@ function SsParticular() {
   useEffect(() => {
     if (storyId) {
       axios
-        .get(`/success-stories/${storyId}`)
+        .get(`/successStories/${storyId}`)
         .then((response) => {
           setStoryName(response.data.title);
           setStoryDescription(response.data.description);
@@ -24,9 +24,8 @@ function SsParticular() {
 
   useEffect(() => {
     axios
-      .get("/success-stories/sync")
+      .get("/successStories/sync")
       .then((response) => {
-        console.log(response);
         setStories(response.data);
       })
       .catch(() => console.log("Promise rejected"));
@@ -44,14 +43,14 @@ function SsParticular() {
       <div className="jumbotron pt-3 mb-0 detail2">
         <div className="link mb-5 text-black text-left">
           <Link to="/">Home</Link> &gt;{" "}
-          <Link to="/success-stories">Success stories</Link> &gt; {storyName}
+          <Link to="/successStories">Success stories</Link> &gt; {storyName}
         </div>
         SUCCESS STORIES
       </div>
       <div className="detail">
         <h1>{storyName}</h1>
         {stories.map((story) => (
-          <div>
+          <div key={story._id}>
             {story._id === storyId ? (
               <img
                 className="center__image"
@@ -65,8 +64,8 @@ function SsParticular() {
         ))}
         <p>{storyDescription}</p>
       </div>
-      <Link className="linkButton linkButtonDetails" to="/success-stories">
-        Back to success-stories
+      <Link className="linkButton linkButtonDetails" to="/successStories">
+        Back to success stories
       </Link>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import axios from "./axios";
+import axios from "../apis/axios";
 import image1 from "../images/story3.jpg";
 import "../Style/Story.css";
 

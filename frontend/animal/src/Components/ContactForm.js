@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import ErrorIcon from "@material-ui/icons/Error";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import "../Style/ContactForm.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "../apis/axios";
+import "../Style/ContactForm.css";
 
 const renderError = (isError) => {
   if (isError === 1) {
@@ -145,7 +145,7 @@ const ContactForm = () => {
           }}
           wrap="soft"
         ></textarea>
-        <div className="mb-3" ref={formWrapper}>
+        <div className="mb-3 captcha-wrapper" ref={formWrapper}>
           <ReCAPTCHA
             sitekey="6LdfAuIZAAAAAI4QNgmJXkSQLbTVZabLOdMVgoNx"
             onChange={(token) => {

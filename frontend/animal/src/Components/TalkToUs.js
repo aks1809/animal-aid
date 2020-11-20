@@ -13,11 +13,13 @@ const TalkToUs = ({ messageList }) => {
 
   const sendQuery = async (e) => {
     e.preventDefault();
-    await axios.post("/talkToUs/new", {
-      message: query,
-      userId: "Demo userId",
-      isAdmin: false,
-    });
+    if (query !== "") {
+      await axios.post("/talkToUs/new", {
+        message: query,
+        userId: "Demo userId",
+        isAdmin: false,
+      });
+    }
     setQuery("");
   };
 

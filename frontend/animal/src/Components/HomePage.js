@@ -4,11 +4,18 @@ import { Link } from "react-router-dom";
 import image1 from "../images/homePage1.png";
 import image2 from "../images/homePage2.png";
 import image3 from "../images/homePage3.png";
-import image4 from "../images/contactForm.jpg";
+import image4 from "../images/homePage4.jpg";
+import image5 from "../images/homePage5.jpg";
+import image6 from "../images/homePage6.jpg";
+import image7 from "../images/homePage7.jpg";
+import image8 from "../images/homePage8.jpg";
+import image9 from "../images/homePage9.jpg";
+import image10 from "../images/homePage10.jpg";
+import image11 from "../images/contactForm.jpg";
 import Avatar from "@material-ui/core/Avatar";
 import TrackVisibility from "react-on-screen";
 import ContactForm from "./ContactForm";
-import axios from "./axios";
+import axios from "../apis/axios";
 
 const ComponentToTrack1 = ({ isVisible, limit }) => {
   if (isVisible) {
@@ -70,25 +77,11 @@ const ComponentToTrack3 = ({ isVisible, limit }) => {
   );
 };
 
-function useWindowSize() {
-  const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
-  useEffect(() => {
-    const handleResize = () => {
-      setSize([window.innerHeight, window.innerWidth]);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  return size;
-}
 function HomePage() {
-  const [height, width] = useWindowSize();
   const [stories, setStories] = useState([]);
   useEffect(() => {
     axios
-      .get("/success-stories/sync")
+      .get("/successStories/sync")
       .then((response) => {
         setStories(response.data);
       })
@@ -97,198 +90,158 @@ function HomePage() {
 
   return (
     <div>
-      <div className="full__carousel">
-        <div
-          id="carouselExampleSlidesOnly"
-          className="carousel slide"
-          data-ride="carousel"
-          data-interval="4000"
-          data-pause="false"
+      <div
+        id="carouselExampleCaptions"
+        className="carousel slide mb-2 shadow-lg"
+        data-ride="carousel"
+      >
+        <div className="overlay"></div>
+        <ol className="carousel-indicators">
+          <li
+            data-target="#carouselExampleCaptions"
+            data-slide-to="0"
+            className="active"
+          ></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="dull_layer"></div>
+            <img src={image4} className="d-block w-100 cass_height" alt="" />
+            <div className="carousel-caption d-none d-md-block text-white">
+              <h1 className="font-weight-bold">Hello</h1>
+              <p>Hi bro</p>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="dull_layer"></div>
+            <img src={image5} className="d-block w-100 cass_height" alt="" />
+            <div className="carousel-caption d-none d-md-block text-white">
+              <h1 className="font-weight-bold">Hello</h1>
+              <p>hi bro</p>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="dull_layer"></div>
+            <img src={image6} className="d-block w-100 cass_height" alt="" />
+            <div className="carousel-caption d-none d-md-block text-white">
+              <h1 className="font-weight-bold">Hello</h1>
+              <p>hi bro</p>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="dull_layer"></div>
+            <img src={image10} className="d-block w-100 cass_height" alt="" />
+            <div className="carousel-caption d-none d-md-block text-white">
+              <h1 className="font-weight-bold">Hello</h1>
+              <p>Hi bro</p>
+            </div>
+          </div>
+        </div>
+        <a
+          className="carousel-control-prev"
+          href="#carouselExampleCaptions"
+          role="button"
+          data-slide="prev"
         >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="home__page__carousel1">
-                <div className="home__page__text">
-                  <p>Street animals need our protection. Help them.</p>
-                </div>
-                <div className="home__page__img">
-                  <img
-                    className="home__page__carousel__img"
-                    src="carousel1.jpg"
-                    alt="dog-profile"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="home__page__carousel2">
-                <div className="home__page__text">
-                  <p>They just need a gentle touch not ignorance.</p>
-                </div>
-                <div className="home__page__img">
-                  <img
-                    className="home__page__carousel__img"
-                    src="carousel2.jpg"
-                    alt="dog-profile"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="home__page__carousel3">
-                <div className="home__page__text">
-                  <p>
-                    Animals are such agreeable friends,they ask no questions.
-                  </p>
-                </div>
-                <div className="home__page__img">
-                  <img
-                    className="home__page__carousel__img"
-                    src="carousel3.jpg"
-                    alt="dog-profile"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="carousel-item">
-              <div className="home__page__carousel2">
-                <div className="home__page__text">
-                  <p>
-                    Until one has loved an animal, a part of one's soul remains
-                    unawakened.
-                  </p>
-                </div>
-                <div className="home__page__img">
-                  <img
-                    className="home__page__carousel__img"
-                    src="animallove.webp"
-                    alt="dog-profile"
-                  />
-                </div>
-              </div>
-            </div>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a
+          className="carousel-control-next"
+          href="#carouselExampleCaptions"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
+      <div className="jumbotron p-0 m-0 bg-white">
+        <div className="row m-0">
+          <div
+            className="col-lg-6 col-sm-12 p-0 banner"
+            style={{ backgroundImage: `url(${image8})` }}
+          />
+          <div className="col-lg-6 col-sm-12 p-4 text-center d-flex flex-column justify-content-center align-items-center description-box">
+            <h1
+              className="text-primary"
+              style={{ fontFamily: "Balsamiq Sans" }}
+            >
+              How we save street animals' lives
+            </h1>
+            <p>
+              Every day we save animals with fractures, wounds, mange, viral
+              diseases, cancer, and much more. We vaccinate against rabies and
+              other illnesses, conduct spay and neuter and educate the community
+              about helping animals.
+            </p>
+            <br />
+            <Link className="btn btn-primary p-3 hover-buttons" to="/whatWeDo">
+              Learn more about what we do
+            </Link>
+          </div>
+        </div>
+        <div className="row m-0">
+          <div
+            className="d-lg-none col-sm-12 p-0 banner"
+            style={{ backgroundImage: `url(${image7})` }}
+          />
+          <div className="col-lg-6 col-sm-12 p-4 text-center d-flex flex-column justify-content-center align-items-center description-box">
+            <h1
+              className="text-primary"
+              style={{ fontFamily: "Balsamiq Sans" }}
+            >
+              So many ways to help
+            </h1>
+            <p>
+              Become a proud member of our rescue team by making a donation,
+              sponsoring an animal and more. With your help we rescue thousands
+              of animals each year from desperate situations.
+            </p>
+            <br />
+            <Link className="btn btn-primary p-3 hover-buttons" to="/whatWeDo">
+              Learn more about what we do
+            </Link>
+          </div>
+          <div
+            className="col-lg-6 d-lg-block d-none p-0 banner"
+            style={{ backgroundImage: `url(${image7})` }}
+          />
+        </div>
+        <div className="row m-0">
+          <div
+            className="col-lg-6 col-sm-12 p-0 banner"
+            style={{ backgroundImage: `url(${image9})` }}
+          />
+          <div className="col-lg-6 col-sm-12 p-4 text-center d-flex flex-column justify-content-center align-items-center description-box">
+            <h1
+              className="text-primary"
+              style={{ fontFamily: "Balsamiq Sans" }}
+            >
+              Visit or volunteer in our team shelter
+            </h1>
+            <p>
+              Volunteers are a life-sustaining force that enables us to give the
+              best care to the most animals. We conduct 4 daily tours to share
+              the stories of the animals we rescue, educate about the problems
+              animals face and the different ways to help.
+            </p>
+            <br />
+            <Link className="btn btn-primary p-3 hover-buttons" to="/whatWeDo">
+              Learn more about what we do
+            </Link>
           </div>
         </div>
       </div>
-
-      {width > 1000 || height > 800 ? (
-        <div>
-          <div className="row what__we__do">
-            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
-              <img src="whatWeDo2.jpg" alt="" className="what__we__do__img" />
-            </div>
-            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
-              <h1>How we save street animals' lives</h1>
-              <p>
-                Every day we save animals with fractures, wounds, mange, viral
-                diseases, cancer, and much more. We vaccinate against rabies and
-                other illnesses, conduct spay and neuter and educate the
-                community about helping animals.
-              </p>
-              <br />
-              <Link className="linkButton" to="/whatWeDo">
-                Learn more about what we do
-              </Link>
-            </div>
-          </div>
-
-          <div className="row what__we__do">
-            <div className="col-lg-6 col-sm-12 what__we__do__text__left">
-              <h1>So many ways to help. </h1>
-              <p>
-                Become a proud member of our rescue team by making a donation,
-                sponsoring an animal and more. With your help we rescue
-                thousands of animals each year from desperate situations.
-              </p>
-              <br />
-              <Link className="linkButton" to="/whatWeDo">
-                Learn more about what we do
-              </Link>
-            </div>
-            <div className="col-lg-6 col-sm-12 what__we__do__img__right">
-              <img src="whatWeDo1.jpg" alt="" className="what__we__do__img" />
-            </div>
-          </div>
-
-          <div className="row what__we__do">
-            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
-              <img src="whatWeDo3.jpg" alt="" className="what__we__do__img" />
-            </div>
-            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
-              <h1>Visit or volunteer in our team shelter.</h1>
-              <p>
-                Volunteers are a life-sustaining force that enables us to give
-                the best care to the most animals. We conduct 4 daily tours to
-                share the stories of the animals we rescue, educate about the
-                problems animals face and the different ways to help.
-              </p>
-              <br />
-              <Link className="linkButton" to="/whatWeDo">
-                Learn more about what we do
-              </Link>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div>
-          {" "}
-          <div className="row what__we__do">
-            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
-              <img src="whatWeDo2.jpg" alt="" className="what__we__do__img" />
-            </div>
-            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
-              <h1>How we save street animals' lives</h1>
-              <p>
-                Every day we save animals with fractures, wounds, mange, viral
-                diseases, cancer, and much more. We vaccinate against rabies and
-                other illnesses, conduct spay and neuter and educate the
-                community about helping animals.
-              </p>
-              <br />
-              <Link className="linkButton" to="/whatWeDo">
-                Learn more about what we do
-              </Link>
-            </div>
-          </div>
-          <div className="row what__we__do">
-            <div className="col-lg-6 col-sm-12 what__we__do__img__right">
-              <img src="whatWeDo1.jpg" alt="" className="what__we__do__img" />
-            </div>
-            <div className="col-lg-6 col-sm-12 what__we__do__text__left">
-              <h1>So many ways to help. </h1>
-              <p>
-                Become a proud member of our rescue team by making a donation,
-                sponsoring an animal and more. With your help we rescue
-                thousands of animals each year from desperate situations.
-              </p>
-              <br />
-              <Link className="linkButton" to="/whatWeDo">
-                Learn more about what we do
-              </Link>
-            </div>
-          </div>
-          <div className="row what__we__do">
-            <div className="col-lg-6 col-sm-12 what__we__do__img__left">
-              <img src="whatWeDo3.jpg" alt="" className="what__we__do__img" />
-            </div>
-            <div className="col-lg-6 col-sm-12 what__we__do__text__right">
-              <h1>Visit or volunteer in our team shelter.</h1>
-              <p>
-                Volunteers are a life-sustaining force that enables us to give
-                the best care to the most animals. We conduct 4 daily tours to
-                share the stories of the animals we rescue, educate about the
-                problems animals face and the different ways to help.
-              </p>
-              <br />
-              <Link className="linkButton" to="/whatWeDo">
-                Learn more about what we do
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="success__stories">
         <div className="row heading">
           <div className="col-lg-6  col-sm-12">
@@ -302,20 +255,22 @@ function HomePage() {
           </div>
         </div>
 
-        <div class="row">
+        <div className="row">
           {stories.slice(0, 3).map((story) => (
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="card">
+            <div className="col-lg-4 col-md-6 col-sm-12" key={story._id}>
+              <div className="card">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
                   alt="Card"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">{story.title}</h5>
-                  <p class="card-text">{story.description.substr(0, 100)}</p>
+                <div className="card-body">
+                  <h5 className="card-title">{story.title}</h5>
+                  <p className="card-text">
+                    {story.description.substr(0, 100)}
+                  </p>
                   <Link
-                    to={`/success-stories/${story._id}`}
+                    to={`/successStories/${story._id}`}
                     className="btn btn-primary card_button"
                   >
                     Read more..
@@ -349,7 +304,7 @@ function HomePage() {
                 <ComponentToTrack2 limit={498} />
               </TrackVisibility>
               <p className="text-center text-white h2">
-                {"average daily number of animals at AAU"}
+                {"average daily number of animals at AA"}
               </p>
             </div>
           </div>
@@ -370,7 +325,7 @@ function HomePage() {
       </div>
       <div
         className="jumbotron rounded-0 bg-dark contact mb-0"
-        style={{ backgroundImage: `url(${image4})` }}
+        style={{ backgroundImage: `url(${image11})` }}
       >
         <div className="contact-form">
           <ContactForm />

@@ -9,13 +9,13 @@ function Header() {
     <div className="full">
       <nav className="navbar navbar-expand-lg navbar-light ">
         <Link to="/">
-          <img src={image3} className="logoHeader" />
+          <img src={image3} className="logoHeader" alt="" />
         </Link>
         <Link className="navbar-brand" to="/">
           <h1 className="title">Animal Aid</h1>
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -43,7 +43,7 @@ function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link " to="/success-stories">
+              <Link className="nav-link " to="/successStories">
                 Success-Stories
               </Link>
             </li>
