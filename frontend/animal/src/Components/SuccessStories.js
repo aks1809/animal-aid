@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "../apis/axios";
-import image1 from "../images/aboutus1.jpg";
+import image1 from "../images/successStories1.jpg";
 import { Link } from "react-router-dom";
 import "../Style/AboutUs.css";
 
@@ -52,7 +52,10 @@ function SuccessStories() {
       <div className="success__stories my-0">
         <div className="row">
           {stories.map((story) => (
-            <div className="col-xl-4 col-md-6 col-12  d-flex justify-content-center my-4">
+            <div
+              className="col-xl-4 col-md-6 col-12  d-flex justify-content-center my-4"
+              key={story._id}
+            >
               <div className="card">
                 <img
                   className="card-img-top"

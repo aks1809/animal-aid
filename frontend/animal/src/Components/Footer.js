@@ -26,7 +26,7 @@ const Footer = () => {
               consectetur
             </div>
             <br />
-            <div className="author text-muted text-right">-Arpit Kher</div>
+            <div className="author text-muted text-right">-From Unknown</div>
           </div>
           <div className="col-lg-3 px-4 mb-4">
             <div className="text-white h3 font-weight-bold">Keep Connected</div>

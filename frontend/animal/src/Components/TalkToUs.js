@@ -5,22 +5,29 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import image from "../images/logoHeader.png";
 import ChatRoom from "./ChatRoom";
 import axios from "../apis/axios";
+import { useStateValue } from "./StateProvider";
 import "../Style/TalkToUs.css";
 
 const TalkToUs = ({ messageList }) => {
+  const [{ user }] = useStateValue();
   const [display, setDisplay] = useState(0);
   const [query, setQuery] = useState("");
+
+  const getUId = () => {
+    if (!user) return null;
+    else return user.googleId;
+  };
 
   const sendQuery = async (e) => {
     e.preventDefault();
     if (query !== "") {
       await axios.post("/talkToUs/new", {
         message: query,
-        userId: "Demo userId",
+        userId: `${getUId()}`,
         isAdmin: false,
       });
+      setQuery("");
     }
-    setQuery("");
   };
 
   if (display === 0) {
@@ -42,7 +49,7 @@ const TalkToUs = ({ messageList }) => {
     return (
       <div className="chat-box">
         <div className="header bg-dark">
-          <div className="avatar-wrapper avatar-big">
+          <div className="avatar-wrapper avatar-big bg-white">
             <img src={image} alt="avatar" />
           </div>
           <span className="name text-white">Animal Aid HelpLine</span>
@@ -57,7 +64,10 @@ const TalkToUs = ({ messageList }) => {
             </IconButton>
           </span>
         </div>
-        <ChatRoom messageList={messageList} />
+        <ChatRoom
+          messageList={messageList}
+          imageUrl={user ? user.imageUrl : null}
+        />
         <div className="type-area">
           <form>
             <div className="input-wrapper">

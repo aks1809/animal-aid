@@ -46,7 +46,7 @@ function SsParticular() {
           <Link to="/">Home</Link> &gt;{" "}
           <Link to="/successStories">Success stories</Link> &gt; {storyName}
         </div>
-        SUCCESS STORIES
+        Success Stories
       </div>
       <div className="detail">
         <h1>{storyName}</h1>
@@ -54,17 +54,20 @@ function SsParticular() {
           <div key={story._id} className="d-flex justify-content-center">
             {story._id === storyId ? (
               <img
-                className="center__image"
+                className="center__image border border-dark shadow-lg"
                 src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
                 alt="card"
               />
             ) : null}
           </div>
         ))}
-        <p>{storyDescription}</p>
+        <p className="mt-5">{storyDescription}</p>
       </div>
-      <div className="d-flex justify-content-center">
-        <Link className="linkButton linkButtonDetails" to="/successStories">
+      <div className="d-flex justify-content-center mb-5">
+        <Link
+          className="linkButton linkButtonDetails rounded-lg"
+          to="/successStories"
+        >
           Back to success stories
         </Link>
       </div>

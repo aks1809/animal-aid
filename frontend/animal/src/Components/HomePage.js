@@ -250,7 +250,7 @@ function HomePage() {
       </div>
       <div className="success__stories">
         <div className="row heading">
-          <div className="col-lg-6  col-sm-12">
+          <div className="col-lg-6  col-sm-12 mb-5">
             <h1>Watch our hurt to healed stories</h1>
           </div>
           <div className="col-lg-6 col-sm-12">
@@ -263,7 +263,10 @@ function HomePage() {
 
         <div className="row">
           {stories.slice(0, 3).map((story) => (
-            <div className="col-lg-4 col-md-6 col-sm-12" key={story._id}>
+            <div
+              className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center"
+              key={story._id}
+            >
               <div className="card">
                 <img
                   className="card-img-top"
@@ -279,7 +282,7 @@ function HomePage() {
                     to={`/successStories/${story._id}`}
                     className="btn btn-primary card_button"
                   >
-                    Read more..
+                    Read more
                   </Link>
                 </div>
               </div>

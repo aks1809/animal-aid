@@ -8,7 +8,7 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 90) {
+    if (offset > 155) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -17,7 +17,7 @@ function Header() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
-  let navbarClasses = ["navbar"];
+  const navbarClasses = ["navbar"];
   if (scrolled) {
     navbarClasses.push("fixed-top");
   }
@@ -46,21 +46,21 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+        <div className="collapse navbar-collapse" id="navbarText">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
               <Link className="nav-link" to="/">
                 Home Page <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/about">
                 About us
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/whatWeDo">
                 What we do
               </Link>
@@ -81,7 +81,7 @@ function Header() {
               </Link>
             </li>
           </ul>
-          <span class="navbar-text">
+          <span className="navbar-text">
             <Login />
           </span>
         </div>

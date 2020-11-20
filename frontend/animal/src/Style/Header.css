@@ -10,6 +10,7 @@
   width: 7rem;
   cursor: pointer;
   display: flex;
+  margin-bottom: 0.5rem;
 }
 .heading {
   display: flex;
@@ -35,7 +36,7 @@
   font-family: "Lobster Two", cursive;
   font-weight: bolder;
   color: #007bff;
-  text-shadow: 2px 2px #e45e9d;
+  text-shadow: 2px 2px black;
 }
 .menu2 {
   position: fixed;
@@ -51,16 +52,6 @@
 
 #navb {
   overflow: hidden;
-}
-@media screen and (max-width: 900px) {
-  .title {
-    font-size: 3.5rem;
-  }
-  .logoHeader {
-    width: 5rem;
-    cursor: pointer;
-    display: flex;
-  }
 }
 
 .nav-link {
@@ -97,5 +88,14 @@
   color: Black !important;
   text-decoration: none;
 }
-.google__logout {
+
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  .logoHeader {
+    width: 5rem;
+    cursor: pointer;
+    display: flex;
+  }
 }

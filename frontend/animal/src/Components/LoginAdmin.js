@@ -6,7 +6,7 @@ import { useStateValue } from "./StateProvider";
 import image3 from "../images/whatWeDo4.jpg";
 
 function LoginAdmin() {
-  const [{}, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
 
   const responseGoogle = (response) => {
     dispatch({
@@ -14,8 +14,6 @@ function LoginAdmin() {
       user: response.profileObj,
     });
   };
-  //ClientId:193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com
-  //193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com
 
   return (
     <div className="login">
