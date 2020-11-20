@@ -16,6 +16,7 @@ import Contacts from "./contact.js";
 import axios from "axios";
 import Razorpay from "razorpay";
 import { v4 as uuidv4 } from "uuid";
+import path from "path";
 // import nodemailer from "nodemailer";
 
 const app = express();
@@ -322,6 +323,11 @@ app.post("/donation/new", (req, res) => {
     }
   });
 });
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("animal/build"));
+}
 
 app.get("/", (req, res) => res.status(200).send("hello"));
 
