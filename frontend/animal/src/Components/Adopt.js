@@ -56,7 +56,10 @@ function Adopt() {
           <div className="card__detail adopt">
             <div className="row">
               {adopts.map((adopt) => (
-                <div className="col-lg-4 col-md-6 col-sm-12" key={adopt._id}>
+                <div
+                  className="col-xl-4 col-md-6 col-12  d-flex justify-content-center"
+                  key={adopt._id}
+                >
                   <div className="card card__width">
                     <img
                       className="card-img-top adopt-image"

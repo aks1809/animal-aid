@@ -4,7 +4,7 @@ import image3 from "../images/whatWeDo4.jpg";
 import image4 from "../images/whatWeDo8.jpg";
 import image5 from "../images/whatWeDo9.jpg";
 import image6 from "../images/whatWeDo7.jpg";
-import image7 from "../images/whatWeDo11.jpg";
+import image7 from "../images/whatWeDo20.jpg";
 
 import "../Style/AboutUs.css";
 

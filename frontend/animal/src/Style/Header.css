@@ -7,8 +7,7 @@
   display: flex;
 }
 .logoHeader {
-  height: 11.5vh;
-  width: 7vw;
+  width: 7rem;
   cursor: pointer;
   display: flex;
 }
@@ -16,7 +15,6 @@
   display: flex;
   margin-bottom: 0px;
   margin-top: 0;
-  height: 115px;
 }
 .logo {
   margin-top: 2%;
@@ -34,7 +32,7 @@
 }
 .title {
   font-size: 6.5rem;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Lobster Two", cursive;
   font-weight: bolder;
   color: #007bff;
   text-shadow: 2px 2px #e45e9d;
@@ -56,7 +54,12 @@
 }
 @media screen and (max-width: 900px) {
   .title {
-    font-size: 80px;
+    font-size: 3.5rem;
+  }
+  .logoHeader {
+    width: 5rem;
+    cursor: pointer;
+    display: flex;
   }
 }
 
@@ -69,7 +72,10 @@
   background-color: #4caf50; /* Green */
   border-radius: 5%;
   color: white;
-  padding: 8px 19px;
+  padding-top: 4px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -81,12 +87,15 @@
 
 .LinkButton {
   background-color: #007bff;
-  color: white;
+  color: white !important;
   border: 2px solid #007bff;
-  margin: 10px;
+  margin: 0px 10px;
 }
 
 .LinkButton:hover {
   background-color: white;
-  color: Black;
+  color: Black !important;
+  text-decoration: none;
+}
+.google__logout {
 }
