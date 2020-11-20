@@ -8,12 +8,10 @@ function Login() {
   const [input, setInput] = useState("");
   const responseGoogle = (response) => {
     setInput(response.profileObj.name);
-    alert("You are successfully logged in");
   };
 
   const logout = () => {
     setInput("");
-    alert("You are successfully logged out");
   };
 
   return (
@@ -21,7 +19,7 @@ function Login() {
       {input === "" ? (
         <GoogleLogin
           className="google__login"
-          clientId="193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com"
+          clientId="430654190508-dc289he7ndjtmhqh9upceic2l30o837s.apps.googleusercontent.com"
           buttonText="Login With Google"
           theme="dark"
           icon={true}
@@ -32,16 +30,15 @@ function Login() {
       ) : (
         <div>
           <GoogleLogout
-            className="google__login"
-            clientId="193889789553-pt2m1crgkr0852rlerpriqdmro7v5l25.apps.googleusercontent.com"
+            className="google__logout"
+            clientId="430654190508-dc289he7ndjtmhqh9upceic2l30o837s.apps.googleusercontent.com"
             buttonText="Log Out"
             theme="dark"
             icon={true}
             onLogoutSuccess={logout}
           ></GoogleLogout>
-          <Link className="LinkButton" to="/donate">
-            {" "}
-            Donate{" "}
+          <Link className="LinkButton btn btn-primary" to="/donate">
+            Donate
           </Link>
         </div>
       )}

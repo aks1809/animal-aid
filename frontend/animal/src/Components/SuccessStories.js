@@ -17,26 +17,22 @@ function SuccessStories() {
     <div className="success__stories">
       <div className="row">
         {stories.map((story) => (
-          <div className="card__detail" key={story._id}>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="card">
-                <img
-                  className="card-img-top"
-                  src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
-                  alt="Card"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{story.title}</h5>
-                  <p className="card-text">
-                    {story.description.substr(0, 100)}
-                  </p>
-                  <Link
-                    to={`/successStories/${story._id}`}
-                    className="btn btn-primary card_button"
-                  >
-                    Read More..
-                  </Link>
-                </div>
+          <div className="col-xl-4 col-md-6 col-12  d-flex justify-content-center">
+            <div className="card">
+              <img
+                className="card-img-top"
+                src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
+                alt="Card"
+              />
+              <div className="card-body">
+                <h5 className="card-title">{story.title}</h5>
+                <p className="card-text">{story.description.substr(0, 70)}</p>
+                <Link
+                  to={`/successStories/${story._id}`}
+                  className="btn btn-primary card_button"
+                >
+                  Read More..
+                </Link>
               </div>
             </div>
           </div>

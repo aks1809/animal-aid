@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import Stories from "./success.js";
 import Adopts from "./adopt.js";
+import Admins from "./admins.js";
 import AdoptContactForms from "./adoptForm.js";
 import fileUpload from "express-fileupload";
 import { dirname } from "path";
@@ -115,11 +116,35 @@ app.get("/howToHelp/adopt/:adoptId", (req, res) => {
   });
 });
 
+app.get("/admins/sync", (req, res) => {
+  Admins.find((err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(data);
+    }
+  });
+});
+
 app.post("/successStories/new", (req, res) => {
   const dbStory = req.body;
   // console.log(req.body);
   // console.log("successfully added");
   Stories.create(dbStory, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(data);
+      // console.log("successfully added");
+    }
+  });
+});
+
+app.post("/admins/new", (req, res) => {
+  const dbAdmin = req.body;
+  // console.log(req.body);
+  // console.log("successfully added");
+  Admins.create(dbAdmin, (err, data) => {
     if (err) {
       res.status(500).send(err);
     } else {
