@@ -63,7 +63,7 @@
 }
 
 .LinkButton {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   border-radius: 5%;
   color: white;
   padding: 8px 19px;
@@ -87,4 +87,3 @@
   background-color: white;
   color: Black;
 }
-

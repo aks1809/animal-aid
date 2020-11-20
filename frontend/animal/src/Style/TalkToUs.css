@@ -31,7 +31,7 @@ img {
   right: 10px;
   width: 350px;
   margin: auto;
-  z-index: 10;
+  z-index: 1040;
 }
 .chat-box .header {
   display: flex;
