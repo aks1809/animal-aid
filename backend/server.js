@@ -14,7 +14,7 @@ import Donations from "./donation.js";
 import Contacts from "./contact.js";
 import axios from "axios";
 import Razorpay from "razorpay";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import nodemailer from "nodemailer";
 
 const app = express();
@@ -203,7 +203,7 @@ app.post("/razorpay", (req, res) => {
     const payment_capture = 1;
     const amount = req.body.amount;
     const currency = "INR";
-    const id = uuidv4();
+    const id = 1;
 
     const options = {
       amount: amount,
