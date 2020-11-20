@@ -75,7 +75,7 @@ db.once("open", () => {
   });
 });
 
-app.get("/success-stories/sync", (req, res) => {
+app.get("/successStories/sync", (req, res) => {
   Stories.find((err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -95,7 +95,7 @@ app.get("/adoptForm/sync", (req, res) => {
   });
 });
 
-app.get("/success-stories/:storyId", (req, res) => {
+app.get("/successStories/:storyId", (req, res) => {
   Stories.findOne({ _id: req.params.storyId }, (err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -115,7 +115,7 @@ app.get("/howToHelp/adopt/:adoptId", (req, res) => {
   });
 });
 
-app.post("/success-stories/new", (req, res) => {
+app.post("/successStories/new", (req, res) => {
   const dbStory = req.body;
   // console.log(req.body);
   // console.log("successfully added");

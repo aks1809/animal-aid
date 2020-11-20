@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "./axios";
+import axios from "../apis/axios";
 import image1 from "../images/aboutus1.jpg";
 
 import "../Style/Adopt.css";

@@ -11,7 +11,7 @@ function Admin() {
         <LoginAdmin />
       ) : (
         <div className="app__body">
-          {user.name === "Arpit Kher" ? (
+          {user.name === "Arpit Kher" || "Akshay Chaturvedi" ? (
             <div>
               <Link to="/admin/form">SUCCESS_STORY_FORM</Link>
               <br />

@@ -38,7 +38,7 @@ function Header() {
         )}`}
       >
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarText"
@@ -66,7 +66,7 @@ function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link " to="/success-stories">
+              <Link className="nav-link " to="/successStories">
                 Success-Stories
               </Link>
             </li>

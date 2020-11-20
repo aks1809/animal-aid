@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import image3 from "../images/Team1.jpg";
 import image4 from "../images/Team5.jpg";
@@ -8,22 +8,7 @@ import image7 from "../images/Team4.jpg";
 import "../Style/Rescue.css";
 import "../Style/AboutUs.css";
 
-function useWindowSize() {
-  const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
-  useEffect(() => {
-    const handleResize = () => {
-      setSize([window.innerHeight, window.innerWidth]);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  return size;
-}
-
 function Team() {
-  const [height, width] = useWindowSize();
   return (
     <div>
       <div
@@ -36,7 +21,8 @@ function Team() {
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; About Us>Our Team
+          <Link to="/">Home</Link> &gt; <Link to="/about">About Us</Link> &gt;
+          Our Team
         </div>
         <div className="row p-4">
           <div className="col-md-6">
@@ -59,116 +45,78 @@ function Team() {
           </div>
         </div>
       </div>
-
-      {width > 1000 || height > 800 ? (
-        <div>
-          <div className="row rescue__flip__flap">
-            <div className="col-lg-6 col-sm-12 ">
-              <img src={image5} className="rescue__img__left" alt="" />
-            </div>
-            <div className="col-lg-6 col-sm-12 rescue__text__right">
-              <h1>Our Caregivers.</h1>
-              <p>
-                Caregivers feed, shampoo, clean areas, and wrap their arms
-                around animals one by one throughout each day. In addition to
-                filling water bowls or changing bedding, they're often the first
-                to notice changes in an animal's condition--they see who ate and
-                who didn't; they encourage first steps, report signs of
-                improvement and always add love to the medicine.
-              </p>
-              <br />
-            </div>
-          </div>
-          <div className="row rescue__flip__flap">
-            <div className="col-lg-6 col-sm-12 rescue__text__left">
-              <h1>Our Rescue Team.</h1>
-              <p>
-                From 7AM to midnight our 20 rescuers coax and comfort frightened
-                animals, search under bushes, descend wells, climb trees--doing
-                whatever it takes to rescue every suffering animal they can. Our
-                4 dispatchers receive up to 150 calls each day, treating each
-                call with importance and ensuring the rescue of the most
-                urgently ill and injured patients first.
-              </p>
-              <br />
-            </div>
-            <div className="col-lg-6 col-sm-12">
-              <img src={image6} className="rescue__img__right" alt="" />
-            </div>
-          </div>
-          <div className="row rescue__flip__flap">
-            <div className="col-lg-6 col-sm-12 ">
-              <img src={image7} className="rescue__img__left" alt="" />
-            </div>
-            <div className="col-lg-6 col-sm-12 rescue__text__right">
-              <h1>Our Medical Team.</h1>
-              <p>
-                Under the supervision of our medical director and supervisor,
-                our team of nurses and assistants provide life-saving treatment
-                to the 450 ever-changing patients at the hospital and dogs in
-                our Spay and Neuter Center, and even directly on the streets
-                through the Street Treatment program. They perform
-                sterilizations and other life-saving surgeries every day.
-              </p>
-              <br />
-            </div>
+      <div className="jumbotron p-0 m-0 bg-white">
+        <div className="row m-0">
+          <div
+            className="col-lg-6 col-sm-12 p-0 banner"
+            style={{ backgroundImage: `url(${image5})` }}
+          />
+          <div className="col-lg-6 col-sm-12 p-4 text-center d-flex flex-column justify-content-center align-items-center description-box">
+            <h1
+              className="text-primary"
+              style={{ fontFamily: "Balsamiq Sans" }}
+            >
+              Our Caregivers
+            </h1>
+            <p>
+              Caregivers feed, shampoo, clean areas, and wrap their arms around
+              animals one by one throughout each day. In addition to filling
+              water bowls or changing bedding, they're often the first to notice
+              changes in an animal's condition--they see who ate and who didn't
+              they encourage first steps, report signs of improvement and always
+              add love to the medicine.
+            </p>
           </div>
         </div>
-      ) : (
-        <div>
-          <div className="row rescue__flip__flap">
-            <div className="col-lg-6 col-sm-12 ">
-              <img src={image5} className="rescue__img__left" alt="" />
-            </div>
-            <div className="col-lg-6 col-sm-12 rescue__text__right">
-              <h1>Our Caregivers.</h1>
-              <p>
-                Caregivers feed, shampoo, clean areas, and wrap their arms
-                around animals one by one throughout each day. In addition to
-                filling water bowls or changing bedding, they're often the first
-                to notice changes in an animal's condition--they see who ate and
-                who didn't; they encourage first steps, report signs of
-                improvement and always add love to the medicine.
-              </p>
-              <br />
-            </div>
+        <div className="row m-0">
+          <div
+            className="d-lg-none col-sm-12 p-0 banner"
+            style={{ backgroundImage: `url(${image6})` }}
+          />
+          <div className="col-lg-6 col-sm-12 p-4 text-center d-flex flex-column justify-content-center align-items-center description-box">
+            <h1
+              className="text-primary"
+              style={{ fontFamily: "Balsamiq Sans" }}
+            >
+              Our Rescue Team
+            </h1>
+            <p>
+              From 7AM to midnight our 20 rescuers coax and comfort frightened
+              animals, search under bushes, descend wells, climb trees--doing
+              whatever it takes to rescue every suffering animal they can. Our 4
+              dispatchers receive up to 150 calls each day, treating each call
+              with importance and ensuring the rescue of the most urgently ill
+              and injured patients first.
+            </p>
           </div>
-          <div className="row rescue__flip__flap">
-            <div className="col-lg-6 col-sm-12">
-              <img src={image6} className="rescue__img__right" alt="" />
-            </div>
-            <div className="col-lg-6 col-sm-12 rescue__text__left">
-              <h1>Our Rescue Team.</h1>
-              <p>
-                From 7AM to midnight our 20 rescuers coax and comfort frightened
-                animals, search under bushes, descend wells, climb trees--doing
-                whatever it takes to rescue every suffering animal they can. Our
-                4 dispatchers receive up to 150 calls each day, treating each
-                call with importance and ensuring the rescue of the most
-                urgently ill and injured patients first.
-              </p>
-              <br />
-            </div>
-          </div>
-          <div className="row rescue__flip__flap">
-            <div className="col-lg-6 col-sm-12 ">
-              <img src={image7} className="rescue__img__left" alt="" />
-            </div>
-            <div className="col-lg-6 col-sm-12 rescue__text__right">
-              <h1>Our Medical Team.</h1>
-              <p>
-                Under the supervision of our medical director and supervisor,
-                our team of nurses and assistants provide life-saving treatment
-                to the 450 ever-changing patients at the hospital and dogs in
-                our Spay and Neuter Center, and even directly on the streets
-                through the Street Treatment program. They perform
-                sterilizations and other life-saving surgeries every day.
-              </p>
-              <br />
-            </div>
+          <div
+            className="col-lg-6 d-lg-block d-none p-0 banner"
+            style={{ backgroundImage: `url(${image6})` }}
+          />
+        </div>
+        <div className="row m-0">
+          <div
+            className="col-lg-6 col-sm-12 p-0 banner"
+            style={{ backgroundImage: `url(${image7})` }}
+          />
+          <div className="col-lg-6 col-sm-12 p-4 text-center d-flex flex-column justify-content-center align-items-center description-box">
+            <h1
+              className="text-primary"
+              style={{ fontFamily: "Balsamiq Sans" }}
+            >
+              Our Medical Team
+            </h1>
+            <p>
+              Under the supervision of our medical director and supervisor, our
+              team of nurses and assistants provide life-saving treatment to the
+              450 ever-changing patients at the hospital and dogs in our Spay
+              and Neuter Center, and even directly on the streets through the
+              Street Treatment program. They perform sterilizations and other
+              life-saving surgeries every day.
+            </p>
           </div>
         </div>
-      )}
+      </div>
       <div className="rescue__vedio">
         <div className="rescue__vedio__detail">
           <h1>A tribute to our wonderful staff.</h1>
@@ -185,7 +133,7 @@ function Team() {
         ></iframe>
       </div>
       <div className="Image" style={{ backgroundImage: `url(${image4})` }}>
-        <div className="Values">
+        <div className="Values text-center text-white bg-primary">
           <h1>A step to improve the world.</h1>
         </div>
       </div>

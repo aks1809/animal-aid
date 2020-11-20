@@ -77,12 +77,12 @@ function App() {
             path="/admin/adoptCarouselForm"
             component={AdoptCarouselForm}
           />
-          <Route exact path="/success-stories" component={StoryPage} />
+          <Route exact path="/successStories" component={StoryPage} />
           <Route exact path="/howToHelp" component={HelpPage} />
           <Route exact path="/howToHelp/adopt" component={AdoptPage} />
           <Route
             exact
-            path="/success-stories/:storyId"
+            path="/successStories/:storyId"
             component={SsParticularPage}
           />
           <Route

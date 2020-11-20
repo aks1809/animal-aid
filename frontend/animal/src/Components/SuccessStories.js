@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "./axios";
+import axios from "../apis/axios";
 import { Link } from "react-router-dom";
 
 function SuccessStories() {
   const [stories, setStories] = useState([]);
   useEffect(() => {
     axios
-      .get("/success-stories/sync")
+      .get("/successStories/sync")
       .then((response) => {
         setStories(response.data);
       })
@@ -31,7 +31,7 @@ function SuccessStories() {
                     {story.description.substr(0, 100)}
                   </p>
                   <Link
-                    to={`/success-stories/${story._id}`}
+                    to={`/successStories/${story._id}`}
                     className="btn btn-primary card_button"
                   >
                     Read More..

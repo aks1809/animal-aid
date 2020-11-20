@@ -7,12 +7,11 @@ import "./Header";
 function Login() {
   const [input, setInput] = useState("");
   const responseGoogle = (response) => {
-    console.log(response);
     setInput(response.profileObj.name);
     alert("You are successfully logged in");
   };
 
-  const logout = (response) => {
+  const logout = () => {
     setInput("");
     alert("You are successfully logged out");
   };

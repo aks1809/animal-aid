@@ -16,7 +16,7 @@ function WhatWeDo() {
         style={{ backgroundImage: `url(${image7})` }}
       >
         <div className="title-bar bg-primary h1 text-white p-3 text-center rounded">
-          What We DO
+          What We Do
         </div>
       </div>
       <div className="jumbotron pt-3 mb-0">

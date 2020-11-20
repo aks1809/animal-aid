@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "./axios";
+import axios from "../apis/axios";
 import "../Style/Rescue.css";
 
 function StoryForm() {
@@ -25,7 +25,7 @@ function StoryForm() {
           "Content-Type": "multipart/form-data",
         },
       });
-      await axios.post("/success-stories/new", {
+      await axios.post("/successStories/new", {
         title: input1,
         description: input2,
         imgName: fileName,
