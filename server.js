@@ -327,9 +327,7 @@ app.post("/donation/new", (req, res) => {
 if (process.env.NODE_ENV === "production") {
   // Set static folder
   app.use(express.static("animal/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "animal", "build", "index.html"));
-  });
+  app.use("*", express.static(path.join(__dirname, "animal", "build")));
 }
 
 app.get("/", (req, res) => res.status(200).send("hello"));
