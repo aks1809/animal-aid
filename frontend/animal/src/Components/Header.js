@@ -25,7 +25,7 @@ function Header() {
     <div className="full">
       <div className="heading">
         <Link to="/" className="logo">
-          <img src={image3} className="logoHeader" />
+          <img src={image3} alt="img" className="logoHeader" />
         </Link>
         <Link className="navbar-brand" to="/">
           <h1 className="title">Animal Aid</h1>

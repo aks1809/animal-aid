@@ -17,7 +17,7 @@ function SuccessStories() {
     <div className="success__stories">
       <div className="row">
         {stories.map((story) => (
-          <div className="col-xl-4 col-md-6 col-12  d-flex justify-content-center">
+          <div className="col-xl-4 col-md-6 col-12  d-flex justify-content-center my-4">
             <div className="card">
               <img
                 className="card-img-top"
