@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import image1 from "../images/story3.jpg";
 import axios from "../apis/axios";
 import "../Style/Story.css";
+import "../Style/AboutUs.css";
 
 function SsParticular() {
   const [storyName, setStoryName] = useState("");
@@ -36,7 +37,7 @@ function SsParticular() {
         className="jumbotron rounded-0 bg-dark banner m-0 p-0"
         style={{ backgroundImage: `url(${image1})` }}
       >
-        <div className=" bg-primary h1 text-white p-3 text-center rounded story d-flex align-items-center justify-content-center">
+        <div className="title-bar bg-primary h1 text-white p-3 text-center rounded">
           {storyName}
         </div>
       </div>
@@ -50,23 +51,23 @@ function SsParticular() {
       <div className="detail">
         <h1>{storyName}</h1>
         {stories.map((story) => (
-          <div key={story._id}>
+          <div key={story._id} className="d-flex justify-content-center">
             {story._id === storyId ? (
               <img
                 className="center__image"
                 src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
                 alt="card"
               />
-            ) : (
-              <div></div>
-            )}
+            ) : null}
           </div>
         ))}
         <p>{storyDescription}</p>
       </div>
-      <Link className="linkButton linkButtonDetails" to="/successStories">
-        Back to success stories
-      </Link>
+      <div className="d-flex justify-content-center">
+        <Link className="linkButton linkButtonDetails" to="/successStories">
+          Back to success stories
+        </Link>
+      </div>
     </div>
   );
 }

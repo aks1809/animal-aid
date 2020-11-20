@@ -17,9 +17,7 @@ const Footer = () => {
       <div className="jumbotron p-5 mb-0 rounded-0 bg-dark">
         <div className="row">
           <div className="col-lg-5 px-4 mb-4">
-            <div className="heading text-white h3 font-weight-bold">
-              About Us
-            </div>
+            <div className="text-white h3 font-weight-bold">About Us</div>
             <hr className="bg-white" />
             <div className="description text-muted text-justify">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -31,17 +29,12 @@ const Footer = () => {
             <div className="author text-muted text-right">-Arpit Kher</div>
           </div>
           <div className="col-lg-3 px-4 mb-4">
-            <div className="heading text-white h3 font-weight-bold">
-              Keep Connected
-            </div>
+            <div className="text-white h3 font-weight-bold">Keep Connected</div>
             <hr className="bg-white" />
             <div className="description-1 mx-auto">
               <div className="row">
                 <div className="row px-3 py-1">
-                  <Link
-                    to="www.google.com"
-                    className="d-flex align-items-center link"
-                  >
+                  <Link to="#" className="d-flex align-items-center link">
                     <div className="col ml-3 facebook">
                       <Avatar>
                         <FacebookIcon />
@@ -53,10 +46,7 @@ const Footer = () => {
               </div>
               <div className="row">
                 <div className="row px-3 py-1">
-                  <Link
-                    to="www.google.com"
-                    className="d-flex align-items-center link"
-                  >
+                  <Link to="#" className="d-flex align-items-center link">
                     <div className="col ml-3 twitter">
                       <Avatar>
                         <TwitterIcon />
@@ -68,10 +58,7 @@ const Footer = () => {
               </div>
               <div className="row">
                 <div className="row px-3 py-1">
-                  <Link
-                    to="www.google.com"
-                    className="d-flex align-items-center link"
-                  >
+                  <Link to="#" className="d-flex align-items-center link">
                     <div className="col ml-3 instagram">
                       <Avatar>
                         <InstagramIcon />
@@ -83,10 +70,7 @@ const Footer = () => {
               </div>
               <div className="row">
                 <div className="row px-3 py-1">
-                  <Link
-                    to="www.google.com"
-                    className="d-flex align-items-center link"
-                  >
+                  <Link to="#" className="d-flex align-items-center link">
                     <div className="col ml-3 youtube">
                       <Avatar>
                         <YouTubeIcon />
@@ -98,10 +82,7 @@ const Footer = () => {
               </div>
               <div className="row">
                 <div className="row px-3 py-1">
-                  <Link
-                    to="www.google.com"
-                    className="d-flex align-items-center link"
-                  >
+                  <Link to="#" className="d-flex align-items-center link">
                     <div className="col ml-3 pinterest">
                       <Avatar>
                         <PinterestIcon />
@@ -114,17 +95,14 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-lg-4 px-4 mb-4">
-            <div className="heading text-white h3 font-weight-bold">
+            <div className="text-white h3 font-weight-bold">
               Contact Information
             </div>
             <hr className="bg-white" />
             <div className="description-1 mx-auto">
               <div className="row">
                 <div className="row px-3 py-1">
-                  <Link
-                    to="www.google.com"
-                    className="d-flex align-items-center link"
-                  >
+                  <Link to="#" className="d-flex align-items-center link">
                     <div className="col ml-3 call">
                       <Avatar>
                         <CallIcon />
@@ -134,10 +112,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className="row px-3 py-1">
-                  <Link
-                    to="www.google.com"
-                    className="d-flex align-items-center link"
-                  >
+                  <Link to="#" className="d-flex align-items-center link">
                     <div className="col ml-3 home">
                       <Avatar>
                         <HomeIcon />
@@ -148,7 +123,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="heading text-white h3 font-weight-bold mt-4">
+            <div className="text-white h3 font-weight-bold mt-4">
               Suscribe to Newsletter
             </div>
             <hr className="bg-white" />
@@ -156,6 +131,7 @@ const Footer = () => {
               <form
                 action="suscribe"
                 className="form-inline d-flex justify-content-center"
+                onSubmit={(e) => e.preventDefault()}
               >
                 <div className="form-group mb-2 mr-1">
                   <input

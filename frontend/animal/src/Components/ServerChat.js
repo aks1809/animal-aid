@@ -1,13 +1,11 @@
 import React from "react";
+import image from "../images/logoHeader.png";
 
 const ServerChat = ({ message }) => {
   return (
     <div className="message message-left">
       <div className="avatar-wrapper avatar-small">
-        <img
-          src="https://i.pinimg.com/236x/b7/2f/bb/b72fbb727aab44381ae0a23f05bc3781.jpg"
-          alt="avatar"
-        />
+        <img src={image} alt="" />
       </div>
       <div className="bubble bubble-light bg-info text-white">{message}</div>
     </div>

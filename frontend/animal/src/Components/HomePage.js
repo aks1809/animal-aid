@@ -111,32 +111,38 @@ function HomePage() {
             <div className="dull_layer"></div>
             <img src={image4} className="d-block w-100 cass_height" alt="" />
             <div className="carousel-caption d-none d-md-block text-white">
-              <h1 className="font-weight-bold">Hello</h1>
-              <p>Hi bro</p>
+              <h1 className="font-weight-bold">
+                Street animals need our protection. Help them today
+              </h1>
             </div>
           </div>
           <div className="carousel-item">
             <div className="dull_layer"></div>
             <img src={image5} className="d-block w-100 cass_height" alt="" />
             <div className="carousel-caption d-none d-md-block text-white">
-              <h1 className="font-weight-bold">Hello</h1>
-              <p>hi bro</p>
+              <h1 className="font-weight-bold">
+                Until one has loved an animal, a part of one's soul remains
+                unawakened
+              </h1>
             </div>
           </div>
           <div className="carousel-item">
             <div className="dull_layer"></div>
             <img src={image6} className="d-block w-100 cass_height" alt="" />
             <div className="carousel-caption d-none d-md-block text-white">
-              <h1 className="font-weight-bold">Hello</h1>
-              <p>hi bro</p>
+              <h1 className="font-weight-bold">
+                Animals are such agreeable friends—they ask no questions; they
+                pass no criticisms
+              </h1>
             </div>
           </div>
           <div className="carousel-item">
             <div className="dull_layer"></div>
             <img src={image10} className="d-block w-100 cass_height" alt="" />
             <div className="carousel-caption d-none d-md-block text-white">
-              <h1 className="font-weight-bold">Hello</h1>
-              <p>Hi bro</p>
+              <h1 className="font-weight-bold">
+                An animal's eyes have the power to speak a great language
+              </h1>
             </div>
           </div>
         </div>
