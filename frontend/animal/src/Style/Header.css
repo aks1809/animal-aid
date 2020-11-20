@@ -47,6 +47,9 @@
   background-color: #fefcff;
   width: 100%;
 }
+.fix {
+  background-color: #fefcff;
+}
 
 #navb {
   overflow: hidden;
@@ -87,4 +90,3 @@
   background-color: white;
   color: Black;
 }
-

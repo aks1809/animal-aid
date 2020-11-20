@@ -8,7 +8,7 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 200) {
+    if (offset > 90) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -33,7 +33,7 @@ function Header() {
       </div>
       <nav
         id="navb"
-        className={`navbar navbar-expand-lg navbar-light bg-light ${navbarClasses.join(
+        className={`navbar fix navbar-expand-lg navbar-light  ${navbarClasses.join(
           " "
         )}`}
       >
