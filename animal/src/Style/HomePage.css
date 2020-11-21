@@ -1,5 +1,6 @@
 .cass_height {
   max-height: 80vh !important;
+  min-height: 50vh !important;
 }
 
 .overlay {
@@ -30,7 +31,7 @@
 }
 
 .hover-buttons {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .hover-buttons:hover {
@@ -42,7 +43,7 @@
 .success__stories {
   display: grid;
   padding: 5% 5%;
-  background-color: #bdedff;
+  background-color: #007bff83;
   margin: 1% 0%;
 }
 

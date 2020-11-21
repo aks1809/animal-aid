@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import ErrorIcon from "@material-ui/icons/Error";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useStateValue } from "./StateProvider";
 import axios from "../apis/axios";
 import "../Style/ContactForm.css";
 
@@ -16,6 +17,7 @@ const renderError = (isError) => {
 };
 
 const ContactForm = () => {
+  const [{ user }] = useStateValue();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -31,6 +33,11 @@ const ContactForm = () => {
   const [send, setSend] = useState(false);
   const reCaptcha = useRef();
   const formWrapper = useRef();
+
+  const getUId = () => {
+    if (!user) return null;
+    else return user.googleId;
+  };
 
   const onSignUp = (e) => {
     e.preventDefault();
@@ -62,7 +69,7 @@ const ContactForm = () => {
           emailAddress: "",
           query: "",
           token: "",
-          userId: "231231232",
+          userId: `${getUId()}`,
         });
       });
   };

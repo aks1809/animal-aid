@@ -56,7 +56,7 @@ function SuccessStories() {
               className="col-xl-4 col-md-6 col-12  d-flex justify-content-center my-4"
               key={story._id}
             >
-              <div className="card">
+              <div className="card  border border-white shadow-lg">
                 <img
                   className="card-img-top"
                   src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}

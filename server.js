@@ -324,7 +324,10 @@ app.post("/donation/new", (req, res) => {
   });
 });
 
-if (process.env.NODE_ENV === "production") {
+if (
+  process.env.NODE_ENV === "production" ||
+  process.env.NODE_ENV === "staging"
+) {
   // Set static folder
   app.use(express.static("animal/build"));
   app.use("*", express.static(path.join(__dirname, "animal", "build")));

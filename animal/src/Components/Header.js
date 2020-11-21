@@ -33,7 +33,7 @@ function Header() {
       </div>
       <nav
         id="navb"
-        className={`navbar fix navbar-expand-lg navbar-light  ${navbarClasses.join(
+        className={`navbar fix navbar-expand-lg navbar-light shadow ${navbarClasses.join(
           " "
         )}`}
       >

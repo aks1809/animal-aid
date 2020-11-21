@@ -119,7 +119,7 @@ function Contact() {
       return (
         <div className="dropdown-option" key={index}>
           <div
-            className="jumbotron jumbotron-fluid mb-0 p-4 d-flex justify-content-between bg-white"
+            className="jumbotron jumbotron-fluid mb-0 py-4 px-1 d-flex justify-content-between bg-white"
             onClick={() => {
               setDropdown(
                 dropdown.map((e, i) => {
@@ -133,14 +133,20 @@ function Contact() {
             }}
           >
             <h3
-              className={`font-weight-lighter ${
+              className={`font-weight-lighter mr-2 ${
                 item === 1 ? "text-primary" : ""
               }`}
             >
               {description[index].title}
             </h3>
-            <div className="p-1 bg-primary rounded d-flex align-items-center text-white">
-              {item === 0 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
+            <div className="d-flex align-items-center text-white">
+              <div className="bg-primary p-1 rounded">
+                {item === 0 ? (
+                  <KeyboardArrowDownIcon />
+                ) : (
+                  <KeyboardArrowUpIcon />
+                )}
+              </div>
             </div>
           </div>
           {item === 0 ? null : (

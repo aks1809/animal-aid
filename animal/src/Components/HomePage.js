@@ -249,11 +249,11 @@ function HomePage() {
         </div>
       </div>
       <div className="success__stories">
-        <div className="row heading">
-          <div className="col-lg-6  col-sm-12 mb-5">
-            <h1>Watch our hurt to healed stories</h1>
+        <div className="row heading mb-5 mt-3">
+          <div className="col-lg-6  col-sm-12 text-white font-weight-bold h1 text-center">
+            <p>Watch our hurt to healed stories</p>
           </div>
-          <div className="col-lg-6 col-sm-12">
+          <div className="col-lg-6 col-sm-12 text-white h5 text-center">
             <p>
               Incredible rescues, heartwarming recoveries, families reunited:
               watch the success stories that your support makes possible.
@@ -261,13 +261,13 @@ function HomePage() {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row mb-5">
           {stories.slice(0, 3).map((story) => (
             <div
               className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center"
               key={story._id}
             >
-              <div className="card">
+              <div className="card border border-white shadow-lg">
                 <img
                   className="card-img-top"
                   src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}

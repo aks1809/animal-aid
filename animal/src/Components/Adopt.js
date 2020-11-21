@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "../apis/axios";
-import image1 from "../images/aboutus1.jpg";
+import image1 from "../images/adopt1.jpg";
 
 import "../Style/Adopt.css";
 
@@ -57,10 +57,10 @@ function Adopt() {
             <div className="row">
               {adopts.map((adopt) => (
                 <div
-                  className="col-xl-4 col-md-6 col-12  d-flex justify-content-center"
+                  className="col-xl-4 col-md-6 col-12  d-flex justify-content-center mb-5"
                   key={adopt._id}
                 >
-                  <div className="card card__width">
+                  <div className="card card__width shadow-lg border border-white">
                     <img
                       className="card-img-top adopt-image"
                       src={process.env.PUBLIC_URL + `/uploads/${adopt.imgName}`}
@@ -73,7 +73,7 @@ function Adopt() {
                         to={`/howToHelp/adopt/${adopt._id}`}
                         className="btn btn-primary card_button"
                       >
-                        Read more..
+                        Read more
                       </Link>
                     </div>
                   </div>
