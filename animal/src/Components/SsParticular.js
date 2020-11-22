@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import image1 from "../images/story3.jpg";
-import axios from "../apis/axios";
+import axios from "axios";
 import "../Style/Story.css";
 import "../Style/AboutUs.css";
 
@@ -14,7 +14,7 @@ function SsParticular() {
   useEffect(() => {
     if (storyId) {
       axios
-        .get(`/successStories/${storyId}`)
+        .get(`/api/successStories/${storyId}`)
         .then((response) => {
           setStoryName(response.data.title);
           setStoryDescription(response.data.description);
@@ -25,7 +25,7 @@ function SsParticular() {
 
   useEffect(() => {
     axios
-      .get("/successStories/sync")
+      .get("/api/successStories/sync")
       .then((response) => {
         setStories(response.data);
       })

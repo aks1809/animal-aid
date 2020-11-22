@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LoginAdmin from "./LoginAdmin";
-import axios from "../apis/axios";
+import axios from "axios";
 import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ function Admin() {
   const [admins, setAdmins] = useState([]);
   useEffect(() => {
     axios
-      .get("/admins/sync")
+      .get("/api/admins/sync")
       .then((response) => {
         setAdmins(response.data);
       })

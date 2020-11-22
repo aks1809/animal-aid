@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "../apis/axios";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import image1 from "../images/aboutus1.jpg";
 import "../Style/AboutUs.css";
@@ -22,7 +22,7 @@ function AdoptionForm() {
     } else if (input3.length > 10) {
       alert("Please enyer a valid phone number");
     } else {
-      await axios.post("/adoptContactForm/new", {
+      await axios.post("/api/adoptContactForm/new", {
         fname: input1,
         lname: input2,
         phone: input3,
@@ -54,7 +54,7 @@ function AdoptionForm() {
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
           <Link to="/">Home</Link> &gt; <Link to="/howToHelp">How To Help</Link>{" "}
-          &gt; <Link to="/howToHelp/adopt">Adopt</Link> &gt; Adopt
+          &gt; <Link to="/howToHelp/adopt">Adopt</Link> &gt; Adopt Form
         </div>
         <div className="row p-4">
           <div className="col-md-6">

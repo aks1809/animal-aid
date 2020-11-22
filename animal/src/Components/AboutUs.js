@@ -32,14 +32,14 @@ function AboutUs() {
           </div>
           <div className="col-md-6 text-justify section-description">
             <p>
-              When our founders started AAU, they had no idea how vast the
-              problems facing animals were. We grew over the years in an effort
-              to meet as many challenges as we could.
+              When our founders started AAU, they had no idea how vast problems
+              the animals were facing. We grew over the years in an effort to
+              meet as many challenges as we could.
             </p>
             <p>
               Today we rescue thousands of animals every year and we use their
               stories and our work to inspire and engage both the local
-              community and people around the world.
+              communities and people around the world.
             </p>
           </div>
         </div>

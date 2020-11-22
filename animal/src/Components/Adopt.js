@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "../apis/axios";
+import axios from "axios";
 import image1 from "../images/adopt1.jpg";
 
 import "../Style/Adopt.css";
@@ -9,7 +9,7 @@ function Adopt() {
   const [adopts, setAdopts] = useState([]);
   useEffect(() => {
     axios
-      .get("/adoptForm/sync")
+      .get("/api/adoptForm/sync")
       .then((response) => {
         setAdopts(response.data);
       })

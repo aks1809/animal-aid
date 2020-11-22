@@ -4,7 +4,7 @@ import AddIcon from "@material-ui/icons/Add";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import image from "../images/logoHeader.png";
 import ChatRoom from "./ChatRoom";
-import axios from "../apis/axios";
+import axios from "axios";
 import { useStateValue } from "./StateProvider";
 import "../Style/TalkToUs.css";
 
@@ -21,7 +21,7 @@ const TalkToUs = ({ messageList }) => {
   const sendQuery = async (e) => {
     e.preventDefault();
     if (query !== "") {
-      await axios.post("/talkToUs/new", {
+      await axios.post("/api/talkToUs/new", {
         message: query,
         userId: `${getUId()}`,
         isAdmin: false,

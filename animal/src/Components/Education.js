@@ -134,12 +134,12 @@ function Education() {
               Teaching compassion through rescue
             </h1>
             <p>
-              When we rescue an animal, a crowd often gathers and they witness
-              an animal being treated with kindness. From saving our helpline
-              number in their phones, to learning that conditions like mange are
-              actually treatable, everyone's awareness grows. Most people who
-              see an animal being rescued today are more likely to spot an
-              animal tomorrow who needs help and report the problem.
+              When we are rescuing an animal, a crowd often gathers and they
+              witness an animal being treated with kindness. From saving our
+              helpline number in their phones, to learning that conditions like
+              mange are actually treatable, everyone's awareness grows. Most
+              people who see an animal being rescued today are more likely to
+              spot an animal tomorrow who needs help and report the problem.
             </p>
             <br />
             <Link className="btn btn-primary p-3 hover-buttons" to="/whatWeDo">

@@ -3,7 +3,7 @@ import ErrorIcon from "@material-ui/icons/Error";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useStateValue } from "./StateProvider";
-import axios from "../apis/axios";
+import axios from "axios";
 import "../Style/ContactForm.css";
 
 const renderError = (isError) => {
@@ -51,7 +51,7 @@ const ContactForm = () => {
     }
     setError("");
     axios
-      .post("/contactForm", form)
+      .post("/api/contactForm", form)
       .then(() => {
         reCaptcha.current.reset();
         setForm({ ...form, token: "" });

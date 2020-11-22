@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import axios from "../apis/axios";
+import axios from "axios";
 import ErrorIcon from "@material-ui/icons/Error";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -40,7 +40,7 @@ const DonationForm = () => {
 
   useEffect(() => {
     const fetcher = async () => {
-      const rzdata = await axios.post("/razorpay", {
+      const rzdata = await axios.post("/api/razorpay", {
         amount: parseInt(diffAmount) * 100,
       });
       setData({ amount: rzdata.data.amount, id: rzdata.data.id });
@@ -61,8 +61,8 @@ const DonationForm = () => {
       description: "Thank you for your donation",
       image: "https://i.ibb.co/gtcx3zp/logo-Header.png",
       order_id: data.id,
-      handler: function (response) {
-        axios.post("/donation/new", {
+      handler: async function (response) {
+        await axios.post("/api/donation/new", {
           ...form,
           amount: diffAmount,
           payment_id: response.razorpay_payment_id,

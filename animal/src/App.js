@@ -26,14 +26,14 @@ import AdoptCarouselForm from "./Components/AdoptCarousel";
 import AdoptParticularPage from "./Components/AdoptParticular";
 import AdoptionFormPage from "./Components/AdoptionForm";
 import ScrollToTop from "./Components/ScrollToTop";
-import axios from "./apis/axios";
+import axios from "axios";
 import Pusher from "pusher-js";
 
 function App() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    axios.get("/talkToUs/sync").then((response) => {
+    axios.get("/api/talkToUs/sync").then((response) => {
       setMessages(response.data);
     });
   }, []);

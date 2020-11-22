@@ -15,7 +15,7 @@ import image11 from "../images/contactForm.jpg";
 import Avatar from "@material-ui/core/Avatar";
 import TrackVisibility from "react-on-screen";
 import ContactForm from "./ContactForm";
-import axios from "../apis/axios";
+import axios from "axios";
 
 const ComponentToTrack1 = ({ isVisible, limit }) => {
   if (isVisible) {
@@ -81,7 +81,7 @@ function HomePage() {
   const [stories, setStories] = useState([]);
   useEffect(() => {
     axios
-      .get("/successStories/sync")
+      .get("/api/successStories/sync")
       .then((response) => {
         setStories(response.data);
       })
@@ -227,9 +227,9 @@ function HomePage() {
             </h1>
             <p>
               Every day we save animals with fractures, wounds, mange, viral
-              diseases, cancer, and much more. We vaccinate against rabies and
-              other illnesses, conduct spay and neuter and educate the community
-              about helping animals.
+              diseases, cancer, and much more. We vaccinate them against rabies
+              and other illnesses, conduct spay and neuter and educate the
+              communities about helping animals.
             </p>
             <br />
             <Link className="btn btn-primary p-3 hover-buttons" to="/whatWeDo">
@@ -277,10 +277,10 @@ function HomePage() {
               Visit or volunteer in our team shelter
             </h1>
             <p>
-              Volunteers are a life-sustaining force that enables us to give the
-              best care to the most animals. We conduct 4 daily tours to share
-              the stories of the animals we rescue, educate about the problems
-              animals face and the different ways to help.
+              Volunteers are life-sustaining forces that enables us to give best
+              care to most animals. We conduct 4 daily tours to share the
+              stories of the animals we rescue, educate people about the
+              problems animals face and the different ways to help.
             </p>
             <br />
             <Link className="btn btn-primary p-3 hover-buttons" to="/whatWeDo">

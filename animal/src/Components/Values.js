@@ -35,8 +35,8 @@ function Values() {
           <div className="col-md-6 text-justify section-description">
             <p>
               Our mission is to rescue and treat the un-owned street animals of
-              Udaipur who have become ill or injured, and through their rescue
-              inspire a community to protect and defend the lives of all
+              Udaipur who have become ill or are injured, and through their
+              rescue inspire communities to protect and defend the lives of all
               animals.
             </p>
           </div>
@@ -58,13 +58,13 @@ function Values() {
             <p>
               We believe all animals deserve our compassion and protection. We
               are working for the day when all animals' lives are respected for
-              their inherent value, whether dogs, chickens, cows or fish. Our
-              planet is in crisis from over-consumption, and the use and abuse
-              of animals contributes tremendously to the climate catastrophe and
-              incalculable animal suffering. Rescue is our strategy to
-              immediately relieve suffering and encourage the protection of all
-              animals lives by sharing their incredible stories of recovery and
-              healing.
+              their inherent value, whether dogs, cats, cows or any other
+              animals. Our planet is in crisis from over-consumption, and the
+              use and abuse of animals contributes tremendously to the climate
+              catastrophe and incalculable animal suffering. Rescue is our
+              strategy to immediately relieve suffering and encourage the
+              protection of all animals lives by sharing their incredible
+              stories of recovery and healing.
             </p>
           </div>
         </div>

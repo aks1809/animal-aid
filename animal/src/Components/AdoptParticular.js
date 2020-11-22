@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import axios from "../apis/axios";
+import axios from "axios";
 import image1 from "../images/adopt1.jpg";
 import "../Style/Story.css";
 
 function AdoptParticular() {
   const [adoptName, setAdoptName] = useState("");
   const [adoptDescription, setAdoptDescription] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
   const { adoptId } = useParams();
   const [adopts, setAdopts] = useState([]);
   useEffect(() => {
     if (adoptId) {
       axios
-        .get(`/howToHelp/adopt/${adoptId}`)
+        .get(`/api/howToHelp/adopt/${adoptId}`)
         .then((response) => {
           setAdoptName(response.data.name);
           setAdoptDescription(response.data.details);
-          setImageUrl(response.data.imgName);
         })
         .catch(() => console.log("Promise rejected"));
     }
@@ -26,7 +24,7 @@ function AdoptParticular() {
 
   useEffect(() => {
     axios
-      .get("/adoptForm/sync")
+      .get("/api/adoptForm/sync")
       .then((response) => {
         setAdopts(response.data);
       })

@@ -77,7 +77,7 @@ db.once("open", () => {
   });
 });
 
-app.get("/successStories/sync", (req, res) => {
+app.get("/api/successStories/sync", (req, res) => {
   Stories.find((err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -87,7 +87,7 @@ app.get("/successStories/sync", (req, res) => {
   });
 });
 
-app.get("/adoptForm/sync", (req, res) => {
+app.get("/api/adoptForm/sync", (req, res) => {
   Adopts.find((err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -97,7 +97,7 @@ app.get("/adoptForm/sync", (req, res) => {
   });
 });
 
-app.get("/successStories/:storyId", (req, res) => {
+app.get("/api/successStories/:storyId", (req, res) => {
   Stories.findOne({ _id: req.params.storyId }, (err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -107,7 +107,7 @@ app.get("/successStories/:storyId", (req, res) => {
   });
 });
 
-app.get("/howToHelp/adopt/:adoptId", (req, res) => {
+app.get("/api/howToHelp/adopt/:adoptId", (req, res) => {
   Adopts.findOne({ _id: req.params.adoptId }, (err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -117,7 +117,7 @@ app.get("/howToHelp/adopt/:adoptId", (req, res) => {
   });
 });
 
-app.get("/admins/sync", (req, res) => {
+app.get("/api/admins/sync", (req, res) => {
   Admins.find((err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -127,7 +127,7 @@ app.get("/admins/sync", (req, res) => {
   });
 });
 
-app.post("/successStories/new", (req, res) => {
+app.post("/api/successStories/new", (req, res) => {
   const dbStory = req.body;
   // console.log(req.body);
   // console.log("successfully added");
@@ -141,7 +141,7 @@ app.post("/successStories/new", (req, res) => {
   });
 });
 
-app.post("/admins/new", (req, res) => {
+app.post("/api/admins/new", (req, res) => {
   const dbAdmin = req.body;
   // console.log(req.body);
   // console.log("successfully added");
@@ -155,7 +155,7 @@ app.post("/admins/new", (req, res) => {
   });
 });
 
-app.post("/adoptForm/new", (req, res) => {
+app.post("/api/adoptForm/new", (req, res) => {
   const dbAdopt = req.body;
   // console.log(req.body);
   // console.log("successfully added");
@@ -169,7 +169,7 @@ app.post("/adoptForm/new", (req, res) => {
   });
 });
 
-app.post("/talkToUs/new", (req, res) => {
+app.post("/api/talkToUs/new", (req, res) => {
   const message = req.body;
   Messages.create(message, (err, data) => {
     if (err) {
@@ -181,7 +181,7 @@ app.post("/talkToUs/new", (req, res) => {
   });
 });
 
-app.post("/adoptContactForm/new", (req, res) => {
+app.post("/api/adoptContactForm/new", (req, res) => {
   const dbAdoptContact = req.body;
   // console.log(req.body);
   AdoptContactForms.create(dbAdoptContact, (err, data) => {
@@ -196,7 +196,7 @@ app.post("/adoptContactForm/new", (req, res) => {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-app.post("/upload", (req, res) => {
+app.post("/api/upload", (req, res) => {
   if (req.files === null) {
     return res.status(400).json({ msg: "No file uploaded" });
   }
@@ -214,7 +214,7 @@ app.post("/upload", (req, res) => {
   );
 });
 
-app.get("/talkToUs/sync", (req, res) => {
+app.get("/api/talkToUs/sync", (req, res) => {
   Messages.find((err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -224,7 +224,7 @@ app.get("/talkToUs/sync", (req, res) => {
   });
 });
 
-app.post("/razorpay", (req, res) => {
+app.post("/api/razorpay", (req, res) => {
   try {
     const payment_capture = 1;
     const amount = req.body.amount;
@@ -253,7 +253,7 @@ app.post("/razorpay", (req, res) => {
   }
 });
 
-app.post("/contactForm", async (req, res) => {
+app.post("/api/contactForm", async (req, res) => {
   const contactDetails = req.body;
   if (!contactDetails.token) {
     res.status(400).send("reCaptcha token is missing");
@@ -296,7 +296,7 @@ app.post("/contactForm", async (req, res) => {
   }
 });
 
-app.post("/donation/new", (req, res) => {
+app.post("/api/donation/new", (req, res) => {
   const details = req.body;
   // console.log(details);
 
@@ -330,9 +330,9 @@ if (
 ) {
   // Set static folder
   app.use(express.static("animal/build"));
-  app.use("*", express.static(path.join(__dirname, "animal", "build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "animal", "build", "index.html"));
+  });
 }
-
-app.get("/", (req, res) => res.status(200).send("hello"));
 
 app.listen(port, () => console.log(`Listening on localhost:${port}`));

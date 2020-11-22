@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "../apis/axios";
+import axios from "axios";
 import image1 from "../images/successStories1.jpg";
 import { Link } from "react-router-dom";
 import "../Style/AboutUs.css";
@@ -8,7 +8,7 @@ function SuccessStories() {
   const [stories, setStories] = useState([]);
   useEffect(() => {
     axios
-      .get("/successStories/sync")
+      .get("/api/successStories/sync")
       .then((response) => {
         setStories(response.data);
       })

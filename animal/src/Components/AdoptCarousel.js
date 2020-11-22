@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "../apis/axios";
+import axios from "axios";
 import "../Style/Rescue.css";
 
 function AdoptCarousel() {
@@ -21,12 +21,12 @@ function AdoptCarousel() {
     formData.append("file", file);
 
     try {
-      await axios.post("/upload", formData, {
+      await axios.post("/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-      await axios.post("/adoptForm/new", {
+      await axios.post("/api/adoptForm/new", {
         name: input3,
         details: input4,
         imgName: fileName,

@@ -13,12 +13,14 @@ function Login() {
   const [_, dispatch] = useStateValue();
 
   const responseGoogle = (response) => {
-    dispatch({
-      type: actionTypes.SET_USER,
-      user: response.profileObj,
-    });
-    setInput(response.profileObj.name);
-    toast.success("Sign in successfull");
+    try {
+      dispatch({
+        type: actionTypes.SET_USER,
+        user: response.profileObj,
+      });
+      setInput(response.profileObj.name);
+      toast.success("Sign in successfull");
+    } catch (error) {}
   };
 
   const logout = () => {
