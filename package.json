@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "animal-install":"npm install --prefix client",
-    "animal":"npm start --prefix animal",
+    "animal-install": "npm install --prefix client",
+    "animal": "npm start --prefix animal",
     "start": "node server.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix animal && npm run build --prefix animal"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix animal && npm run build --prefix animal"
   },
   "author": "arpit-akshay",
   "license": "MIT",
