@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from "react-google-login";
 import { Link } from "react-router-dom";
+import { actionTypes } from "./Reducer";
+import { useStateValue } from "./StateProvider";
 import "./Header";
 
 function Login() {
   const [input, setInput] = useState("");
+  const [{}, dispatch] = useStateValue();
+
   const responseGoogle = (response) => {
+    dispatch({
+      type: actionTypes.SET_USER,
+      user: response.profileObj,
+    });
     setInput(response.profileObj.name);
   };
 
