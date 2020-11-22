@@ -8,6 +8,7 @@ import "../Style/Story.css";
 function AdoptParticular() {
   const [adoptName, setAdoptName] = useState("");
   const [adoptDescription, setAdoptDescription] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   const { adoptId } = useParams();
   const [adopts, setAdopts] = useState([]);
   useEffect(() => {
@@ -17,6 +18,7 @@ function AdoptParticular() {
         .then((response) => {
           setAdoptName(response.data.name);
           setAdoptDescription(response.data.details);
+          setImageUrl(response.data.imgName);
         })
         .catch(() => console.log("Promise rejected"));
     }
@@ -66,15 +68,15 @@ function AdoptParticular() {
       <div className="d-flex flex-column align-items-center justify-content-center">
         <Link
           className="btn btn-outline-primary btn-lg mb-4"
-          to="/howToHelp/adopt"
+          to="/howToHelp/adopt/adoptId/adoptionForm"
         >
-          Back to adopt page
+          Adopt {adoptName}
         </Link>
         <Link
           className="btn btn-outline-dark btn-lg mb-4"
-          to="/howToHelp/adopt/adoptId/adoptionForm"
+          to="/howToHelp/adopt"
         >
-          Pls Adopt {adoptName}
+          Back to adopt page
         </Link>
       </div>
     </div>
