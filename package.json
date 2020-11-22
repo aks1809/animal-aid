@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "animal-install":"npm install --prefix client",
+    "animal":"npm start --prefix animal",
+    "start": "node server.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix animal && npm run build --prefix animal"
+  },
+  "author": "arpit-akshay",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "mongoose": "^5.10.11",
+    "nodemailer": "^6.4.16",
+    "nodemon": "^2.0.6",
+    "razorpay": "^2.0.6",
+    "uuid": "^8.3.1",
+    "path": "^0.12.7",
+    "pusher": "^4.0.0",
+    "url": "^0.11.0"
+  }
+}

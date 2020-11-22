@@ -1,0 +1,41 @@
+.banner {
+  height: 70vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-bar {
+  position: relative;
+  top: 50%;
+  left: 10%;
+  width: 200px;
+  transform: translateY(-50%);
+}
+.link {
+  font-size: 0.8rem;
+}
+.small-title {
+  font-size: 0.8rem;
+}
+.large-title {
+  font-size: 2.1rem !important;
+  line-height: 2.5rem;
+}
+.section-description {
+  font-size: 18px;
+}
+.dropdown-container {
+  width: 70vw;
+  border-bottom: 1px dashed #0275d8;
+}
+.dropdown-option {
+  cursor: pointer;
+}
+.dropdown-option {
+  border-top: 1px dashed #0275d8;
+}
+@media only screen and (max-width: 768px) {
+  .dropdown-container {
+    width: 90vw;
+  }
+}

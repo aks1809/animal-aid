@@ -1,0 +1,130 @@
+.cass_height {
+  max-height: 80vh !important;
+  min-height: 50vh !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: #007bff;
+  opacity: 0.1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 10;
+}
+
+.banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hover-buttons {
+  font-size: 1rem;
+}
+
+.hover-buttons:hover {
+  background: white;
+  border-color: #007bff;
+  color: rgb(54, 53, 53);
+}
+
+.success__stories {
+  display: grid;
+  padding: 5% 5%;
+  background-color: #007bff83;
+  margin: 1% 0%;
+}
+
+.heading {
+  display: flex;
+  margin-bottom: 5%;
+}
+.heading > h1 {
+  color: #007bff;
+}
+.heading > p {
+  font-size: 18px;
+  margin-left: 5%;
+}
+
+.card__detail {
+  display: flex;
+  place-items: center;
+}
+.card {
+  width: 100%;
+}
+
+.card-img-top {
+  height: 30vh;
+}
+
+.card__margin {
+  margin: 5%;
+}
+
+.card_button {
+  position: relative;
+  bottom: 0px;
+}
+
+.card-text,
+.card-title {
+  text-align: justify;
+}
+
+.small-png > .MuiAvatar-root {
+  height: 120px;
+  width: 120px;
+}
+
+.large-numbers {
+  font-size: 3.5rem;
+}
+
+.counter-divs {
+  height: 400px;
+}
+
+.counter-divs > p {
+  font-size: 1.6rem;
+}
+
+.contact {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+@media screen and (max-width: 991px) {
+  .banner {
+    height: 40vh !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact {
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 100% !important;
+  }
+  .card_button {
+    position: relative;
+    bottom: 0px;
+  }
+}

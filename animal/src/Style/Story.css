@@ -1,0 +1,96 @@
+.link {
+  font-size: 0.8rem;
+}
+.small-title {
+  font-size: 0.8rem;
+}
+.large-title {
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+}
+.section-description {
+  font-size: 18px;
+}
+.category-link {
+  text-decoration: none !important;
+}
+.detail2 {
+  text-align: center;
+  font-size: 4vw;
+  color: #007bff;
+}
+.text-black {
+  color: black;
+}
+.detail {
+  place-items: center;
+  padding: 7% 5% 1% 5%;
+  text-align: center;
+  justify-content: center;
+}
+.detail > h1 {
+  font-size: 7vw;
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: bolder;
+  color: #007bff;
+  margin-bottom: 2%;
+}
+.detail > p {
+  font-size: 1rem;
+  padding: 0% 5%;
+}
+.linkButton {
+  background-color: #4caf50; /* Green */
+  border-radius: 2%;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.linkButton {
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
+}
+.linkButtonDetails2 {
+  background-color: black;
+  border-radius: 2%;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.linkButtonDetails2:hover {
+  background-color: white;
+  color: Black;
+  text-decoration: none;
+}
+
+.linkButton:hover {
+  background-color: white;
+  color: Black;
+  text-decoration: none;
+}
+.center__image {
+  width: 70vw;
+  height: 80vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .center__image {
+    width: 90vw !important;
+    height: 50vh;
+  }
+}
