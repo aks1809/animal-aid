@@ -53,7 +53,8 @@ function AdoptionForm() {
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
-          <Link to="/">Home</Link> &gt; howToHelp>adopt>adoptionForm
+          <Link to="/">Home</Link> &gt; <Link to="/howToHelp">How To Help</Link>{" "}
+          &gt; <Link to="/howToHelp/adopt">Adopt</Link> &gt; Adopt
         </div>
         <div className="row p-4">
           <div className="col-md-6">

@@ -11,7 +11,6 @@ function Adopt() {
     axios
       .get("/adoptForm/sync")
       .then((response) => {
-        console.log(response);
         setAdopts(response.data);
       })
       .catch(() => console.log("Promise rejected"));
