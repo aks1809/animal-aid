@@ -75,7 +75,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container bg-white p-5">
+    <div className="container bg-white py-5 px-4">
       <form onSubmit={(e) => onSignUp(e)} id="contactForm">
         <div className="form-row">
           <div className="form-group col-md-6">

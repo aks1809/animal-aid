@@ -4,11 +4,13 @@ import { GoogleLogout } from "react-google-login";
 import { Link } from "react-router-dom";
 import { actionTypes } from "./Reducer";
 import { useStateValue } from "./StateProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Header";
 
 function Login() {
   const [input, setInput] = useState("");
-  const [dispatch] = useStateValue();
+  const [_, dispatch] = useStateValue();
 
   const responseGoogle = (response) => {
     dispatch({
@@ -16,14 +18,28 @@ function Login() {
       user: response.profileObj,
     });
     setInput(response.profileObj.name);
+    toast.success("Sign in successfull");
   };
 
   const logout = () => {
     setInput("");
+    toast.error("Signed out");
+    console.log(_);
   };
 
   return (
     <div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {input === "" ? (
         <GoogleLogin
           className="google__login"

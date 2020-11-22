@@ -133,8 +133,8 @@ function Team() {
         ></iframe>
       </div>
       <div className="Image" style={{ backgroundImage: `url(${image4})` }}>
-        <div className="Values text-center text-white bg-primary">
-          <h1>A step to improve the world.</h1>
+        <div className="Values text-center text-white p-3 px-5">
+          <h1 className="m-0 values_heading">A step to improve the world.</h1>
         </div>
       </div>
     </div>

@@ -3,20 +3,13 @@
   width: 100%;
 }
 
-.header {
-  display: flex;
-}
 .logoHeader {
   width: 7rem;
   cursor: pointer;
   display: flex;
   margin-bottom: 0.5rem;
 }
-.heading {
-  display: flex;
-  margin-bottom: 0px;
-  margin-top: 0;
-}
+
 .logo {
   margin-top: 2%;
   margin-left: 2%;
@@ -97,5 +90,14 @@
     width: 5rem;
     cursor: pointer;
     display: flex;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .title {
+    font-size: 10vw;
+  }
+  .logoHeader {
+    width: 5rem;
   }
 }

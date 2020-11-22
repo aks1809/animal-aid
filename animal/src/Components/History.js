@@ -137,8 +137,10 @@ function History() {
         ></iframe>
       </div>
       <div className="Image" style={{ backgroundImage: `url(${image4})` }}>
-        <div className="Values text-center text-white bg-primary">
-          <h1>Make the future bright for animals.</h1>
+        <div className="Values  text-center text-white bg-primary d-flex flex-column justify-content-center">
+          <p className="values_heading m-0">
+            Make the future bright for animals.
+          </p>
         </div>
       </div>
     </div>

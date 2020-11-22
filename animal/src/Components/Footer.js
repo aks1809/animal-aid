@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <div className="jumbotron p-5 mb-0 rounded-0 bg-dark">
+      <div className="jumbotron py-5 px-2 mb-0 rounded-0 bg-dark">
         <div className="row">
           <div className="col-lg-5 px-4 mb-4">
             <div className="text-white h3 font-weight-bold">About Us</div>
@@ -124,12 +124,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-white h3 font-weight-bold mt-4">
-              Suscribe to Newsletter
+              Subscribe to Newsletter
             </div>
             <hr className="bg-white" />
             <div className="container d-flex justify-content-center">
               <form
-                action="suscribe"
+                action="subscribe"
                 className="form-inline d-flex justify-content-center"
                 onSubmit={(e) => e.preventDefault()}
               >
@@ -141,14 +141,14 @@ const Footer = () => {
                   />
                 </div>
                 <button type="submit" className="btn btn-primary mb-2">
-                  Suscribe!
+                  Subscribe!
                 </button>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <div className="jumbotron jumbotron-flex rounded-0 bg-primary m-0 p-2 text-white text-center ">
+      <div className="jumbotron jumbotron-flex rounded-0 bg-primary m-0 p-2 text-white text-center copyright">
         &#169; Designed by Akshay-Arpit | All Rights Reserved
       </div>
     </footer>

@@ -19,11 +19,6 @@
   z-index: 10;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: #0000006e;
-}
-
 .banner {
   background-position: center center;
   background-repeat: no-repeat;
@@ -64,8 +59,7 @@
   place-items: center;
 }
 .card {
-  width: 20rem;
-  height: 30rem;
+  width: 100%;
 }
 
 .card-img-top {
@@ -77,8 +71,13 @@
 }
 
 .card_button {
-  position: sticky;
-  top: 100%;
+  position: relative;
+  bottom: 0px;
+}
+
+.card-text,
+.card-title {
+  text-align: justify;
 }
 
 .small-png > .MuiAvatar-root {
@@ -110,12 +109,6 @@
   width: 50%;
 }
 
-@media screen and (max-width: 750px) {
-  .card {
-    margin-top: 80px;
-  }
-}
-
 @media screen and (max-width: 991px) {
   .banner {
     height: 40vh !important;
@@ -131,7 +124,7 @@
     width: 100% !important;
   }
   .card_button {
-    position: sticky;
-    top: 65%;
+    position: relative;
+    bottom: 0px;
   }
 }

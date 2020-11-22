@@ -35,3 +35,8 @@
   color: #ff6600;
   background-color: white;
 }
+@media only screen and (max-width: 380px) {
+  .copyright {
+    font-size: 13px !important;
+  }
+}

@@ -171,6 +171,47 @@ function HomePage() {
           <span className="sr-only">Next</span>
         </a>
       </div>
+      <div className="success__stories">
+        <div className="row heading mt-3">
+          <div className="col-lg-6  col-sm-12 text-white font-weight-bold h1 text-left">
+            <p>Watch our hurt to healed stories</p>
+          </div>
+          <div className="col-lg-6 col-sm-12 text-white h5 text-left">
+            <p>
+              Incredible rescues, heartwarming recoveries, families reunited:
+              watch the success stories that your support makes possible.
+            </p>
+          </div>
+        </div>
+        <div className="row mb-5">
+          {stories.slice(0, 3).map((story) => (
+            <div
+              className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center my-4"
+              key={story._id}
+            >
+              <div className="card border border-white shadow-lg">
+                <img
+                  className="card-img-top"
+                  src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
+                  alt="Card"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{story.title}</h5>
+                  <p className="card-text">
+                    {story.description.substr(0, 100)}
+                  </p>
+                  <Link
+                    to={`/successStories/${story._id}`}
+                    className="btn btn-primary card_button"
+                  >
+                    Read more
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="jumbotron p-0 m-0 bg-white">
         <div className="row m-0">
           <div
@@ -248,49 +289,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="success__stories">
-        <div className="row heading mb-5 mt-3">
-          <div className="col-lg-6  col-sm-12 text-white font-weight-bold h1 text-center">
-            <p>Watch our hurt to healed stories</p>
-          </div>
-          <div className="col-lg-6 col-sm-12 text-white h5 text-center">
-            <p>
-              Incredible rescues, heartwarming recoveries, families reunited:
-              watch the success stories that your support makes possible.
-            </p>
-          </div>
-        </div>
-
-        <div className="row mb-5">
-          {stories.slice(0, 3).map((story) => (
-            <div
-              className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center"
-              key={story._id}
-            >
-              <div className="card border border-white shadow-lg">
-                <img
-                  className="card-img-top"
-                  src={process.env.PUBLIC_URL + `/uploads/${story.imgName}`}
-                  alt="Card"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{story.title}</h5>
-                  <p className="card-text">
-                    {story.description.substr(0, 100)}
-                  </p>
-                  <Link
-                    to={`/successStories/${story._id}`}
-                    className="btn btn-primary card_button"
-                  >
-                    Read more
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="jumbotron bg-white rounded-0 pt-4 mb-0">
+      <div className="jumbotron rounded-0 pt-4 mb-0">
         <h2 className="text-center mb-5 mt-4">Our numbers so far</h2>
         <div className="row">
           <div className="col-md-4 col-12 mb-4">
