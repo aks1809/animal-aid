@@ -6,6 +6,9 @@ import "./Header";
 
 function Login() {
   const [input, setInput] = useState("");
+  const responseGoogle = (response) => {
+    setInput(response.profileObj.name);
+  };
 
   const logout = () => {
     setInput("");
