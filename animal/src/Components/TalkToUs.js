@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Avatar, IconButton } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
@@ -8,10 +8,11 @@ import axios from "axios";
 import { useStateValue } from "./StateProvider";
 import "../Style/TalkToUs.css";
 
-const TalkToUs = ({ messageList }) => {
+const TalkToUs = ({ messageList, admins }) => {
   const [{ user }] = useStateValue();
   const [display, setDisplay] = useState(0);
   const [query, setQuery] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const getUId = () => {
     if (!user) return null;
@@ -24,11 +25,20 @@ const TalkToUs = ({ messageList }) => {
       await axios.post("/api/talkToUs/new", {
         message: query,
         userId: `${getUId()}`,
-        isAdmin: false,
+        isAdmin: isAdmin,
       });
       setQuery("");
     }
   };
+
+  useEffect(() => {
+    if (admins && user)
+      admins.forEach((admin) => {
+        if (admin.adminId === user.googleId) {
+          setIsAdmin(true);
+        }
+      });
+  }, [isAdmin, admins, user]);
 
   if (display === 0) {
     return (

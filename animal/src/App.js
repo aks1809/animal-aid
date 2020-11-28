@@ -31,6 +31,16 @@ import Pusher from "pusher-js";
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const [admins, setAdmins] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/api/admins/sync")
+      .then((response) => {
+        setAdmins(response.data);
+      })
+      .catch(() => console.log("Promise rejected"));
+  }, []);
 
   useEffect(() => {
     axios.get("/api/talkToUs/sync").then((response) => {
@@ -98,7 +108,7 @@ function App() {
           />
           <Route path="*" component={NotFound} />
         </Switch>
-        <TalkToUs messageList={messages} />
+        <TalkToUs messageList={messages} admins={admins} />
         <Footer />
       </Router>
     </div>

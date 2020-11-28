@@ -15,13 +15,13 @@ function Values() {
         style={{ backgroundImage: `url(${image3})` }}
       >
         <div className="title-bar bg-primary h1 text-white p-3 text-center rounded">
-          Our Values And Missions
+          Our Values And Mission
         </div>
       </div>
       <div className="jumbotron pt-3 mb-0">
         <div className="link mb-5">
           <Link to="/">Home</Link> &gt; <Link to="/about">About Us</Link> &gt;
-          Our Values And Missions
+          Our Values And Mission
         </div>
         <div className="row p-4">
           <div className="col-md-6">
@@ -59,10 +59,10 @@ function Values() {
               We believe all animals deserve our compassion and protection. We
               are working for the day when all animals' lives are respected for
               their inherent value, whether dogs, cats, cows or any other
-              animals. Our planet is in crisis from over-consumption, and the
-              use and abuse of animals contributes tremendously to the climate
-              catastrophe and incalculable animal suffering. Rescue is our
-              strategy to immediately relieve suffering and encourage the
+              animal. Our planet is in crisis from over-consumption, and the use
+              and abuse of animals contributes tremendously to the climate
+              catastrophe and incalculable animal sufferings. Rescue is our
+              strategy to immediately relieve sufferings and encourage the
               protection of all animals lives by sharing their incredible
               stories of recovery and healing.
             </p>
@@ -96,8 +96,10 @@ function Values() {
         </div>
       </div>
       <div className="Image" style={{ backgroundImage: `url(${image4})` }}>
-        <div className="Values text-center text-white bg-primary">
-          <h2>In Bareilly,Help is on the way.</h2>
+        <div className="Values text-center text-white p-3 px-5">
+          <h1 className="m-0 values_heading">
+            In Bareilly,Help is on the way.
+          </h1>
         </div>
       </div>
     </div>

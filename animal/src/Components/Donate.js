@@ -33,14 +33,14 @@ function Donate() {
           </div>
           <div className="col-md-6 text-justify section-description">
             <p>
-              When our founders started AAU, they had no idea how vast the
-              problems facing animals were. We grew over the years in an effort
-              to meet as many challenges as we could.
+              When our founders started AAU, they had no idea how vast problems,
+              the animals are facing. We grew over the years in an effort to
+              meet as many challenges as we could.
             </p>
             <p>
               Today we rescue thousands of animals every year and we use their
               stories and our work to inspire and engage both the local
-              community and people around the world.
+              communities and people around the world.
             </p>
           </div>
         </div>
@@ -57,9 +57,9 @@ function Donate() {
           </div>
           <div className="col-md-6 text-justify section-description">
             <p>
-              Become a monthly donor to support our work into the future, save
-              an animal’s life in honor of a beloved pet, or buy a gift of
-              beautiful jewellry in support of our work.
+              Become a monthly donor to support our work in the future, save an
+              animal’s life in honor of a beloved pet, or buy gifts comprising
+              of beautiful jewelleries in support of our work.
             </p>
           </div>
         </div>
