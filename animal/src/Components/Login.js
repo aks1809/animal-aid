@@ -43,7 +43,7 @@ function Login() {
       {input === "" ? (
         <GoogleLogin
           className="google__login"
-          clientId="430654190508-dc289he7ndjtmhqh9upceic2l30o837s.apps.googleusercontent.com"
+          clientId="461932582755-1b8ma5010ghbjttsm41vh2sbf53905un.apps.googleusercontent.com"
           buttonText="Login With Google"
           theme="dark"
           icon={true}
@@ -55,7 +55,7 @@ function Login() {
         <div>
           <GoogleLogout
             className="google__logout"
-            clientId="430654190508-dc289he7ndjtmhqh9upceic2l30o837s.apps.googleusercontent.com"
+            clientId="461932582755-1b8ma5010ghbjttsm41vh2sbf53905un.apps.googleusercontent.com"
             buttonText="Log Out"
             theme="dark"
             icon={true}
