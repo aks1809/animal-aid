@@ -157,7 +157,7 @@ const DonationForm = () => {
               onClick={() => {
                 setForm({ ...form, frequency: 0 });
               }}
-              className={`container frequency-text p-3 border border-primary rounded-left selectors text-center h5 ${
+              className={`container frequency-text p-3 border border-primary rounded-left selectors text-center h5 d-flex align-items-center ${
                 form.frequency === 0 ? "selected" : ""
               }`}
             >
@@ -167,7 +167,7 @@ const DonationForm = () => {
               onClick={() => {
                 setForm({ ...form, frequency: 1 });
               }}
-              className={`container frequency-text p-3 border border-primary rounded-right selectors text-center h5 ${
+              className={`container frequency-text p-3 border border-primary rounded-right selectors text-center h5 d-flex align-items-center ${
                 form.frequency === 1 ? "selected" : ""
               }`}
             >
@@ -360,7 +360,7 @@ const DonationForm = () => {
                   setEmailBlur(1);
                 }
               }}
-              pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
+              type="email"
               required
             />
             {renderError(emailBlur)}
