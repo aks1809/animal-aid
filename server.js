@@ -70,6 +70,7 @@ db.once("open", () => {
         message: messageDetails.message,
         userId: messageDetails.userId,
         isAdmin: messageDetails.isAdmin,
+        pictureUrl: messageDetails.pictureUrl,
       });
     } else {
       // console.log("Error triggering pusher");
