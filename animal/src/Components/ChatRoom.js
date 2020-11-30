@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ClientChat from "./ClientChat";
 import ServerChat from "./ServerChat";
 
-const ChatRoom = ({ messageList, imageUrl }) => {
+const ChatRoom = ({ messageList }) => {
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -19,7 +19,10 @@ const ChatRoom = ({ messageList, imageUrl }) => {
             {message.isAdmin ? (
               <ServerChat message={message.message} />
             ) : (
-              <ClientChat message={message.message} imageUrl={imageUrl} />
+              <ClientChat
+                message={message.message}
+                imageUrl={message.pictureUrl}
+              />
             )}
           </div>
         );

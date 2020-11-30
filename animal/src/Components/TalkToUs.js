@@ -26,6 +26,7 @@ const TalkToUs = ({ messageList, admins }) => {
         message: query,
         userId: `${getUId()}`,
         isAdmin: isAdmin,
+        pictureUrl: user ? user.imageUrl : null,
       });
       setQuery("");
     }
@@ -58,7 +59,7 @@ const TalkToUs = ({ messageList, admins }) => {
   } else {
     return (
       <div className="chat-box">
-        <div className="header bg-dark">
+        <div className="header bg-dark" id="chat-header">
           <div className="avatar-wrapper avatar-big bg-white">
             <img src={image} alt="avatar" />
           </div>
@@ -74,10 +75,7 @@ const TalkToUs = ({ messageList, admins }) => {
             </IconButton>
           </span>
         </div>
-        <ChatRoom
-          messageList={messageList}
-          imageUrl={user ? user.imageUrl : null}
-        />
+        <ChatRoom messageList={messageList} />
         <div className="type-area">
           <form>
             <div className="input-wrapper">

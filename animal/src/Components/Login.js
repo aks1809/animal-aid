@@ -4,8 +4,7 @@ import { GoogleLogout } from "react-google-login";
 import { Link } from "react-router-dom";
 import { actionTypes } from "./Reducer";
 import { useStateValue } from "./StateProvider";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import "./Header";
 
 function Login() {
@@ -31,17 +30,6 @@ function Login() {
 
   return (
     <div>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       {input === "" ? (
         <GoogleLogin
           className="google__login"

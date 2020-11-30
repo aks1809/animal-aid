@@ -26,6 +26,8 @@ import AdoptCarouselForm from "./Components/AdoptCarousel";
 import AdoptParticularPage from "./Components/AdoptParticular";
 import AdoptionFormPage from "./Components/AdoptionForm";
 import ScrollToTop from "./Components/ScrollToTop";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import Pusher from "pusher-js";
 
@@ -65,6 +67,17 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Router>
         <ScrollToTop />
         <Header />
